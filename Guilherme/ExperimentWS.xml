@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description>
+   <baseDir>C:\owlsedit\temp</baseDir>
+   <service>ExperimentWS_Service.owl</service>
+   <profile>ExperimentWS_Profile.owl</profile>
+   <process>ExperimentWS_Process.owl</process>
+   <grounding>ExperimentWS_Grounding.owl</grounding>
+   <name>ExperimentWS.xml</name>
+</description>

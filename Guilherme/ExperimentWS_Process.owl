@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xml:base="http://experiment.me.org//ExperimentWS_ProcessModel.owl#"
+  xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
+  xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
+  xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
+  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <rdfs:comment>Add Ontology Comment</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl"/>
+  </owl:Ontology>
+  <process:ProcessModel rdf:ID="ExperimentWS_ProcessModel">
+    <process:hasProcess rdf:resource="#ExperimentWS_Composite"/>
+    <process:describes rdf:resource="http://experiment.me.org//ExperimentWS_Service#ExperimentWS_Service"/>
+  </process:ProcessModel>
+  <process:CompositeProcess rdf:ID="ExperimentWS_Composite"/>
+  <process:Input rdf:ID="ExperimentWS_getSubClasses_className_IN">
+    <process:parameterName>ExperimentWS_getSubClasses_className_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="ExperimentWS_getSubClasses_subClasses_OUT">
+    <process:parameterName>ExperimentWS_getSubClasses_subClasses_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="ExperimentWS_getSubClasses">
+    <process:hasInput rdf:resource="#ExperimentWS_getSubClasses_className_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#ExperimentWS_getSubClasses_subClasses_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="ExperimentWS_getSubClassesForSPARQL_className_IN">
+    <process:parameterName>ExperimentWS_getSubClassesForSPARQL_className_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="ExperimentWS_getSubClassesForSPARQL_subClasses_OUT">
+    <process:parameterName>ExperimentWS_getSubClassesForSPARQL_subClasses_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="ExperimentWS_getSubClassesForSPARQL">
+    <process:hasInput rdf:resource="#ExperimentWS_getSubClassesForSPARQL_className_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#ExperimentWS_getSubClassesForSPARQL_subClasses_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="ExperimentWS_getIndividuals_className_IN">
+    <process:parameterName>ExperimentWS_getIndividuals_className_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="ExperimentWS_getIndividuals_individuosClass_OUT">
+    <process:parameterName>ExperimentWS_getIndividuals_individuosClass_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="ExperimentWS_getIndividuals">
+    <process:hasInput rdf:resource="#ExperimentWS_getIndividuals_className_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#ExperimentWS_getIndividuals_individuosClass_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="ExperimentWS_getIndividualsForSPARQL_className_IN">
+    <process:parameterName>ExperimentWS_getIndividualsForSPARQL_className_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="ExperimentWS_getIndividualsForSPARQL_individuosClass_OUT">
+    <process:parameterName>ExperimentWS_getIndividualsForSPARQL_individuosClass_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="ExperimentWS_getIndividualsForSPARQL">
+    <process:hasInput rdf:resource="#ExperimentWS_getIndividualsForSPARQL_className_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#ExperimentWS_getIndividualsForSPARQL_individuosClass_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="ExperimentWS_getDatasIndividuals_className_IN">
+    <process:parameterName>ExperimentWS_getDatasIndividuals_className_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="ExperimentWS_getDatasIndividuals_dataIndividuosClass_OUT">
+    <process:parameterName>ExperimentWS_getDatasIndividuals_dataIndividuosClass_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="ExperimentWS_getDatasIndividuals">
+    <process:hasInput rdf:resource="#ExperimentWS_getDatasIndividuals_className_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#ExperimentWS_getDatasIndividuals_dataIndividuosClass_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Output rdf:ID="ExperimentWS_getResponsibleExperiment_responsible_OUT">
+    <process:parameterName>ExperimentWS_getResponsibleExperiment_responsible_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="ExperimentWS_getResponsibleExperiment">
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#ExperimentWS_getResponsibleExperiment_responsible_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="ExperimentWS_getGroupExperiment_experiment_IN">
+    <process:parameterName>ExperimentWS_getGroupExperiment_experiment_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="ExperimentWS_getGroupExperiment_individuos_OUT">
+    <process:parameterName>ExperimentWS_getGroupExperiment_individuos_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="ExperimentWS_getGroupExperiment">
+    <process:hasInput rdf:resource="#ExperimentWS_getGroupExperiment_experiment_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#ExperimentWS_getGroupExperiment_individuos_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+</rdf:RDF>
