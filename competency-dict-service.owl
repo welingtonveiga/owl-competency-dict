@@ -6,32 +6,32 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY competency-dictionary "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#">
-    <!ENTITY competency-dict-process "http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process#">
-    <!ENTITY competency-dict-profile "http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-profile#">
-    <!ENTITY competency-dict-grounding "http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-grounding#">
+    <!ENTITY competency-dictionary "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#">
+    <!ENTITY competency-dict-process "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-process.owl#">
+    <!ENTITY competency-dict-profile "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-profile.owl#">
+    <!ENTITY competency-dict-grounding "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-grounding.owl#">
 ]>
 
 
-<rdf:RDF xmlns="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service#"
-     xml:base="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-service.owl#"
+     xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-service.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:competency-dictionary="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#"
-     xmlns:competency-dict-process="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process#"
-     xmlns:competency-dict-profile="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-profile#"
-     xmlns:competency-dict-grounding="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-grounding#"
+     xmlns:competency-dictionary="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#"
+     xmlns:competency-dict-process="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-process.owl#"
+     xmlns:competency-dict-profile="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-profile.owl#"
+     xmlns:competency-dict-grounding="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-grounding.owl#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#" 
      xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#" 
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Grounding.owl#" 
      xmlns:actor="http://www.daml.org/services/owl-s/1.2/ActorDefault.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary"/>
-        <owl:imports rdf:resource="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process"/>
-        <owl:imports rdf:resource="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-profile"/>
-        <owl:imports rdf:resource="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-grounding"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service.owl">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-process.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-profile.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-grounding.owl"/>
         <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
         <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
         <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>

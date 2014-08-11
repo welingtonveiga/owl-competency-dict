@@ -6,18 +6,18 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY competency-dictionary "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#" >
+    <!ENTITY competency-dictionary "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#" >
 ]>
 
 
-<rdf:RDF xmlns="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#"
-     xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary"
-     xmlns:competency-dictionary="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#"
+     xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl"
+     xmlns:competency-dictionary="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary"/>
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl"/>
     
 
 
@@ -32,7 +32,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#contains -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#contains -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;contains">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -41,7 +41,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#hasCompetency -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasCompetency -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;hasCompetency">
         <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
@@ -54,7 +54,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#hasManager -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasManager -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;hasManager">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -65,7 +65,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#hasMember -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasMember -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;hasMember">
         <rdfs:range rdf:resource="&competency-dictionary;Person"/>
@@ -75,7 +75,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#hasRole -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasRole -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;hasRole">
         <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
@@ -84,7 +84,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#hasTask -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasTask -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;hasTask">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -94,7 +94,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#involvesCompetency -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#involvesCompetency -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;involvesCompetency">
         <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
@@ -107,7 +107,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#involvesRole -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#involvesRole -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;involvesRole">
         <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
@@ -120,7 +120,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isAssociateIn -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isAssociateIn -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isAssociateIn">
         <rdfs:range rdf:resource="&competency-dictionary;Organization"/>
@@ -133,7 +133,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isManagedBy -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isManagedBy -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isManagedBy">
         <owl:equivalentProperty>
@@ -145,7 +145,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isManager -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isManager -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isManager">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
@@ -157,7 +157,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isMe -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isMe -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isMe">
         <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
@@ -165,7 +165,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isMember -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isMember -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isMember">
         <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
@@ -174,7 +174,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isOnSameTeam -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isOnSameTeam -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isOnSameTeam">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
@@ -189,7 +189,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isPartOf -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isPartOf -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isPartOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
@@ -199,7 +199,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isPartOfProject -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isPartOfProject -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isPartOfProject">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -212,7 +212,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#isRequiredBy -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isRequiredBy -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;isRequiredBy">
         <rdfs:domain rdf:resource="&competency-dictionary;Competency"/>
@@ -226,7 +226,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#leads -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#leads -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;leads">
         <owl:equivalentProperty rdf:resource="&competency-dictionary;manages"/>
@@ -234,7 +234,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#manages -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#manages -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;manages">
         <rdfs:range rdf:resource="&competency-dictionary;Person"/>
@@ -247,7 +247,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#requires -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requires -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;requires">
         <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
@@ -256,7 +256,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#requiresCompetency -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requiresCompetency -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;requiresCompetency">
         <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
@@ -265,7 +265,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#requiresHability -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requiresHability -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;requiresHability">
         <rdfs:range rdf:resource="&competency-dictionary;Hability"/>
@@ -275,7 +275,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#requiresKnowledge -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requiresKnowledge -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;requiresKnowledge">
         <rdfs:range rdf:resource="&competency-dictionary;Knowledge"/>
@@ -285,7 +285,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#requiresSkill -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requiresSkill -->
 
     <owl:ObjectProperty rdf:about="&competency-dictionary;requiresSkill">
         <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
@@ -306,7 +306,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#done -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#done -->
 
     <owl:DatatypeProperty rdf:about="&competency-dictionary;done">
         <rdfs:domain rdf:resource="&competency-dictionary;Task"/>
@@ -315,7 +315,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#jobTitle -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#jobTitle -->
 
     <owl:DatatypeProperty rdf:about="&competency-dictionary;jobTitle">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -325,7 +325,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#name -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#name -->
 
     <owl:DatatypeProperty rdf:about="&competency-dictionary;name">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -334,7 +334,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#scope -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#scope -->
 
     <owl:DatatypeProperty rdf:about="&competency-dictionary;scope">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -344,7 +344,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#taskDescription -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#taskDescription -->
 
     <owl:DatatypeProperty rdf:about="&competency-dictionary;taskDescription">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
@@ -365,13 +365,13 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Competency -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Competency -->
 
     <owl:Class rdf:about="&competency-dictionary;Competency"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Hability -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Hability -->
 
     <owl:Class rdf:about="&competency-dictionary;Hability">
         <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
@@ -379,7 +379,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Knowledge -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Knowledge -->
 
     <owl:Class rdf:about="&competency-dictionary;Knowledge">
         <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
@@ -387,7 +387,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Manager -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Manager -->
 
     <owl:Class rdf:about="&competency-dictionary;Manager">
         <rdfs:subClassOf rdf:resource="&competency-dictionary;Role"/>
@@ -395,13 +395,13 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Organization -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Organization -->
 
     <owl:Class rdf:about="&competency-dictionary;Organization"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Organization_Unit -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Organization_Unit -->
 
     <owl:Class rdf:about="&competency-dictionary;Organization_Unit">
         <rdfs:subClassOf rdf:resource="&competency-dictionary;Organization"/>
@@ -409,25 +409,25 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Person -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Person -->
 
     <owl:Class rdf:about="&competency-dictionary;Person"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Project -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Project -->
 
     <owl:Class rdf:about="&competency-dictionary;Project"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Role -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Role -->
 
     <owl:Class rdf:about="&competency-dictionary;Role"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Skill -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Skill -->
 
     <owl:Class rdf:about="&competency-dictionary;Skill">
         <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
@@ -435,13 +435,13 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task -->
 
     <owl:Class rdf:about="&competency-dictionary;Task"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Team -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Team -->
 
     <owl:Class rdf:about="&competency-dictionary;Team">
         <rdfs:subClassOf rdf:resource="&competency-dictionary;Organization_Unit"/>
@@ -449,7 +449,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Team_Member -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Team_Member -->
 
     <owl:Class rdf:about="&competency-dictionary;Team_Member">
         <rdfs:subClassOf rdf:resource="&competency-dictionary;Role"/>
@@ -468,7 +468,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Acceptance_Tests -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Acceptance_Tests -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Acceptance_Tests">
         <rdf:type rdf:resource="&competency-dictionary;Skill"/>
@@ -476,7 +476,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Computer_Programming -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Computer_Programming -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Computer_Programming">
         <rdf:type rdf:resource="&competency-dictionary;Skill"/>
@@ -486,7 +486,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Design -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Design -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Design">
         <rdf:type rdf:resource="&competency-dictionary;Skill"/>
@@ -494,7 +494,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Designer -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Designer -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Designer">
         <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
@@ -504,7 +504,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Development -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Development -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Development">
         <rdf:type rdf:resource="&competency-dictionary;Skill"/>
@@ -512,7 +512,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Devops -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Devops -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Devops">
         <rdf:type rdf:resource="&competency-dictionary;Skill"/>
@@ -521,7 +521,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Dom_Alonso_Asturias -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Dom_Alonso_Asturias -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Dom_Alonso_Asturias">
         <rdf:type rdf:resource="&competency-dictionary;Person"/>
@@ -530,7 +530,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Fernando_Alonso -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Fernando_Alonso -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Fernando_Alonso">
         <rdf:type rdf:resource="&competency-dictionary;Person"/>
@@ -541,7 +541,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Funcional_Tests -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Funcional_Tests -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Funcional_Tests">
         <rdf:type rdf:resource="&competency-dictionary;Skill"/>
@@ -549,7 +549,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Gather_Requirements -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Gather_Requirements -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Gather_Requirements">
         <rdf:type rdf:resource="&competency-dictionary;Hability"/>
@@ -557,7 +557,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#IT_Coordinator -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#IT_Coordinator -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;IT_Coordinator">
         <rdf:type rdf:resource="&competency-dictionary;Manager"/>
@@ -566,7 +566,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Jack_White -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Jack_White -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Jack_White">
         <rdf:type rdf:resource="&competency-dictionary;Person"/>
@@ -576,7 +576,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Joana_Darc -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Joana_Darc -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Joana_Darc">
         <rdf:type rdf:resource="&competency-dictionary;Person"/>
@@ -586,7 +586,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#John_Doe -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#John_Doe -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;John_Doe">
         <rdf:type rdf:resource="&competency-dictionary;Person"/>
@@ -596,7 +596,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Leadership -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Leadership -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Leadership">
         <rdf:type rdf:resource="&competency-dictionary;Hability"/>
@@ -607,7 +607,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#OU_Development -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#OU_Development -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;OU_Development">
         <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
@@ -617,7 +617,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#OU_HR -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#OU_HR -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;OU_HR">
         <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
@@ -627,7 +627,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#OU_IT -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#OU_IT -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;OU_IT">
         <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
@@ -637,7 +637,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Organization_Wayne_Enterprises -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Organization_Wayne_Enterprises -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Organization_Wayne_Enterprises">
         <rdf:type rdf:resource="&competency-dictionary;Organization"/>
@@ -646,7 +646,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Plataform_Operator -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Plataform_Operator -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Plataform_Operator">
         <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
@@ -656,7 +656,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Project_ECommerce_Development -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Project_ECommerce_Development -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Project_ECommerce_Development">
         <rdf:type rdf:resource="&competency-dictionary;Project"/>
@@ -671,7 +671,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Project_Report_Creation -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Project_Report_Creation -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Project_Report_Creation">
         <rdf:type rdf:resource="&competency-dictionary;Project"/>
@@ -682,13 +682,13 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Project_X -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Project_X -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Project_X"/>
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Relational_Databases -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Relational_Databases -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Relational_Databases">
         <rdf:type rdf:resource="&competency-dictionary;Knowledge"/>
@@ -696,7 +696,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Systems_Analyst -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Systems_Analyst -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Systems_Analyst">
         <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
@@ -708,7 +708,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_Create_Layout -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Create_Layout -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Layout">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -720,7 +720,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_Create_Query -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Create_Query -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Query">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -731,7 +731,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_Create_Report_Layout -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Create_Report_Layout -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Report_Layout">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -743,7 +743,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_Deployment -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Deployment -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Deployment">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -755,7 +755,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_Development -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Development -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Development">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -768,7 +768,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_Modeling_Database -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Modeling_Database -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Modeling_Database">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -779,7 +779,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_Requirements_Gathering -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Requirements_Gathering -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Requirements_Gathering">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -790,7 +790,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_Tests -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Tests -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Tests">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -802,7 +802,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Task_integrate_report -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_integrate_report -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Task_integrate_report">
         <rdf:type rdf:resource="&competency-dictionary;Task"/>
@@ -814,7 +814,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Team_I -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Team_I -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Team_I">
         <rdf:type rdf:resource="&competency-dictionary;Team"/>
@@ -825,7 +825,7 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#Tester -->
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Tester -->
 
     <owl:NamedIndividual rdf:about="&competency-dictionary;Tester">
         <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
