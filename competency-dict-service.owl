@@ -27,7 +27,7 @@
      xmlns:service="http://www.daml.org/services/owl-s/1.2/Grounding.owl#" 
      xmlns:actor="http://www.daml.org/services/owl-s/1.2/ActorDefault.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-service.owl">
         <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-process.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-profile.owl"/>
