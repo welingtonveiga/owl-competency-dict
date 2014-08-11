@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE uridef[
+  <!ENTITY rdf       "http://www.w3.org/1999/02/22-rdf-syntax-ns">
+  <!ENTITY rdfs      "http://www.w3.org/2000/01/rdf-schema">
+  <!ENTITY xsd       "http://www.w3.org/2001/XMLSchema">
+  <!ENTITY owl       "http://www.w3.org/2002/07/owl">
+  <!ENTITY service 	 "https://sites.google.com/site/francilaneiva/restfulgrounding/service.owl">
+  <!ENTITY profile   "https://sites.google.com/site/francilaneiva/restfulgrounding/profile.owl">
+  <!ENTITY process   "https://sites.google.com/site/francilaneiva/restfulgrounding/process.owl">
+  <!ENTITY restful   "https://sites.google.com/site/francilaneiva/restfulgrounding/restful-grounding.owl"> 
+  <!ENTITY ypf       "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-profile.owl">
+  <!ENTITY ypc       "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-process.owl">
+  <!ENTITY ygr       "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-grounding.owl>
+  <!ENTITY DEFAULT   "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-service.owl">
+]>
+
+<rdf:RDF
+  xmlns:rdf    ="&rdf;#"
+  xmlns:rdfs   ="&rdfs;#"
+  xmlns:owl    ="&owl;#"
+  xmlns:service="&service;#"
+  xmlns:profile="&profile;#"
+  xmlns:process="&process;#"
+  xmlns:restful="&restful;#"
+  xmlns:ypf    ="&ypf;#"
+  xmlns:ypc    ="&ypc;#"
+  xmlns:ygr    ="&ygr;#"
+  xmlns        ="&DEFAULT;#"
+  xml:base     ="&DEFAULT;"
+>
+
+<!-- Ontology -->
+
+<!-- Ontology -->
+
+<owl:Ontology rdf:about="">
+  <rdfs:comment> 
+    This ontology represents the OWL-S service description for ServiceDescription Web Service.
+  </rdfs:comment>
+  <owl:imports rdf:resource="&service;"/>
+  <owl:imports rdf:resource="&profile;"/>
+  <owl:imports rdf:resource="&process;"/>
+  <owl:imports rdf:resource="&restful;"/>
+  <owl:imports rdf:resource="&ypf;"/>
+  <owl:imports rdf:resource="&ypc;"/>
+  <owl:imports rdf:resource="&ygr;"/>
+</owl:Ontology>
+
+<!-- Direct references to the nested ontologies --> 
+<service:Service rdf:ID="serviceDescription-Service">
+  <!-- Reference to the Service Profile -->
+  <service:presents rdf:resource="&ypf;#serviceDescription-Profile"/>
+
+  <!-- Reference to the Service Process Model -->
+  <service:describedBy rdf:resource="&ypc;#serviceDescription-Process"/>
+
+  <!-- Reference to the Service Grounding -->
+  <service:supports rdf:resource="&ygr;#serviceDescription-Grounding"/>
+</service:Service>
+
+<!-- Inverse links -->
+
+<profile:Profile rdf:about="&ypf;#serviceDescription-Profile">
+  <service:presentedBy rdf:resource="#serviceDescription-Service"/>
+</profile:Profile>
+
+<process:AtomicProcess rdf:about="&ypc;#serviceDescription-Process">
+  <service:describes rdf:resource="#serviceDescription-Service"/>
+</process:AtomicProcess>
+
+<restful:WadlGrounding rdf:about="&ygr;#serviceDescription-Grounding">
+  <service:supportedBy rdf:resource="#serviceDescription-Service"/>
+</restful:WadlGrounding>
+
+</rdf:RDF>

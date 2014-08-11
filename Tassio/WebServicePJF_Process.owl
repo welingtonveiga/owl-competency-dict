@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xml:base="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel.owl#"
+  xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
+  xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
+  xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
+  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <rdfs:comment>Add Ontology Comment</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl"/>
+  </owl:Ontology>
+  <process:ProcessModel rdf:ID="WebServicePJF_ProcessModel">
+    <process:hasProcess rdf:resource="#WebServicePJF_Composite"/>
+    <process:describes rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_Service#WebServicePJF_Service"/>
+  </process:ProcessModel>
+  <process:CompositeProcess rdf:ID="WebServicePJF_Composite"/>
+  <process:Input rdf:ID="WebServicePJF_buscarClassesComJena_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarClassesComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarClassesComJena_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarClassesComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarClassesComJena">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarClassesComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarClassesComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_buscarSubclassesComJena_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarSubclassesComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarSubclassesComJena_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarSubclassesComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarSubclassesComJena">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarSubclassesComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarSubclassesComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_buscarIndividuosClasseComJena_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarIndividuosClasseComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarIndividuosClasseComJena_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarIndividuosClasseComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarIndividuosClasseComJena">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarIndividuosClasseComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarIndividuosClasseComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_buscarPropriedadesComJena_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarPropriedadesComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarPropriedadesComJena_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarPropriedadesComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarPropriedadesComJena">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarPropriedadesComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarPropriedadesComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_buscarSoftwareGerenciadaPor_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarSoftwareGerenciadaPor_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarSoftwareGerenciadaPor_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarSoftwareGerenciadaPor_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarSoftwareGerenciadaPor">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarSoftwareGerenciadaPor_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarSoftwareGerenciadaPor_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarIndividuosComInferenciaComSparql">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarSubClassesSemInferenciaComSparql">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarSubclassesComInferenciaComSparql">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_IN">
+    <process:parameterName>WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_OUT">
+    <process:parameterName>WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_buscarSubclassesComInferenciaComJena">
+    <process:hasInput rdf:resource="#WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServicePJF_hello_parameters_IN">
+    <process:parameterName>WebServicePJF_hello_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServicePJF_hello_parameters_OUT">
+    <process:parameterName>WebServicePJF_hello_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServicePJF_hello">
+    <process:hasInput rdf:resource="#WebServicePJF_hello_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServicePJF_hello_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+</rdf:RDF>

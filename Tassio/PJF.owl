@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/tassio/ontologies/2014/6/spit"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/tassio/ontologies/2014/6/spit">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Ontologia da SPIT - SETTRA - PJF</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Acidente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bilhetagem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equipe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Projetos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Projetos_Desktop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Projetos_Web"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SOU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SPIT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoftwareDesktop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoftwareGeral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoftwareWeb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Taxi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Desenvolve"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#EdoTipo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Gerencia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GerenciadaPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#TrabalhaCom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Versoes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BDMySQL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#BDSQLite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Acidente_V1.0"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Acidente_V1.0.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bilhetagem_V1.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bilhetagem_V1.2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bilhetagem_V1.3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bilhetagem_V2.0"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gleison"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sou_V1.0"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sou_V1.2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sou_V1.3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tassio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Taxi_V2.0"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Taxi_V2.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Taxi_V2.1.1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wallace"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Projetos_Desktop"/>
+        <Class IRI="#SoftwareDesktop"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Projetos_Web"/>
+        <Class IRI="#SoftwareWeb"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Acidente"/>
+        <Class IRI="#Projetos_Web"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Acidente"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#EdoTipo"/>
+            <Class IRI="#Projetos_Web"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bilhetagem"/>
+        <Class IRI="#Projetos_Desktop"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bilhetagem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#EdoTipo"/>
+            <Class IRI="#Projetos_Desktop"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bilhetagem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#EdoTipo"/>
+            <Class IRI="#Projetos_Web"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Projetos"/>
+        <Class IRI="#SPIT"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Projetos_Desktop"/>
+        <Class IRI="#Projetos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Projetos_Web"/>
+        <Class IRI="#Projetos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Projetos_Web"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#EdoTipo"/>
+            <Class IRI="#SoftwareWeb"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SOU"/>
+        <Class IRI="#Projetos_Web"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SOU"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#EdoTipo"/>
+            <Class IRI="#Projetos_Web"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareDesktop"/>
+        <Class IRI="#SPIT"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareGeral"/>
+        <Class IRI="#SPIT"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareWeb"/>
+        <Class IRI="#SPIT"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Taxi"/>
+        <Class IRI="#Projetos_Web"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Taxi"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#EdoTipo"/>
+            <Class IRI="#Projetos_Web"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Acidente"/>
+        <Class IRI="#SOU"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Acidente"/>
+        <Class IRI="#Taxi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SOU"/>
+        <Class IRI="#Taxi"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class IRI="#SoftwareGeral"/>
+        <Class IRI="#SoftwareDesktop"/>
+        <Class IRI="#SoftwareWeb"/>
+    </DisjointUnion>
+    <ClassAssertion>
+        <Class IRI="#Acidente"/>
+        <NamedIndividual IRI="#Acidente_V1.0.1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bilhetagem"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Projetos_Web"/>
+        <NamedIndividual IRI="#Bilhetagem_V2.0"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equipe"/>
+        <NamedIndividual IRI="#Gleison"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SOU"/>
+        <NamedIndividual IRI="#Sou_V1.0"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Taxi"/>
+        <NamedIndividual IRI="#Taxi_V2.0"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#Acidente_V1.0"/>
+        <NamedIndividual IRI="#Acidente_V1.0.1"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Bilhetagem_V1.1"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.2"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Bilhetagem_V1.1"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.3"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Sou_V1.0"/>
+        <NamedIndividual IRI="#Sou_V1.2"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Sou_V1.2"/>
+        <NamedIndividual IRI="#Sou_V1.3"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Tassio"/>
+        <NamedIndividual IRI="#Wallace"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Taxi_V2.0"/>
+        <NamedIndividual IRI="#Taxi_V2.1"/>
+    </SameIndividual>
+    <SameIndividual>
+        <NamedIndividual IRI="#Taxi_V2.1"/>
+        <NamedIndividual IRI="#Taxi_V2.1.1"/>
+    </SameIndividual>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+        <NamedIndividual IRI="#Acidente_V1.0"/>
+        <NamedIndividual IRI="#Tassio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Versoes"/>
+        <NamedIndividual IRI="#Acidente_V1.0"/>
+        <NamedIndividual IRI="#Acidente_V1.0.1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Versoes"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.2"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.3"/>
+        <NamedIndividual IRI="#Wallace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+        <NamedIndividual IRI="#Bilhetagem_V2.0"/>
+        <NamedIndividual IRI="#Wallace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#GerenciadaPor"/>
+        <NamedIndividual IRI="#Bilhetagem_V2.0"/>
+        <NamedIndividual IRI="#Gleison"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Gerencia"/>
+        <NamedIndividual IRI="#Gleison"/>
+        <NamedIndividual IRI="#Acidente_V1.0"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Gerencia"/>
+        <NamedIndividual IRI="#Gleison"/>
+        <NamedIndividual IRI="#Sou_V1.0"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Gerencia"/>
+        <NamedIndividual IRI="#Gleison"/>
+        <NamedIndividual IRI="#Taxi_V2.0"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Gerencia"/>
+        <NamedIndividual IRI="#Gleison"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+        <NamedIndividual IRI="#Sou_V1.0"/>
+        <NamedIndividual IRI="#Tassio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+        <NamedIndividual IRI="#Sou_V1.0"/>
+        <NamedIndividual IRI="#Wallace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+        <NamedIndividual IRI="#Sou_V1.3"/>
+        <NamedIndividual IRI="#Wallace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Versoes"/>
+        <NamedIndividual IRI="#Sou_V1.3"/>
+        <NamedIndividual IRI="#Sou_V1.0"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#TrabalhaCom"/>
+        <NamedIndividual IRI="#Tassio"/>
+        <NamedIndividual IRI="#Gleison"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+        <NamedIndividual IRI="#Taxi_V2.1.1"/>
+        <NamedIndividual IRI="#Tassio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Versoes"/>
+        <NamedIndividual IRI="#Taxi_V2.1.1"/>
+        <NamedIndividual IRI="#Taxi_V2.0"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Acidente_V1.0"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Acidente_V1.0.1"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDSQLite"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.1"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDSQLite"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.2"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDSQLite"/>
+        <NamedIndividual IRI="#Bilhetagem_V1.3"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Bilhetagem_V2.0"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDSQLite"/>
+        <NamedIndividual IRI="#Bilhetagem_V2.0"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Sou_V1.0"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Sou_V1.2"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Sou_V1.3"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Taxi_V2.0"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Taxi_V2.1"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#BDMySQL"/>
+        <NamedIndividual IRI="#Taxi_V2.1.1"/>
+        <Literal datatypeIRI="&xsd;boolean">true</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Desenvolve"/>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#GerenciadaPor"/>
+        <ObjectProperty IRI="#Gerencia"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#Versoes"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#TrabalhaCom"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#DesenvolvidoPor"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#Gerencia"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#TrabalhaCom"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#TrabalhaCom"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#TrabalhaCom"/>
+        <Class IRI="#Equipe"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#DesenvolvidoPor"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#GerenciadaPor"/>
+    </SubObjectPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#BDMySQL"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#BDSQLite"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Acidente</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Acidente é um projeto web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Acidente_V1.0</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">versao do projeto web Acidente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Acidente_V1.0.1</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">versao do projeto web Acidente</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BDMySQL</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">quais software utilizam banco mysql</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BDSQLite</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">quais software utilizam banco sqlite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Bilhetagem</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Bilhetagem é um projeto desktop até a versão 1.3</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Desenvolve</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Qual pessoa desenvolveu o software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DesenvolvidoPor</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">O software é desenvolvido por quem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EdoTipo</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Qual o tipo do software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Equipe</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Membros da SPIT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gerencia</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">A pessoa gerencia qual software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GerenciadaPor</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">O software é gerenciada por quem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gleison</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Gestor da SPIT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Projetos</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Projetos Desenvolvidos pela SPIT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Projetos_Desktop</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Todo projeto desktop gera um software desktop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Projetos_Web</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Todo projeto web gera um software web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SOU</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">SOU é um projeto web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SPIT</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Divisão da SETTRA dentro da PJF
+SPIT (Supervisão de Pesquisa e Informações Técnicas)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SoftwareDesktop</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Software desktop é o resultado de todo projeto desktop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SoftwareGeral</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Software geral é qualquer software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SoftwareWeb</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Software web é o resultado de qualquer projeto web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sou_V1.0</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">versao do projeto web Sou</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sou_V1.2</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">versao do projeto web Sou</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sou_V1.3</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">versao do projeto web Sou</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tassio</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Programador na SPIT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Taxi</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Taxi é um projeto web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Taxi_V2.0</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">versao do projeto web Taxi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Taxi_V2.1</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">versao do projeto web Taxi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Taxi_V2.1.1</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">versao do projeto web Taxi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TrabalhaCom</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">quem trabalha junto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Versoes</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">quais as versões do mesmo software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wallace</IRI>
+        <Literal xml:lang="pt" datatypeIRI="&rdf;PlainLiteral">Programador na SPIT</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

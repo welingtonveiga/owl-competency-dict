@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY competency-dictionary "http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#">
+    <!ENTITY competency-dict-process "http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process#">
+    <!ENTITY competency-dict-service "http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service#">
+    <!ENTITY competency-dict-wsdl "http://localhost:8080/soap/competency-dict?wsdl">
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-grounding#"
+     xml:base="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-grounding"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:competency-dictionary="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#"
+     xmlns:competency-dict-process="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process#"
+     xmlns:competency-dict-service="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service#"
+     xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#" 
+     xmlns:service="http://www.daml.org/services/owl-s/1.2/Service.owl#" 
+     xmlns:profile="http://www.daml.org/services/owl-s/1.2/Profile.owl#" 
+     xmlns:grounding="http://www.daml.org/services/owl-s/1.2/Grounding.owl#" 
+     xmlns:actor="http://www.daml.org/services/owl-s/1.2/ActorDefault.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-grounding">
+        <owl:imports rdf:resource="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process"/>
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Service.owl"/>
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
+        <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/ActorDefault.owl" />
+    </owl:Ontology>
+
+
+  <grounding:WsdlGrounding rdf:ID="CompetencyDict_Agent">
+    <service:supportedBy rdf:resource="&competency-dict-service;CompetencyDictService"/>
+    <!-- Collecton of all the groundings specifications -->
+    <grounding:hasAtomicProcessGrounding rdf:resource="#Wsdl_GetPersonByName"/>
+  </grounding:WsdlGrounding>
+
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="Wsdl_GetPersonByName">
+    <!-- Location of theWSDL document -->
+    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;</grounding:wsdlDocument>
+    <grounding:owlsProcess rdf:datatype="&xsd;anyURI">&competency-dict-process;getPersonByName</grounding:owlsProcess>
+    <!-- Reference to the corresponding WSDL operation -->
+    <!--grounding:wsdlOperation rdf:resource="#getPersonByName"/-->
+    <!-- Reference to the WSDL input message -->
+    <!--grounding:wsdlInputMessage rdf:datatype="&xsd;string" /-->
+  
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;getPersonByName_In_Name"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#PersonByNameRequest</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;getPersonByName_Out_Person"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#PersonByNameResponse</grounding:wsdlMessagePart>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    
+    <grounding:wsdlVersion rdf:datatype="&xsd;anyURI">
+      http://www.w3.org/TR/2001/NOTE-wsdl-20010315
+    </grounding:wsdlVersion>
+  </grounding:WsdlAtomicProcessGrounding>
+  
+  <grounding:WsdlOperationRef rdf:ID="Wsdl_GetPersonByName_Op">
+    <rdfs:comment>
+     A pointer to the WSDL operation used for SelectAvailableFlight
+    </rdfs:comment>
+    <!-- locate port type to be used -->
+    <grounding:portType rdf:datatype="&xsd;anyURI">
+      &competency-dict-wsdl;#CompetencyDictService
+    </grounding:portType>
+    <!-- locate operation to be used -->
+    <grounding:operation rdf:datatype="&xsd;anyURI">
+      &competency-dict-wsdl;#getPersonByName
+    </grounding:operation>
+  </grounding:WsdlOperationRef>
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

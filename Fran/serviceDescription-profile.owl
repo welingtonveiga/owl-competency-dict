@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE uridef[
+  <!ENTITY rdf     "http://www.w3.org/1999/02/22-rdf-syntax-ns">
+  <!ENTITY rdfs    "http://www.w3.org/2000/01/rdf-schema">
+  <!ENTITY owl     "http://www.w3.org/2002/07/owl">
+  <!ENTITY profile "https://sites.google.com/site/francilaneiva/restfulgrounding/profile.owl">
+  <!ENTITY actor   "https://sites.google.com/site/francilaneiva/restfulgrounding/ActorDefault.owl">
+  <!ENTITY myOnto  "http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl">
+  <!ENTITY ypc     "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-process.owl">
+  <!ENTITY DEFAULT "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-profile.owl">
+]>
+
+<rdf:RDF
+  xmlns:rdf    ="&rdf;#"
+  xmlns:rdfs   ="&rdfs;#"
+  xmlns:owl    ="&owl;#"
+  xmlns:profile="&profile;#"
+  xmlns:actor  ="&actor;#"
+  xmlns:myOnto ="&myOnto;#"
+  xmlns:ypc    ="&ypc;#"
+  xmlns        ="&DEFAULT;#"
+  xml:base     ="&DEFAULT;"
+>
+
+<!-- Ontology -->
+
+<owl:Ontology rdf:about="">
+  <rdfs:comment> 
+    This ontology represents the OWL-S service profile description for Service Description Search Web Service.
+  </rdfs:comment>
+  <owl:imports rdf:resource="&profile;"/>
+  <owl:imports rdf:resource="&ypc;"/>
+</owl:Ontology>
+
+<!-- Profile -->
+
+<profile:Profile rdf:ID="serviceDescription-Profile">
+  <profile:has_process rdf:resource="&ypc;#serviceDescription-Process"/>
+  <profile:serviceName>ServiceDescription Service</profile:serviceName>
+  <profile:textDescription>
+    This web service provides cientific experiments to be used, including awareness information.
+  </profile:textDescription>
+  
+  <profile:contactInformation>      
+    <actor:Actor rdf:ID="serviceDescription-Contact">
+      <actor:name>Werner institute of HIV Research</actor:name>
+      <actor:title>Copyright Agent</actor:title>
+      <actor:phone>(408) 349-5080</actor:phone>
+      <actor:fax>(408) 349-7821</actor:fax>
+      <actor:email>contact@wernerinstitute.com</actor:email>
+      <actor:physicalAddress>RJ, BR</actor:physicalAddress>
+      <actor:webURL>http://institutewerne.com.br</actor:webURL>
+    </actor:Actor>
+  </profile:contactInformation>
+  
+  <profile:hasInput rdf:resource="&ypc;#performProteinIsolation-cell"/>
+  <profile:hasInput rdf:resource="&ypc;#performProteinSynthesis-cell"/>
+  <profile:hasInput rdf:resource="&ypc;#serviceDescription-service"/>
+  <profile:hasOutput rdf:resource="&ypc;#performProteinIsolation-Success"/>
+  <profile:hasOutput rdf:resource="&ypc;#serviceDescriptionOut-performProteinSynthesis"/>
+  <profile:hasOutput rdf:resource="&ypc;#serviceDescriptionOut-getAwareness"/>
+  
+  
+</profile:Profile>
+
+</rdf:RDF>

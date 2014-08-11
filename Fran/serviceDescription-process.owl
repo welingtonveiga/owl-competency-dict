@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE uridef[
+  <!ENTITY rdf     "http://www.w3.org/1999/02/22-rdf-syntax-ns">
+  <!ENTITY rdfs    "http://www.w3.org/2000/01/rdf-schema">
+  <!ENTITY owl     "http://www.w3.org/2002/07/owl">
+  <!ENTITY xsd     "http://www.w3.org/2001/XMLSchema">
+  <!ENTITY process "https://sites.google.com/site/francilaneiva/restfulgrounding/process.owl">
+  <!ENTITY myOnto  "http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl">
+  <!ENTITY DEFAULT "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-process.owl">
+  <!ENTITY THIS    "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-process.owl">
+]>
+
+<rdf:RDF
+  xmlns:rdf    ="&rdf;#"
+  xmlns:rdfs   ="&rdfs;#"
+  xmlns:owl    ="&owl;#"
+  xmlns:xsd    ="&xsd;#"
+  xmlns:process="&process;#"
+  xmlns:myOnto ="&myOnto;"
+  xmlns        ="&DEFAULT;#"
+  xml:base     ="&DEFAULT;"
+>
+
+<!-- Ontology -->
+
+<owl:Ontology rdf:about="">
+  <rdfs:comment> 
+    This ontology represents the OWL-S service process description for Service Description Web Service.
+  </rdfs:comment>
+  <owl:imports rdf:resource="&process;"/>
+</owl:Ontology>
+
+<!-- Basic Data Types -->
+
+<owl:Class rdf:ID="performProteinIsolation-cell-Opt">
+  <rdfs:comment> 
+    Protein45Isolation can support three types of cells: atgccta, btgctaa and abctgcaa
+  </rdfs:comment>
+  <owl:oneOf rdf:parseType="Collection">
+    <performProteinIsolation-cell-Opt rdf:ID="atgccta"/>
+    <performProteinIsolation-cell-Opt rdf:ID="btgctaa"/>
+    <performProteinIsolation-cell-Opt rdf:ID="abctgcaa"/>
+  </owl:oneOf>
+</owl:Class>
+
+<!-- Atomic Process performProteinIsolation -->
+
+<process:AtomicProcess rdf:ID="serviceDescription-performProteinIsolation">
+
+  <!-- Input Parameters -->
+
+  <process:hasInput>
+    <process:Input rdf:ID="performProteinIsolation-cell">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&THIS;#performProteinIsolation-cell-Opt</process:parameterType>
+    </process:Input>
+  </process:hasInput>
+  <!-- Output Parameters -->
+
+  <process:hasOutput> 
+    <process:Output rdf:ID="performProteinIsolation-Success">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&myOnto;#hasSemanticReturn</process:parameterType>
+    </process:Output>
+  </process:hasOutput>
+
+</process:AtomicProcess>
+
+<!-- Atomic Process performProteinSynthesis -->
+
+<process:AtomicProcess rdf:ID="serviceDescription-performProteinSynthesis">
+
+  <!-- Input Parameters -->
+
+  <process:hasInput>
+    <process:Input rdf:ID="performProteinSynthesis-cell">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&myOnto;#hasSemanticReception</process:parameterType>
+    </process:Input>
+  </process:hasInput>
+  <!-- Output Parameters -->
+
+  <process:hasOutput> 
+    <process:Output rdf:ID="serviceDescriptionOut-performProteinSynthesis">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&myOnto;#hasSemanticReturn</process:parameterType>
+    </process:Output>
+  </process:hasOutput>
+
+</process:AtomicProcess>
+
+<!-- Atomic Process getAwareness -->
+
+<process:AtomicProcess rdf:ID="serviceDescription-getAwareness">
+
+  <!-- Input Parameters -->
+
+  <process:hasInput>
+    <process:Input rdf:ID="serviceDescription-service">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&myOnto;#Service</process:parameterType>
+    </process:Input>
+  </process:hasInput>
+  <!-- Output Parameters -->
+
+  <process:hasOutput> 
+    <process:Output rdf:ID="serviceDescriptionOut-getAwareness">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&myOnto;#Pragmatic</process:parameterType>
+    </process:Output>
+  </process:hasOutput>
+
+</process:AtomicProcess>
+</rdf:RDF>

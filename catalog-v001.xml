@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process" uri="competency-dict-process.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/Grounding.owl" uri="owl-s/Grounding.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/Profile.owl" uri="owl-s/Profile.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/services/owl-s/1.2/Service.owl" uri="owl-s/Service.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://modelo.pgcc.ufjf.br//WebServicePJF_Grounding.owl#" uri="Tassio/WebServicePJF_Grounding.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel.owl#" uri="Tassio/WebServicePJF_Process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://modelo.pgcc.ufjf.br//WebServicePJF_Profile.owl#" uri="Tassio/WebServicePJF_Profile.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://modelo.pgcc.ufjf.br//WebServicePJF_Service.owl#" uri="Tassio/WebServicePJF_Service.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.daml.org/services/owl-s/1.2/ActorDefault.owl" uri="owl-s/ActorDefault.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.daml.org/services/owl-s/1.2/Grounding.owl" uri="owl-s/Grounding.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.daml.org/services/owl-s/1.2/Process.owl" uri="owl-s/Process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.daml.org/services/owl-s/1.2/Profile.owl" uri="owl-s/Profile.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.daml.org/services/owl-s/1.2/ProfileHierarchy.owl" uri="owl-s/ProfileHierarchy.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.daml.org/services/owl-s/1.2/Service.owl" uri="owl-s/Service.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.daml.org/services/owl-s/1.2/generic/Expression.owl" uri="owl-s/Expression.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.daml.org/services/owl-s/1.2/generic/ObjectList.owl" uri="owl-s/ObjectList.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl" uri="Fran/PLScienceServiceDescription.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.semanticweb.org/tassio/ontologies/2014/6/spit" uri="Tassio/PJF.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary" uri="competency-dictionary.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-grounding" uri="competency-dict-grounding.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process" uri="competency-dict-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-profile" uri="competency-dict-profile.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service" uri="competency-dict-service.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="https://sites.google.com/site/francilaneiva/restfulgrounding/ServiceDescription.owl" uri="Fran/sdteste.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-grounding.owl" uri="Fran/serviceDescription-grounding.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-process.owl" uri="Fran/serviceDescription-process.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1407793845120" name="https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-profile.owl" uri="Fran/serviceDescription-profile.owl"/>
+    </group>
+</catalog>

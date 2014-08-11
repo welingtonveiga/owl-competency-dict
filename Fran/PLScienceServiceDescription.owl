@@ -1,0 +1,1096 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     ontologyIRI="http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PL-Science service description, considering syntactic, semantic and pragmatic aspects!</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hardware"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pragmatic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scientist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Semantic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Syntactic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInvolved"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesHardware"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesPragmatic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesSemantic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#includesSyntactic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pragmaticallyEquivalent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#semanticIsIncludedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#semanticallyEquivalent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#syntacticIsIncludedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#syntacticallyEquivalent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#who"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasArtifact"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCPU"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasComments"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCompleteName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasContextComposition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDomain"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFunctionalRequirements"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHardwareConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasIdentification"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasInstitutionFiliation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLicense"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNonFunctionalRequirement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOperationalSystem"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRAM"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasROM"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasReputation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRestriction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasReturn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSemanticComposition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSemanticReception"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSemanticRepresentation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSemanticReturn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSyntacticComposition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#how"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#what"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#when"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#where"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Context1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Context2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hardware1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hardware2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Parameter1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Parameter2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pragmatic1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pragmatic2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scientist1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scientist2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Semantic1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Semantic2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Service1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Service2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Service3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Syntactic1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Syntactic2"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Context"/>
+        <Class IRI="#Pragmatic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hardware"/>
+        <Class IRI="#Pragmatic"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Context"/>
+        <Class IRI="#Hardware"/>
+        <Class IRI="#Semantic"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Hardware1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hardware"/>
+        <NamedIndividual IRI="#Hardware2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#Parameter1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Parameter"/>
+        <NamedIndividual IRI="#Parameter2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pragmatic"/>
+        <NamedIndividual IRI="#Pragmatic1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pragmatic"/>
+        <NamedIndividual IRI="#Pragmatic2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Scientist"/>
+        <NamedIndividual IRI="#Scientist1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Scientist"/>
+        <NamedIndividual IRI="#Scientist2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Semantic"/>
+        <NamedIndividual IRI="#Semantic1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Semantic"/>
+        <NamedIndividual IRI="#Semantic2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Service"/>
+        <NamedIndividual IRI="#Service1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Service"/>
+        <NamedIndividual IRI="#Service2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Service"/>
+        <NamedIndividual IRI="#Service3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Syntactic"/>
+        <NamedIndividual IRI="#Syntactic1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Syntactic"/>
+        <NamedIndividual IRI="#Syntactic2"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInvolved"/>
+        <NamedIndividual IRI="#Context1"/>
+        <NamedIndividual IRI="#Scientist2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInvolved"/>
+        <NamedIndividual IRI="#Context1"/>
+        <NamedIndividual IRI="#Scientist1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#who"/>
+        <NamedIndividual IRI="#Context1"/>
+        <NamedIndividual IRI="#Scientist1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInvolved"/>
+        <NamedIndividual IRI="#Context2"/>
+        <NamedIndividual IRI="#Scientist1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasInvolved"/>
+        <NamedIndividual IRI="#Context2"/>
+        <NamedIndividual IRI="#Scientist2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#who"/>
+        <NamedIndividual IRI="#Context2"/>
+        <NamedIndividual IRI="#Scientist2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesContext"/>
+        <NamedIndividual IRI="#Pragmatic1"/>
+        <NamedIndividual IRI="#Context1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesHardware"/>
+        <NamedIndividual IRI="#Pragmatic1"/>
+        <NamedIndividual IRI="#Hardware1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesContext"/>
+        <NamedIndividual IRI="#Pragmatic2"/>
+        <NamedIndividual IRI="#Context2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesHardware"/>
+        <NamedIndividual IRI="#Pragmatic2"/>
+        <NamedIndividual IRI="#Hardware2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesPragmatic"/>
+        <NamedIndividual IRI="#Service1"/>
+        <NamedIndividual IRI="#Pragmatic1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesSemantic"/>
+        <NamedIndividual IRI="#Service1"/>
+        <NamedIndividual IRI="#Semantic1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesSyntactic"/>
+        <NamedIndividual IRI="#Service1"/>
+        <NamedIndividual IRI="#Syntactic1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesPragmatic"/>
+        <NamedIndividual IRI="#Service2"/>
+        <NamedIndividual IRI="#Pragmatic2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesSemantic"/>
+        <NamedIndividual IRI="#Service2"/>
+        <NamedIndividual IRI="#Semantic2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesSyntactic"/>
+        <NamedIndividual IRI="#Service2"/>
+        <NamedIndividual IRI="#Syntactic2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesPragmatic"/>
+        <NamedIndividual IRI="#Service3"/>
+        <NamedIndividual IRI="#Pragmatic2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesSemantic"/>
+        <NamedIndividual IRI="#Service3"/>
+        <NamedIndividual IRI="#Semantic1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#includesSyntactic"/>
+        <NamedIndividual IRI="#Service3"/>
+        <NamedIndividual IRI="#Syntactic1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Syntactic1"/>
+        <NamedIndividual IRI="#Parameter1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasParameter"/>
+        <NamedIndividual IRI="#Syntactic2"/>
+        <NamedIndividual IRI="#Parameter2"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasArtifact"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Prot45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasComments"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">very good</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDomain"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">HIV</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLicense"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">public</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReputation"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRestriction"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">not valid for anemic subjects</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#how"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Composition</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#what"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"> artifact 2.05 composition with artifact 3.90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#when"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">20140424000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#where"/>
+        <NamedIndividual IRI="#Context1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RJ, Brazil</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasArtifact"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Prot46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasComments"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">It works fine!</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasDomain"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">muscle regenaration</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLicense"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">4.2.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReputation"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRestriction"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">can not be applied to children younger than 6 years</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#how"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Experiment</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#what"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">artifact 2.05 utilization</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#when"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">20140510000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#where"/>
+        <NamedIndividual IRI="#Context2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Miami, Florida</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCPU"/>
+        <NamedIndividual IRI="#Hardware1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">I5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOperationalSystem"/>
+        <NamedIndividual IRI="#Hardware1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Linux</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRAM"/>
+        <NamedIndividual IRI="#Hardware1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasROM"/>
+        <NamedIndividual IRI="#Hardware1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCPU"/>
+        <NamedIndividual IRI="#Hardware2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">I7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasOperationalSystem"/>
+        <NamedIndividual IRI="#Hardware2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Windows</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRAM"/>
+        <NamedIndividual IRI="#Hardware2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasROM"/>
+        <NamedIndividual IRI="#Hardware2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasType"/>
+        <NamedIndividual IRI="#Parameter1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">cell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Parameter1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">object31</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasType"/>
+        <NamedIndividual IRI="#Parameter2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">cell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasValue"/>
+        <NamedIndividual IRI="#Parameter2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">object32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNonFunctionalRequirement"/>
+        <NamedIndividual IRI="#Pragmatic1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">performance below 15 minutes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNonFunctionalRequirement"/>
+        <NamedIndividual IRI="#Pragmatic2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">memory space demanded below 1GB</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCompleteName"/>
+        <NamedIndividual IRI="#Scientist1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Marcio Werner</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEmail"/>
+        <NamedIndividual IRI="#Scientist1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">werner.marcio@chr.org</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstitutionFiliation"/>
+        <NamedIndividual IRI="#Scientist1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Center of HIV Research (CHR-RJ)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasCompleteName"/>
+        <NamedIndividual IRI="#Scientist2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Maria Winter</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasEmail"/>
+        <NamedIndividual IRI="#Scientist2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">winter.maria@health.us</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasInstitutionFiliation"/>
+        <NamedIndividual IRI="#Scientist2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Health Department of Miami</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFunctionalRequirements"/>
+        <NamedIndividual IRI="#Semantic1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">to isolate protein Prot45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSemanticReception"/>
+        <NamedIndividual IRI="#Semantic1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">type B cell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSemanticRepresentation"/>
+        <NamedIndividual IRI="#Semantic1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Protein Pro45 isolation</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSemanticReturn"/>
+        <NamedIndividual IRI="#Semantic1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">if the protein prot45 was isolated</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFunctionalRequirements"/>
+        <NamedIndividual IRI="#Semantic2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">to synthesize protein Prot46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSemanticReception"/>
+        <NamedIndividual IRI="#Semantic2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">type A cell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSemanticRepresentation"/>
+        <NamedIndividual IRI="#Semantic2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">protein Prot46  synthesis </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSemanticReturn"/>
+        <NamedIndividual IRI="#Semantic2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">if protein Prot46 was synthesized inside the received cell</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Syntactic1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">service45/1.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReturn"/>
+        <NamedIndividual IRI="#Syntactic1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Syntactic2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">service46/1.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasReturn"/>
+        <NamedIndividual IRI="#Syntactic2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">true</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#includesPragmatic"/>
+        <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#includesSemantic"/>
+        <ObjectProperty IRI="#semanticIsIncludedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#syntacticIsIncludedBy"/>
+        <ObjectProperty IRI="#includesSyntactic"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInvolved"/>
+        <Class IRI="#Context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParameter"/>
+        <Class IRI="#Syntactic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
+        <Class IRI="#Pragmatic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#semanticIsIncludedBy"/>
+        <Class IRI="#Semantic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#syntacticIsIncludedBy"/>
+        <Class IRI="#Syntactic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#who"/>
+        <Class IRI="#Context"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInvolved"/>
+        <Class IRI="#Scientist"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParameter"/>
+        <Class IRI="#Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesContext"/>
+        <Class IRI="#Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesHardware"/>
+        <Class IRI="#Hardware"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesPragmatic"/>
+        <Class IRI="#Pragmatic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesSemantic"/>
+        <Class IRI="#Semantic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#includesSyntactic"/>
+        <Class IRI="#Syntactic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#who"/>
+        <Class IRI="#Scientist"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#includesPragmatic"/>
+        <ObjectProperty IRI="#includesSemantic"/>
+        <ObjectProperty IRI="#includesSyntactic"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
+        <ObjectProperty IRI="#semanticIsIncludedBy"/>
+        <ObjectProperty IRI="#syntacticIsIncludedBy"/>
+    </DisjointObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#includesPragmatic"/>
+            <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#pragmaticallyEquivalent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#includesSemantic"/>
+            <ObjectProperty IRI="#semanticIsIncludedBy"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#semanticallyEquivalent"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#includesSyntactic"/>
+            <ObjectProperty IRI="#syntacticIsIncludedBy"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#syntacticallyEquivalent"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasArtifact"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCPU"/>
+        <DataProperty IRI="#hasHardwareConfiguration"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasComments"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasCompleteName"/>
+        <DataProperty IRI="#hasIdentification"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasDomain"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasEmail"/>
+        <DataProperty IRI="#hasIdentification"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFunctionalRequirements"/>
+        <DataProperty IRI="#hasSemanticComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasInstitutionFiliation"/>
+        <DataProperty IRI="#hasIdentification"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLicense"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasName"/>
+        <DataProperty IRI="#hasSyntacticComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasOperationalSystem"/>
+        <DataProperty IRI="#hasHardwareConfiguration"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRAM"/>
+        <DataProperty IRI="#hasHardwareConfiguration"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasROM"/>
+        <DataProperty IRI="#hasHardwareConfiguration"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasReputation"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasRestriction"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasReturn"/>
+        <DataProperty IRI="#hasSyntacticComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSemanticReception"/>
+        <DataProperty IRI="#hasSemanticComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSemanticRepresentation"/>
+        <DataProperty IRI="#hasSemanticComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasSemanticReturn"/>
+        <DataProperty IRI="#hasSemanticComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#how"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#what"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#when"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#where"/>
+        <DataProperty IRI="#hasContextComposition"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasArtifact"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCPU"/>
+        <Class IRI="#Hardware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasComments"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCompleteName"/>
+        <Class IRI="#Scientist"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasContextComposition"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDomain"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEmail"/>
+        <Class IRI="#Scientist"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFunctionalRequirements"/>
+        <Class IRI="#Semantic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasHardwareConfiguration"/>
+        <Class IRI="#Hardware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasIdentification"/>
+        <Class IRI="#Scientist"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasInstitutionFiliation"/>
+        <Class IRI="#Scientist"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLicense"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Syntactic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNonFunctionalRequirement"/>
+        <Class IRI="#Pragmatic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOperationalSystem"/>
+        <Class IRI="#Hardware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRAM"/>
+        <Class IRI="#Hardware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasROM"/>
+        <Class IRI="#Hardware"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasReputation"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRestriction"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasReturn"/>
+        <Class IRI="#Syntactic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSemanticComposition"/>
+        <Class IRI="#Semantic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSemanticReception"/>
+        <Class IRI="#Semantic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSemanticRepresentation"/>
+        <Class IRI="#Semantic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSemanticReturn"/>
+        <Class IRI="#Semantic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSyntacticComposition"/>
+        <Class IRI="#Syntactic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasType"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValue"/>
+        <Class IRI="#Parameter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#how"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#what"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#when"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#where"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasArtifact"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCPU"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasComments"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCompleteName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDomain"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEmail"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFunctionalRequirements"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasInstitutionFiliation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLicense"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNonFunctionalRequirement"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOperationalSystem"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRAM"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasROM"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasReputation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRestriction"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasReturn"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSemanticReception"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSemanticRepresentation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSemanticReturn"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#how"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#what"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#when"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#where"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DisjointDataProperties>
+        <DataProperty IRI="#hasFunctionalRequirements"/>
+        <DataProperty IRI="#hasNonFunctionalRequirement"/>
+    </DisjointDataProperties>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

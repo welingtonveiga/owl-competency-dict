@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description>
+   <baseDir>C:\owlsedit\temp</baseDir>
+   <service>WebServicePJF_Service.owl</service>
+   <profile>WebServicePJF_Profile.owl</profile>
+   <process>WebServicePJF_Process.owl</process>
+   <grounding>WebServicePJF_Grounding.owl</grounding>
+   <name>WebServicePJF.xml</name>
+</description>

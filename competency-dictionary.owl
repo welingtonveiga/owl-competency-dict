@@ -1,0 +1,841 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY competency-dictionary "http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#"
+     xml:base="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary"
+     xmlns:competency-dictionary="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#contains -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;contains">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#hasCompetency -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasCompetency">
+        <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&competency-dictionary;hasRole"/>
+            <rdf:Description rdf:about="&competency-dictionary;requires"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#hasManager -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasManager">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Team"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;hasMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#hasMember -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasMember">
+        <rdfs:range rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Team"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;isMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#hasRole -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasRole">
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#hasTask -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasTask">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#involvesCompetency -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;involvesCompetency">
+        <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&competency-dictionary;hasTask"/>
+            <rdf:Description rdf:about="&competency-dictionary;requiresCompetency"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#involvesRole -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;involvesRole">
+        <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Role"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&competency-dictionary;involvesCompetency"/>
+            <rdf:Description rdf:about="&competency-dictionary;isRequiredBy"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isAssociateIn -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isAssociateIn">
+        <rdfs:range rdf:resource="&competency-dictionary;Organization"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&competency-dictionary;isMember"/>
+            <rdf:Description rdf:about="&competency-dictionary;isPartOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isManagedBy -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isManagedBy">
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&competency-dictionary;manages"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isManager -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isManager">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Team"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;hasManager"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;isMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isMe -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isMe">
+        <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isMember -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isMember">
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isOnSameTeam -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isOnSameTeam">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&competency-dictionary;isMember"/>
+            <rdf:Description rdf:about="&competency-dictionary;hasMember"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isPartOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Organization"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Organization_Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isPartOfProject -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isPartOfProject">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&competency-dictionary;hasTask"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#isRequiredBy -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isRequiredBy">
+        <rdfs:domain rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Role"/>
+        <owl:equivalentProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&competency-dictionary;requires"/>
+            </rdf:Description>
+        </owl:equivalentProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#leads -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;leads">
+        <owl:equivalentProperty rdf:resource="&competency-dictionary;manages"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#manages -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;manages">
+        <rdfs:range rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&competency-dictionary;isManager"/>
+            <rdf:Description rdf:about="&competency-dictionary;hasMember"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#requires -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requires">
+        <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#requiresCompetency -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requiresCompetency">
+        <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#requiresHability -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requiresHability">
+        <rdfs:range rdf:resource="&competency-dictionary;Hability"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;requires"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#requiresKnowledge -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requiresKnowledge">
+        <rdfs:range rdf:resource="&competency-dictionary;Knowledge"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;requires"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#requiresSkill -->
+
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requiresSkill">
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Skill"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;requires"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#done -->
+
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;done">
+        <rdfs:domain rdf:resource="&competency-dictionary;Task"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#jobTitle -->
+
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;jobTitle">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#name -->
+
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;name">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#scope -->
+
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;scope">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#taskDescription -->
+
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;taskDescription">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Task"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Competency -->
+
+    <owl:Class rdf:about="&competency-dictionary;Competency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Hability -->
+
+    <owl:Class rdf:about="&competency-dictionary;Hability">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Knowledge -->
+
+    <owl:Class rdf:about="&competency-dictionary;Knowledge">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Manager -->
+
+    <owl:Class rdf:about="&competency-dictionary;Manager">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Organization -->
+
+    <owl:Class rdf:about="&competency-dictionary;Organization"/>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Organization_Unit -->
+
+    <owl:Class rdf:about="&competency-dictionary;Organization_Unit">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Person -->
+
+    <owl:Class rdf:about="&competency-dictionary;Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Project -->
+
+    <owl:Class rdf:about="&competency-dictionary;Project"/>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Role -->
+
+    <owl:Class rdf:about="&competency-dictionary;Role"/>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Skill -->
+
+    <owl:Class rdf:about="&competency-dictionary;Skill">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task -->
+
+    <owl:Class rdf:about="&competency-dictionary;Task"/>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Team -->
+
+    <owl:Class rdf:about="&competency-dictionary;Team">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Organization_Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Team_Member -->
+
+    <owl:Class rdf:about="&competency-dictionary;Team_Member">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Acceptance_Tests -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Acceptance_Tests">
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Computer_Programming -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Computer_Programming">
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+        <name rdf:datatype="&xsd;string">Computer programming</name>
+        <owl:sameAs rdf:resource="&competency-dictionary;Development"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Design -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Design">
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Designer -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Designer">
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
+        <jobTitle rdf:datatype="&xsd;string">Designer</jobTitle>
+        <requires rdf:resource="&competency-dictionary;Design"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Development -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Development">
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Devops -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Devops">
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Dom_Alonso_Asturias -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Dom_Alonso_Asturias">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
+        <isManager rdf:resource="&competency-dictionary;Team_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Fernando_Alonso -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Fernando_Alonso">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
+        <name rdf:datatype="&xsd;string">Fernando Alonso</name>
+        <hasRole rdf:resource="&competency-dictionary;IT_Coordinator"/>
+        <isManager rdf:resource="&competency-dictionary;Team_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Funcional_Tests -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Funcional_Tests">
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Gather_Requirements -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Gather_Requirements">
+        <rdf:type rdf:resource="&competency-dictionary;Hability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#IT_Coordinator -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;IT_Coordinator">
+        <rdf:type rdf:resource="&competency-dictionary;Manager"/>
+        <jobTitle rdf:datatype="&xsd;string">IT  Coordinator</jobTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Jack_White -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Jack_White">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
+        <name rdf:datatype="&xsd;string">Jack White</name>
+        <isOnSameTeam rdf:resource="&competency-dictionary;John_Doe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Joana_Darc -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Joana_Darc">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
+        <name rdf:datatype="&xsd;string">Joana Darc</name>
+        <isMember rdf:resource="&competency-dictionary;Team_I"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#John_Doe -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;John_Doe">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
+        <name rdf:datatype="&xsd;string">Jhon Doe</name>
+        <hasRole rdf:resource="&competency-dictionary;Systems_Analyst"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Leadership -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Leadership">
+        <rdf:type rdf:resource="&competency-dictionary;Hability"/>
+        <rdf:type rdf:resource="&competency-dictionary;Knowledge"/>
+        <name rdf:datatype="&xsd;string">Leadership</name>
+        <isRequiredBy rdf:resource="&competency-dictionary;IT_Coordinator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#OU_Development -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;OU_Development">
+        <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
+        <name rdf:datatype="&xsd;string">Development</name>
+        <isPartOf rdf:resource="&competency-dictionary;OU_IT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#OU_HR -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;OU_HR">
+        <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
+        <name rdf:datatype="&xsd;string">Human Resources Departament</name>
+        <isPartOf rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#OU_IT -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;OU_IT">
+        <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
+        <name rdf:datatype="&xsd;string">TI Departament</name>
+        <isPartOf rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Organization_Wayne_Enterprises -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Organization_Wayne_Enterprises">
+        <rdf:type rdf:resource="&competency-dictionary;Organization"/>
+        <name rdf:datatype="&xsd;string">Wayne Enterprises</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Plataform_Operator -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Plataform_Operator">
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
+        <jobTitle rdf:datatype="&xsd;string">Platform Operator</jobTitle>
+        <requires rdf:resource="&competency-dictionary;Devops"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Project_ECommerce_Development -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Project_ECommerce_Development">
+        <rdf:type rdf:resource="&competency-dictionary;Project"/>
+        <scope rdf:datatype="&xsd;string">Construir e-commerce modular customizável.</scope>
+        <hasTask rdf:resource="&competency-dictionary;Task_Create_Layout"/>
+        <hasTask rdf:resource="&competency-dictionary;Task_Deployment"/>
+        <hasTask rdf:resource="&competency-dictionary;Task_Development"/>
+        <hasTask rdf:resource="&competency-dictionary;Task_Modeling_Database"/>
+        <hasTask rdf:resource="&competency-dictionary;Task_Requirements_Gathering"/>
+        <hasTask rdf:resource="&competency-dictionary;Task_Tests"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Project_Report_Creation -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Project_Report_Creation">
+        <rdf:type rdf:resource="&competency-dictionary;Project"/>
+        <hasTask rdf:resource="&competency-dictionary;Task_Create_Query"/>
+        <hasTask rdf:resource="&competency-dictionary;Task_Create_Report_Layout"/>
+        <hasTask rdf:resource="&competency-dictionary;Task_integrate_report"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Project_X -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Project_X"/>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Relational_Databases -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Relational_Databases">
+        <rdf:type rdf:resource="&competency-dictionary;Knowledge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Systems_Analyst -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Systems_Analyst">
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
+        <jobTitle rdf:datatype="&xsd;string">Systems Analyst</jobTitle>
+        <requiresSkill rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <requires rdf:resource="&competency-dictionary;Gather_Requirements"/>
+        <requires rdf:resource="&competency-dictionary;Relational_Databases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_Create_Layout -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Layout">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Criação das telas do e-commerce, assim como sua identidade visual.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">false</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Design"/>
+        <isPartOfProject rdf:resource="&competency-dictionary;Project_X"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_Create_Query -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Query">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Consruir a consulta para obtenção dos resultados.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">false</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_Create_Report_Layout -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Report_Layout">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Criar a distribuição das informações no relatório final.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">false</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Design"/>
+        <requiresCompetency rdf:resource="&competency-dictionary;Development"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_Deployment -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Deployment">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Realizar deploy em ambiente de homologação e produção.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">false</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Development"/>
+        <requiresCompetency rdf:resource="&competency-dictionary;Devops"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_Development -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Development">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Desenvolvimento.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">false</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Development"/>
+        <requiresCompetency rdf:resource="&competency-dictionary;Funcional_Tests"/>
+        <requiresCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_Modeling_Database -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Modeling_Database">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Modelagem do banco de dados.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">false</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_Requirements_Gathering -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Requirements_Gathering">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Coleta de requisitos e definição dos casos de uso.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">true</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Gather_Requirements"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_Tests -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Tests">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Testes funcionais e de aceitação.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">false</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Acceptance_Tests"/>
+        <requiresCompetency rdf:resource="&competency-dictionary;Funcional_Tests"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Task_integrate_report -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_integrate_report">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
+        <taskDescription rdf:datatype="&xsd;string">Integra o relatório ao projeto existente.</taskDescription>
+        <done rdf:datatype="&xsd;boolean">false</done>
+        <requiresCompetency rdf:resource="&competency-dictionary;Development"/>
+        <requiresCompetency rdf:resource="&competency-dictionary;Devops"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Team_I -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Team_I">
+        <rdf:type rdf:resource="&competency-dictionary;Team"/>
+        <name rdf:datatype="&xsd;string">Unidos de Vila Esperança</name>
+        <hasMember rdf:resource="&competency-dictionary;John_Doe"/>
+        <isPartOf rdf:resource="&competency-dictionary;OU_Development"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#Tester -->
+
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Tester">
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
+        <jobTitle rdf:datatype="&xsd;string">Tester</jobTitle>
+        <requires rdf:resource="&competency-dictionary;Acceptance_Tests"/>
+        <requires rdf:resource="&competency-dictionary;Funcional_Tests"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

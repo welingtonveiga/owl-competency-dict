@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE uridef [
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema">
+  <!ENTITY owl "http://www.w3.org/2002/07/owl">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema">
+  <!ENTITY service "http://www.daml.org/services/owl-s/1.2/Service.owl">
+  <!ENTITY profile "http://www.daml.org/services/owl-s/1.2/Profile.owl">
+  <!ENTITY process "http://www.daml.org/services/owl-s/1.2/Process.owl">
+  <!ENTITY grounding "http://www.daml.org/services/owl-s/1.2/Grounding.owl">
+  <!ENTITY mind "http://on.cs.unibas.ch/owl-s/1.2/MindswapProfileHierarchy.owl">
+  <!ENTITY actor   "https://sites.google.com/site/francilaneiva/restfulgrounding/ActorDefault.owl">
+  <!ENTITY wadl      "https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription.wadl">
+  <!ENTITY restful   "https://sites.google.com/site/francilaneiva/restfulgrounding/restful-grounding.owl"> 
+  <!ENTITY myOnto "https://sites.google.com/site/francilaneiva/restfulgrounding/PLScienceServiceDescription">
+]>
+
+<rdf:RDF
+  xmlns:rdf="&rdf;#"
+  xmlns:rdfs="&rdfs;#"
+  xmlns:owl="&owl;#"
+  xmlns:xsd="&xsd;#"
+  xmlns:service="&service;#"
+  xmlns:profile="&profile;#"
+  xmlns:process="&process;#"
+  xmlns:grounding="&grounding;#"
+  xmlns:mind="&mind;#"
+  xmlns:actor  ="&actor;#"
+  xmlns:wadl="&wadl;#"
+  xmlns:restful  ="&restful;#"
+  xmlns:myOnto="&myOnto;#"
+  xml:base="https://sites.google.com/site/francilaneiva/restfulgrounding/ServiceDescription.owl">
+  
+  <owl:Ontology rdf:about="">
+	<owl:imports rdf:resource="&profile;"/>
+	<owl:imports rdf:resource="&grounding;"/>
+	<owl:imports rdf:resource="&mind;"/>
+	<owl:versionInfo>$Id: Service Description Web Service 1.0 $</owl:versionInfo>
+</owl:Ontology>
+
+<!-- Service description -->
+<service:Service rdf:ID="ZipCodeFinderService">
+	<service:presents rdf:resource="#serviceDescription-Profile"/>
+
+	<service:describedBy rdf:resource="#serviceDescription-Process"/>
+
+	<service:supports rdf:resource="#serviceDescription-Grounding"/>
+</service:Service>
+
+<!-- Profile description -->
+
+<mind:MapService rdf:ID="ServiceDescriptionProfile">
+	<service:presentedBy rdf:resource="#ServiceDescription"/>
+
+	<profile:serviceName xml:lang="en">ServiceDescriptionService</profile:serviceName>
+	<profile:textDescription xml:lang="en">This web service provides cientific experiments to be used, including awareness information.</profile:textDescription>
+
+	<profile:hasInput rdf:resource="#performProteinIsolation-cell"/>
+	<profile:hasInput rdf:resource="#performProteinSynthesis-cell"/>
+	<profile:hasInput rdf:resource="#serviceDescription-service"/>
+	<profile:hasOutput rdf:resource="#performProteinIsolation-Success"/>
+	<profile:hasOutput rdf:resource="#serviceDescriptionOut-performProteinSynthesis"/>
+	<profile:hasOutput rdf:resource="#serviceDescriptionOut-getAwareness"/>
+</mind:MapService>
+
+<!-- Process description -->
+<process:AtomicProcess rdf:ID="serviceDescription-performProteinIsolation">
+
+  <!-- Input Parameters -->
+
+  <process:hasInput>
+    <process:Input rdf:ID="performProteinIsolation-cell">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&xsd;#string</process:parameterType>
+    </process:Input>
+  </process:hasInput>
+  <!-- Output Parameters -->
+
+  <process:hasOutput> 
+    <process:Output rdf:ID="performProteinIsolation-Success">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&xsd;#string</process:parameterType>
+    </process:Output>
+  </process:hasOutput>
+
+</process:AtomicProcess>
+
+<!-- Atomic Process performProteinSynthesis -->
+
+<process:AtomicProcess rdf:ID="serviceDescription-performProteinSynthesis">
+
+  <!-- Input Parameters -->
+
+  <process:hasInput>
+    <process:Input rdf:ID="performProteinSynthesis-cell">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&xsd;#string</process:parameterType>
+    </process:Input>
+  </process:hasInput>
+  <!-- Output Parameters -->
+
+  <process:hasOutput> 
+    <process:Output rdf:ID="serviceDescriptionOut-performProteinSynthesis">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&xsd;#string</process:parameterType>
+    </process:Output>
+  </process:hasOutput>
+
+</process:AtomicProcess>
+
+<!-- Atomic Process getAwareness -->
+
+<process:AtomicProcess rdf:ID="serviceDescription-getAwareness">
+
+  <!-- Input Parameters -->
+
+  <process:hasInput>
+    <process:Input rdf:ID="serviceDescription-service">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&xsd;#string</process:parameterType>
+    </process:Input>
+  </process:hasInput>
+  <!-- Output Parameters -->
+
+  <process:hasOutput> 
+    <process:Output rdf:ID="serviceDescriptionOut-getAwareness">
+      <process:parameterType rdf:datatype="&xsd;#anyURI">&xsd;#string</process:parameterType>
+    </process:Output>
+  </process:hasOutput>
+
+</process:AtomicProcess>
+
+<!-- WADL Grounding -->
+
+<restful:WadlGrounding rdf:ID="serviceDescription-Grounding">
+  <grounding:hasAtomicProcessGrounding rdf:resource="#serviceDescription-performProteinIsolation"/>
+  <grounding:hasAtomicProcessGrounding rdf:resource="#serviceDescription-performProteinSynthesis"/>
+  <grounding:hasAtomicProcessGrounding rdf:resource="#serviceDescription-getAwareness"/>
+</restful:WadlGrounding>
+
+
+<!-- WADL Atomic Process Grounding -->
+  <!-- ############################################################### -->
+  <!-- # performProteinIsolation                                     # -->
+
+<restful:WadlAtomicProcessGrounding rdf:ID="serviceDescription-performProteinIsolation1">
+  <grounding:owlsProcess rdf:resource="#serviceDescription-performProteinIsolation"/>
+  <restful:wadlResourceMethod>
+    <restful:WadlResourceMethodRef>
+      <restful:resource rdf:datatype="&xsd;#anyURI">&wadl;#/protein45Isolation/cell-Resource</restful:resource>
+      <restful:method rdf:datatype="&xsd;#anyURI">&wadl;#performProteinIsolation</restful:method>
+    </restful:WadlResourceMethodRef>
+  </restful:wadlResourceMethod>
+  <restful:wadlVersion rdf:datatype="&xsd;#anyURI">
+    https://wadl.dev.java.net/wadl20090202.xsd
+  </restful:wadlVersion>
+  <restful:wadlDocument rdf:datatype="&xsd;#anyURI">
+    https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription.wadl
+  </restful:wadlDocument>
+  
+  <!-- Request Parameters -->
+
+  <restful:wadlRequestParam>
+    <restful:WadlRequestParamMap>
+      <grounding:owlsParameter rdf:resource="#performProteinIsolation-cell"/>
+      <restful:wadlMessageParam rdf:datatype="&xsd;#anyURI">&wadl;#cell</restful:wadlMessageParam>
+    </restful:WadlRequestParamMap>
+  </restful:wadlRequestParam>
+  
+  <!-- Response Parameters -->
+
+  <restful:wadlResponseParam>
+    <restful:WadResponseParamMap>
+      <grounding:owlsParameter rdf:resource="#performProteinIsolation-Success"/>
+      <restful:wadlMessageParam rdf:datatype="&xsd;#anyURI">&wadl;#performProteinIsolation-response</restful:wadlMessageParam>
+    </restful:WadResponseParamMap>
+  </restful:wadlResponseParam>
+  
+</restful:WadlAtomicProcessGrounding>
+
+  <!-- ############################################################### -->
+  <!-- # performProteinSynthesis                                     # -->
+
+<restful:WadlAtomicProcessGrounding rdf:ID="serviceDescription-performProteinSynthesis1">
+  <grounding:owlsProcess rdf:resource="#serviceDescription-performProteinSynthesis"/>
+  <restful:wadlResourceMethod>
+    <restful:WadlResourceMethodRef>
+      <restful:resource rdf:datatype="&xsd;#anyURI">&wadl;#/protein46Synthesis/cell-Resource</restful:resource>
+      <restful:method rdf:datatype="&xsd;#anyURI">&wadl;#performProteinSynthesis</restful:method>
+    </restful:WadlResourceMethodRef>
+  </restful:wadlResourceMethod>
+  <restful:wadlVersion rdf:datatype="&xsd;#anyURI">
+    https://wadl.dev.java.net/wadl20090202.xsd
+  </restful:wadlVersion>
+  <restful:wadlDocument rdf:datatype="&xsd;#anyURI">
+    https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription.wadl
+  </restful:wadlDocument>
+  
+  <!-- Request Parameters -->
+
+  <restful:wadlRequestParam>
+    <restful:WadlRequestParamMap>
+      <grounding:owlsParameter rdf:resource="#performProteinSynthesis-cell"/>
+      <restful:wadlMessageParam rdf:datatype="&xsd;#anyURI">&wadl;#cell</restful:wadlMessageParam>
+    </restful:WadlRequestParamMap>
+  </restful:wadlRequestParam>
+  
+  <!-- Response Parameters -->
+
+  <restful:wadlResponseParam>
+    <restful:WadResponseParamMap>
+      <grounding:owlsParameter rdf:resource="#serviceDescriptionOut-performProteinSynthesis"/>
+      <restful:wadlMessageParam rdf:datatype="&xsd;#anyURI">&wadl;#serviceDescription-performProteinSynthesis</restful:wadlMessageParam>
+    </restful:WadResponseParamMap>
+  </restful:wadlResponseParam>
+  
+</restful:WadlAtomicProcessGrounding>
+
+  <!-- ############################################################### -->
+  <!-- # getAwareness                                     # -->
+  
+  <restful:WadlAtomicProcessGrounding rdf:ID="serviceDescription-getAwareness1">
+  <grounding:owlsProcess rdf:resource="#serviceDescription-getAwareness"/>
+  <restful:wadlResourceMethod>
+    <restful:WadlResourceMethodRef>
+      <restful:resource rdf:datatype="&xsd;#anyURI">&wadl;#/awareness/service-Resource</restful:resource>
+      <restful:method rdf:datatype="&xsd;#anyURI">&wadl;#getAwareness</restful:method>
+    </restful:WadlResourceMethodRef>
+  </restful:wadlResourceMethod>
+  <restful:wadlVersion rdf:datatype="&xsd;#anyURI">
+    https://wadl.dev.java.net/wadl20090202.xsd
+  </restful:wadlVersion>
+  <restful:wadlDocument rdf:datatype="&xsd;#anyURI">
+    https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription.wadl
+  </restful:wadlDocument>
+  
+  <!-- Request Parameters -->
+
+  <restful:wadlRequestParam>
+    <restful:WadlRequestParamMap>
+      <grounding:owlsParameter rdf:resource="#serviceDescription-service"/>
+      <restful:wadlMessageParam rdf:datatype="&xsd;#anyURI">&wadl;#service</restful:wadlMessageParam>
+    </restful:WadlRequestParamMap>
+  </restful:wadlRequestParam>
+  
+  <!-- Response Parameters -->
+
+  <restful:wadlResponseParam>
+    <restful:WadResponseParamMap>
+      <grounding:owlsParameter rdf:resource="#serviceDescriptionOut-getAwareness"/>
+      <restful:wadlMessageParam rdf:datatype="&xsd;#anyURI">&wadl;#serviceDescription-getAwareness</restful:wadlMessageParam>
+    </restful:WadResponseParamMap>
+  </restful:wadlResponseParam>
+  
+</restful:WadlAtomicProcessGrounding>
+
+</rdf:RDF>
