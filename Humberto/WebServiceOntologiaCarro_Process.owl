@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-  xml:base="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel.owl#"
+  xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
   xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
   xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
@@ -19,7 +19,7 @@
   </owl:Ontology>
   <process:ProcessModel rdf:ID="WebServiceOntologiaCarro_ProcessModel">
     <process:hasProcess rdf:resource="#WebServiceOntologiaCarro_Composite"/>
-    <process:describes rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_Service#WebServiceOntologiaCarro_Service"/>
+    <process:describes rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Service#WebServiceOntologiaCarro_Service"/>
   </process:ProcessModel>
   <process:CompositeProcess rdf:ID="WebServiceOntologiaCarro_Composite"/>
   <process:Input rdf:ID="WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_IN">
