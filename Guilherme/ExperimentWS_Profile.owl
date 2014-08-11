@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xml:base="http://experiment.me.org//ExperimentWS_Profile.owl#"
+<rdf:RDF xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_Profile.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
   xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
   xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
@@ -29,19 +29,19 @@
         <vcard:tel>(32)9999-0099</vcard:tel>
       </vcard:VCard>
     </profile:contactInformation>
-    <profile:hasInput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getSubClasses_className_IN"/>
-    <profile:hasOutput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getSubClasses_subClasses_OUT"/>
-    <profile:hasInput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL_className_IN"/>
-    <profile:hasOutput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL_subClasses_OUT"/>
-    <profile:hasInput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getIndividuals_className_IN"/>
-    <profile:hasOutput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getIndividuals_individuosClass_OUT"/>
-    <profile:hasInput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getIndividualsForSPARQL_className_IN"/>
-    <profile:hasOutput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getIndividualsForSPARQL_individuosClass_OUT"/>
-    <profile:hasInput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getDatasIndividuals_className_IN"/>
-    <profile:hasOutput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getDatasIndividuals_dataIndividuosClass_OUT"/>
-    <profile:hasOutput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getResponsibleExperiment_responsible_OUT"/>
-    <profile:hasInput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment_experiment_IN"/>
-    <profile:hasOutput rdf:resource="http://experiment.me.org//ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment_individuos_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClasses_className_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClasses_subClasses_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL_className_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL_subClasses_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividuals_className_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividuals_individuosClass_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividualsForSPARQL_className_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividualsForSPARQL_individuosClass_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getDatasIndividuals_className_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getDatasIndividuals_dataIndividuosClass_OUT"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getResponsibleExperiment_responsible_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment_experiment_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment_individuos_OUT"/>
     <profile:qualityRating/>
   </profile:Profile>
 </rdf:RDF>
