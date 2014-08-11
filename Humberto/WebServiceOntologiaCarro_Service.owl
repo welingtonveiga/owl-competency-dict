@@ -13,8 +13,8 @@
     <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
   </owl:Ontology>
   <service:Service rdf:ID="WebServiceOntologiaCarro_Service">
-    <service:presents rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Profile#WebServiceOntologiaCarro_Profile"/>
-    <service:describedBy rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_ProcessModel"/>
-    <service:supports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding#WebServiceOntologiaCarro_Grounding"/>
+    <service:presents rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Profile.owl#WebServiceOntologiaCarro_Profile"/>
+    <service:describedBy rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel.owl#WebServiceOntologiaCarro_ProcessModel"/>
+    <service:supports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WebServiceOntologiaCarro_Grounding"/>
   </service:Service>
 </rdf:RDF>
