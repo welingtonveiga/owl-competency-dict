@@ -6,7 +6,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY competency-dictionary "http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#">
+    <!ENTITY competency-dictionary "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#">
     <!ENTITY competency-dict-process "http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process#">
     <!ENTITY competency-dict-service "http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service#">
     <!ENTITY competency-dict-wsdl "http://localhost:8080/soap/competency-dict?wsdl">
@@ -18,7 +18,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:competency-dictionary="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary#"
+     xmlns:competency-dictionary="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary#"
      xmlns:competency-dict-process="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process#"
      xmlns:competency-dict-service="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-service#"
      xmlns:process="http://www.daml.org/services/owl-s/1.2/Process.owl#" 
@@ -28,7 +28,7 @@
      xmlns:actor="http://www.daml.org/services/owl-s/1.2/ActorDefault.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-grounding">
-        <owl:imports rdf:resource="http://www.semanticweb.org/welingtonveiga/ontologies/2014/6/competency-dictionary"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/welingtonveiga/ontologies/2014/7/competency-dict-process"/>
         <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Grounding.owl"/>
         <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Profile.owl"/>
