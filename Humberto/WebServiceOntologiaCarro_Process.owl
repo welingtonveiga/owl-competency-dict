@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xml:base="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel.owl#"
+  xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
+  xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
+  xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
+  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <rdfs:comment>Add Ontology Comment</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl"/>
+  </owl:Ontology>
+  <process:ProcessModel rdf:ID="WebServiceOntologiaCarro_ProcessModel">
+    <process:hasProcess rdf:resource="#WebServiceOntologiaCarro_Composite"/>
+    <process:describes rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_Service#WebServiceOntologiaCarro_Service"/>
+  </process:ProcessModel>
+  <process:CompositeProcess rdf:ID="WebServiceOntologiaCarro_Composite"/>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarClassesComJena_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarClassesComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarClassesComJena_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarClassesComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarClassesComJena">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarClassesComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarClassesComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarIndividuosClasseComJena">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComJena">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarPropriedadesComJena">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="WebServiceOntologiaCarro_hello_parameters_IN">
+    <process:parameterName>WebServiceOntologiaCarro_hello_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="WebServiceOntologiaCarro_hello_parameters_OUT">
+    <process:parameterName>WebServiceOntologiaCarro_hello_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="WebServiceOntologiaCarro_hello">
+    <process:hasInput rdf:resource="#WebServiceOntologiaCarro_hello_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#WebServiceOntologiaCarro_hello_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+</rdf:RDF>

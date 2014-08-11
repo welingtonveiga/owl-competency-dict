@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xml:base="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_Grounding.owl#"
+  xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
+  xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
+  xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
+  xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
+  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" xmlns:xsd="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <rdfs:comment>Add Ontology Comment</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl"/>
+  </owl:Ontology>
+  <grounding:WsdlGrounding rdf:ID="WebServiceOntologiaCarro_Grounding">
+    <service:supportedBy rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_Service#WebServiceOntologiaCarro_Service"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarClassesComJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarIndividuosClasseComJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarPropriedadesComJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServiceOntologiaCarro_hello"/>
+  </grounding:WsdlGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSoftwareGerenciadaPor"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSoftwareGerenciadaPor"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSoftwareGerenciadaPorResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarClassesComJena">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarClassesComJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarClassesComJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarClassesComJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarIndividuosClasseComJena">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosClasseComJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarIndividuosClasseComJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarIndividuosClasseComJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarIndividuosClasseComJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComJena">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarPropriedadesComJena">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarPropriedadesComJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarPropriedadesComJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarPropriedadesComJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarIndividuosComInferenciaComSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarIndividuosComInferenciaComSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarIndividuosComInferenciaComSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubClassesSemInferenciaComSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubClassesSemInferenciaComSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubClassesSemInferenciaComSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComInferenciaComSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComInferenciaComSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComInferenciaComSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComInferenciaComJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComInferenciaComJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComInferenciaComJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServiceOntologiaCarro_hello">
+    <grounding:owlsProcess rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_hello"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#hello"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#hello"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_hello_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#helloResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_hello_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

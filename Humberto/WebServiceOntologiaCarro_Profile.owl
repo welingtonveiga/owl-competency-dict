@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+  xml:base="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_Profile.owl#"
+  xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
+  xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
+  xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#" xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <rdfs:comment>Add Ontology Comment</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+  </owl:Ontology>
+  <profile:Profile rdf:ID="WebServiceOntologiaCarro_Profile">
+    <service:presentedBy rdf:resource="WebServiceOntologiaCarro_Service"/>
+    <profile:serviceName/>
+    <profile:textDescription/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosClasseComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_hello_parameters_IN"/>
+    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_hello_parameters_OUT"/>
+    <profile:qualityRating/>
+  </profile:Profile>
+</rdf:RDF>

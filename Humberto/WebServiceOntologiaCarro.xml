@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description>
+   <baseDir>C:\owlsedit\temp</baseDir>
+   <service>WebServiceOntologiaCarro_Service.owl</service>
+   <profile>WebServiceOntologiaCarro_Profile.owl</profile>
+   <process>WebServiceOntologiaCarro_Process.owl</process>
+   <grounding>WebServiceOntologiaCarro_Grounding.owl</grounding>
+   <name>WebServiceOntologiaCarro.xml</name>
+</description>
