@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#"
+<rdf:RDF xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Process.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
   xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
   xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
@@ -18,7 +18,7 @@
   </owl:Ontology>
   <process:ProcessModel rdf:ID="GrosnWS_ProcessModel">
     <process:hasProcess rdf:resource="#GrosnWS_Composite"/>
-    <process:describes rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Service.owl#GrosnWS_Service"/>
+    <process:describes rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Process.owl#GrosnWS_Service"/>
   </process:ProcessModel>
   <process:CompositeProcess rdf:ID="GrosnWS_Composite"/>
   <process:Input rdf:ID="GrosnWS_obterClasses_parameters_IN">
