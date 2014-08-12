@@ -879,6 +879,7 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#Competency">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#Service"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-grounding.owl#Wsdl_GetPersonByName"/>
     </owl:NamedIndividual>
     
 
