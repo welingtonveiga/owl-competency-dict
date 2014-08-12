@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE uridef[
+  <!ENTITY kkk       "http://www.w3.org/2001/XMLSchema">
+]>
+
+
 <rdf:RDF
+  xmlns:kkk      ="&xsd;#"
   xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#"
   xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
@@ -7,8 +13,7 @@
   xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
-  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" 
-  xmlns:xsd="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#">
+  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" xmlns:xsd="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#">
   <owl:Ontology rdf:about="">
     <owl:versionInfo>Version 1.0</owl:versionInfo>
     <rdfs:comment>Ontologia PJF</rdfs:comment>
@@ -63,10 +68,7 @@
     <grounding:wsdlReference>
       <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
     </grounding:wsdlReference>
-    
-    
-    
-  </grounding:WsdlAtomicProcessGrounding>
+    </grounding:WsdlAtomicProcessGrounding>
   <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarSubclassesComJena">
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena"/>
