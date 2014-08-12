@@ -15,14 +15,14 @@
 
 <rdf:RDF xmlns="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#"
      xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#"
      xmlns:Grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdf-schema="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:Service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#"
-     xmlns:owl2="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:rdf-schema="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl2="http://jamsci.servehttp.com/owlsedit/owl.rdf#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl">
         <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-grounding.owl"/>
         <owl:imports rdf:resource="https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-grounding.owl"/>
@@ -206,8 +206,8 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_Grounding.owl">
         <rdf:type rdf:resource="&owl2;Ontology"/>
-        <rdf-schema:comment>Add Ontology Comment</rdf-schema:comment>
         <owl2:versionInfo>Version 1.0</owl2:versionInfo>
+        <rdf-schema:comment>Add Ontology Comment</rdf-schema:comment>
         <owl2:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
         <owl2:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
         <owl2:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl"/>
@@ -240,32 +240,32 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_Grounding.owl#WSDLGrounding_ExperimentWS_getDatasIndividuals">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getDatasIndividuals"/>
-        <Grounding:wsdlReference>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlReference>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
-        <Grounding:wsdlOutputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOutputMessage>
-        <Grounding:wsdlOperation>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOperation>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
     </owl:NamedIndividual>
     
 
@@ -283,6 +283,16 @@
         <Grounding:wsdlOutputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
         <Grounding:wsdlOperation>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -291,16 +301,6 @@
         <Grounding:wsdlInputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlInputMessageParts>
-        <Grounding:wsdlOutputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOutputMessage>
-        <Grounding:wsdlInputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlInputMessage>
     </owl:NamedIndividual>
     
 
@@ -310,32 +310,32 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_Grounding.owl#WSDLGrounding_ExperimentWS_getIndividuals">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividuals"/>
-        <Grounding:wsdlOperation>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOperation>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
-        <Grounding:wsdlInputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlInputMessage>
         <Grounding:wsdlReference>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlReference>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
         <Grounding:wsdlOutputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOutputMessage>
-        <Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessageParts>
             <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
+        </Grounding:wsdlInputMessageParts>
     </owl:NamedIndividual>
     
 
@@ -345,32 +345,32 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_Grounding.owl#WSDLGrounding_ExperimentWS_getIndividualsForSPARQL">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividualsForSPARQL"/>
-        <Grounding:wsdlOperation>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOperation>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
-        <Grounding:wsdlReference>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlReference>
         <Grounding:wsdlOutputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlInputMessage>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
     </owl:NamedIndividual>
     
 
@@ -381,16 +381,16 @@
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:wsdlInputMessageParts rdf:resource="&rdf;nil"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getResponsibleExperiment"/>
-        <Grounding:wsdlInputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlInputMessage>
         <Grounding:wsdlReference>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlReference>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
         <Grounding:wsdlOperation>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -413,6 +413,16 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_Grounding.owl#WSDLGrounding_ExperimentWS_getSubClasses">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClasses"/>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -421,21 +431,11 @@
         <Grounding:wsdlInputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlInputMessageParts>
-        <Grounding:wsdlOutputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOutputMessage>
         <Grounding:wsdlReference>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlReference>
-        <Grounding:wsdlOperation>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOperation>
         <Grounding:wsdlOutputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlOutputMessageParts>
@@ -448,12 +448,6 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_Grounding.owl#WSDLGrounding_ExperimentWS_getSubClassesForSPARQL">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL"/>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -464,6 +458,9 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlReference>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
         <Grounding:wsdlOutputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -474,6 +471,9 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOperation>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
     </owl:NamedIndividual>
     
 
@@ -500,17 +500,17 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarClassesComJena">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena"/>
-        <Grounding:wsdlReference>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlReference>
         <Grounding:wsdlOutputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlOutputMessageParts>
         <Grounding:wsdlInputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
         <Grounding:wsdlOperation>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -521,11 +521,11 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOutputMessage>
-        <Grounding:wsdlInputMessage>
+        <Grounding:wsdlReference>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
-        </Grounding:wsdlInputMessage>
+        </Grounding:wsdlReference>
     </owl:NamedIndividual>
     
 
@@ -545,22 +545,22 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOperation>
-        <Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessageParts>
             <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
+        </Grounding:wsdlOutputMessageParts>
         <Grounding:wsdlOutputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlInputMessage>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
     </owl:NamedIndividual>
     
 
@@ -570,32 +570,32 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql"/>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
-        <Grounding:wsdlReference>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlReference>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
-        <Grounding:wsdlOutputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOutputMessage>
         <Grounding:wsdlOperation>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOperation>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
     </owl:NamedIndividual>
     
 
@@ -605,32 +605,32 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarPropriedadesComJena">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena"/>
-        <Grounding:wsdlOperation>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOperation>
-        <Grounding:wsdlInputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlInputMessage>
         <Grounding:wsdlReference>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlReference>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
         <Grounding:wsdlOutputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
     </owl:NamedIndividual>
     
 
@@ -640,16 +640,6 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor"/>
-        <Grounding:wsdlOutputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOutputMessage>
-        <Grounding:wsdlReference>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlReference>
         <Grounding:wsdlOutputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlOutputMessageParts>
@@ -658,14 +648,24 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOperation>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlInputMessage>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
     </owl:NamedIndividual>
     
 
@@ -680,27 +680,27 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOperation>
-        <Grounding:wsdlReference>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlReference>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
         <Grounding:wsdlOutputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOutputMessage>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
     </owl:NamedIndividual>
     
 
@@ -710,11 +710,6 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena"/>
-        <Grounding:wsdlInputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlInputMessage>
         <Grounding:wsdlInputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlInputMessageParts>
@@ -736,6 +731,11 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlReference>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
     </owl:NamedIndividual>
     
 
@@ -745,24 +745,16 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql"/>
-        <Grounding:wsdlOutputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOutputMessage>
-        <Grounding:wsdlReference>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlReference>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
         <Grounding:wsdlOperation>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOperation>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
         <Grounding:wsdlOutputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlOutputMessageParts>
@@ -771,6 +763,14 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlInputMessage>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
     </owl:NamedIndividual>
     
 
@@ -780,27 +780,27 @@
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComJena">
         <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
         <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena"/>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
-        <Grounding:wsdlOutputMessage>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlOutputMessage>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlInputMessage>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
         <Grounding:wsdlOperation>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOperation>
-        <Grounding:wsdlInputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
         <Grounding:wsdlReference>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -818,9 +818,6 @@
         <Grounding:wsdlInputMessageParts>
             <rdf:Description/>
         </Grounding:wsdlInputMessageParts>
-        <Grounding:wsdlOutputMessageParts>
-            <rdf:Description/>
-        </Grounding:wsdlOutputMessageParts>
         <Grounding:wsdlReference>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -836,6 +833,9 @@
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
             </rdf:Description>
         </Grounding:wsdlOperation>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
         <Grounding:wsdlInputMessage>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -864,6 +864,392 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl">
+        <rdf:type rdf:resource="&owl2;Ontology"/>
+        <rdf-schema:comment>Add Ontology Comment</rdf-schema:comment>
+        <owl2:versionInfo>Version 1.0</owl2:versionInfo>
+        <owl2:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+        <owl2:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+        <owl2:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl"/>
+        <owl2:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl"/>
+        <owl2:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+        <owl2:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+        <owl2:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarClassesComJena -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarClassesComJena">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarClassesComJena"/>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarIndividuosClasseComJena -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarIndividuosClasseComJena">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosClasseComJena"/>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarIndividuosComInferenciaComSparql -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarIndividuosComInferenciaComSparql">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosComInferenciaComSparql"/>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarPropriedadesComJena -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarPropriedadesComJena">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarPropriedadesComJena"/>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSoftwareGerenciadaPor -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSoftwareGerenciadaPor">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSoftwareGerenciadaPor"/>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubClassesSemInferenciaComSparql -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubClassesSemInferenciaComSparql">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubClassesSemInferenciaComSparql"/>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComJena -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComJena">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComJena"/>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComSparql -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComSparql">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComSparql"/>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComJena -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComJena">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena"/>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_hello -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_hello">
+        <rdf:type rdf:resource="&Grounding;WsdlAtomicProcessGrounding"/>
+        <Grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_hello"/>
+        <Grounding:wsdlReference>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlReference>
+        <Grounding:wsdlInputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlInputMessage>
+        <Grounding:wsdlOperation>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOperation>
+        <Grounding:wsdlInputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlInputMessageParts>
+        <Grounding:wsdlOutputMessageParts>
+            <rdf:Description/>
+        </Grounding:wsdlOutputMessageParts>
+        <Grounding:wsdlOutputMessage>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlOutputMessage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WebServicePJF_Grounding -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WebServicePJF_Grounding">
+        <rdf:type rdf:resource="&Grounding;WsdlGrounding"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarClassesComJena"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarIndividuosClasseComJena"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarIndividuosComInferenciaComSparql"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarPropriedadesComJena"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSoftwareGerenciadaPor"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubClassesSemInferenciaComSparql"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComJena"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComSparql"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComJena"/>
+        <Grounding:hasAtomicProcessGrounding rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_hello"/>
+        <Service:supportedBy rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Service#WebServicePJF_Service"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#Car -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#Car">
@@ -872,6 +1258,12 @@
         <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarIndividuosClasseComJena"/>
         <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql"/>
         <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarPropriedadesComJena"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_buscarSubclassesComJena"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_Grounding.owl#WSDLGrounding_WebServiceOntologiaCarro_hello"/>
     </owl:NamedIndividual>
     
 
@@ -897,6 +1289,16 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#Development">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#Service"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarClassesComJena"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarIndividuosClasseComJena"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarIndividuosComInferenciaComSparql"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarPropriedadesComJena"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSoftwareGerenciadaPor"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubClassesSemInferenciaComSparql"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComJena"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComSparql"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_buscarSubclassesComJena"/>
+        <isService rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WSDLGrounding_WebServicePJF_hello"/>
     </owl:NamedIndividual>
     
 
@@ -933,7 +1335,7 @@
     </owl:NamedIndividual>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_IN"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -942,7 +1344,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena_parameters_OUT"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_IN"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -951,7 +1353,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_OUT"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -960,7 +1362,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment_individuos_OUT"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -969,7 +1371,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena_parameters_IN"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -978,7 +1380,34 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getDatasIndividuals_dataIndividuosClass_OUT"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSoftwareGerenciadaPor_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSoftwareGerenciadaPor_parameters_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -996,7 +1425,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment_experiment_IN"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getDatasIndividuals_dataIndividuosClass_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1014,6 +1443,15 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment_experiment_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
         <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
@@ -1023,7 +1461,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_hello_parameters_OUT"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena_parameters_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1032,7 +1470,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL_subClasses_OUT"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarPropriedadesComJena_parameters_IN"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1041,7 +1479,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClasses_className_IN"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment_individuos_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1050,7 +1488,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1059,7 +1497,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarClassesComJena_parameters_IN"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1068,70 +1506,7 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
-        <Grounding:wsdlMessagePart>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlMessagePart>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_IN"/>
-        <Grounding:wsdlMessagePart>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlMessagePart>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_OUT"/>
-        <Grounding:wsdlMessagePart>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlMessagePart>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL_className_IN"/>
-        <Grounding:wsdlMessagePart>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlMessagePart>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
-        <Grounding:wsdlMessagePart>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlMessagePart>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_IN"/>
-        <Grounding:wsdlMessagePart>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlMessagePart>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
-        <Grounding:wsdlMessagePart>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlMessagePart>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1158,7 +1533,34 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClasses_subClasses_OUT"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_hello_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_hello_parameters_IN"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1168,6 +1570,24 @@
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
         <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividualsForSPARQL_individuosClass_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClasses_subClasses_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
@@ -1194,15 +1614,6 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
-        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
-        <Grounding:wsdlMessagePart>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
-            </rdf:Description>
-        </Grounding:wsdlMessagePart>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
         <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividualsForSPARQL_className_IN"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
@@ -1221,7 +1632,178 @@
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_hello_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL_subClasses_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClasses_className_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL_className_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubclassesComJena_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Humberto/WebServiceOntologiaCarro_ProcessModel#WebServiceOntologiaCarro_buscarSoftwareGerenciadaPor_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarPropriedadesComJena_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarPropriedadesComJena_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosClasseComJena_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosClasseComJena_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
         <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getResponsibleExperiment_responsible_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena_parameters_IN"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarClassesComJena_parameters_OUT"/>
+        <Grounding:wsdlMessagePart>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
+            </rdf:Description>
+        </Grounding:wsdlMessagePart>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&Grounding;WsdlMessageMap"/>
+        <Grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarClassesComJena_parameters_IN"/>
         <Grounding:wsdlMessagePart>
             <rdf:Description>
                 <rdf:type rdf:resource="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#uriReference"/>
