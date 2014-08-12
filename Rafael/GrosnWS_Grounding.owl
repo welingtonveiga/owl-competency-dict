@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xml:base=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Grounding.owl"
+<rdf:RDF xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Grounding.owl#"
   xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
   xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
