@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xml:base=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Service.owl#"
+<rdf:RDF xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Service.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#" xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#">
@@ -12,8 +12,8 @@
     <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
   </owl:Ontology>
   <service:Service rdf:ID="GrosnWS_Service">
-    <service:presents rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Profile.owl#GrosnWS_Profile"/>
-    <service:describedBy rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_ProcessModel"/>
-    <service:supports rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Grounding.owl#GrosnWS_Grounding"/>
+    <service:presents rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Profile.owl#GrosnWS_Profile"/>
+    <service:describedBy rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_ProcessModel"/>
+    <service:supports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Grounding.owl#GrosnWS_Grounding"/>
   </service:Service>
 </rdf:RDF>

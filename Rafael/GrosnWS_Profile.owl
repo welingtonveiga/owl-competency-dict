@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xml:base=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Profile.owl#"
+<rdf:RDF xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Profile.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
   xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
   xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
@@ -19,25 +19,25 @@
     <profile:serviceName>GrosnService</profile:serviceName>
     <profile:textDescription>Serviço de anotação semantica sobre a Grosn.</profile:textDescription>
     <profile:qualityRating/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterClasses_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessMode.owll#GrosnWS_obterClasses_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesSPARQL_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesSPARQL_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterPropriedades_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterPropriedades_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosClasse_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosClasse_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosClasseSparql_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosClasseSparql_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclasses_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclasses_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesComInferencia_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesComInferencia_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosComInferenciaComSparql_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosComInferenciaComSparql_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesComInferenciaComSparql_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesComInferenciaComSparql_parameters_OUT"/>
-    <profile:hasInput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterDadosIndividuosClasseSparql_parameters_IN"/>
-    <profile:hasOutput rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterDadosIndividuosClasseSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterClasses_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessMode.owll#GrosnWS_obterClasses_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesSPARQL_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesSPARQL_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterPropriedades_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterPropriedades_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosClasse_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosClasse_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosClasseSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosClasseSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclasses_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclasses_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesComInferencia_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesComInferencia_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosComInferenciaComSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterIndividuosComInferenciaComSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesComInferenciaComSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterSubclassesComInferenciaComSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterDadosIndividuosClasseSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_obterDadosIndividuosClasseSparql_parameters_OUT"/>
   </profile:Profile>
 </rdf:RDF>
