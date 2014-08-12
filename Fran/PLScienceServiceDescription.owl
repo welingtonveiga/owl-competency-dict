@@ -1,1094 +1,824 @@
 <?xml version="1.0"?>
 
 
-<!DOCTYPE Ontology [
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY PLScienceServiceDescription "http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#" >
 ]>
 
 
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl"
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:PLScienceServiceDescription="http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     ontologyIRI="http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">PL-Science service description, considering syntactic, semantic and pragmatic aspects!</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="#Context"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Hardware"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Parameter"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Pragmatic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Scientist"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Semantic"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Service"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Syntactic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasInvolved"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasParameter"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#includesContext"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#includesHardware"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#includesPragmatic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#includesSemantic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#includesSyntactic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#pragmaticallyEquivalent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#semanticIsIncludedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#semanticallyEquivalent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#syntacticIsIncludedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#syntacticallyEquivalent"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#who"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasArtifact"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasCPU"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasComments"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasCompleteName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasContextComposition"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasDomain"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasEmail"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasFunctionalRequirements"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasHardwareConfiguration"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasIdentification"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasInstitutionFiliation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasLicense"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasNonFunctionalRequirement"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasOperationalSystem"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasRAM"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasROM"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasReputation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasRestriction"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasReturn"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasSemanticComposition"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasSemanticReception"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasSemanticRepresentation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasSemanticReturn"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasSyntacticComposition"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasValue"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#how"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#what"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#when"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#where"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Context1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Context2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Hardware1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Hardware2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Parameter1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Parameter2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pragmatic1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pragmatic2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Scientist1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Scientist2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Semantic1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Semantic2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Service1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Service2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Service3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Syntactic1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Syntactic2"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#Context"/>
-        <Class IRI="#Pragmatic"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Hardware"/>
-        <Class IRI="#Pragmatic"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#Context"/>
-        <Class IRI="#Hardware"/>
-        <Class IRI="#Semantic"/>
-    </DisjointClasses>
-    <ClassAssertion>
-        <Class IRI="#Hardware"/>
-        <NamedIndividual IRI="#Hardware1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Hardware"/>
-        <NamedIndividual IRI="#Hardware2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Parameter"/>
-        <NamedIndividual IRI="#Parameter1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Parameter"/>
-        <NamedIndividual IRI="#Parameter2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Pragmatic"/>
-        <NamedIndividual IRI="#Pragmatic1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Pragmatic"/>
-        <NamedIndividual IRI="#Pragmatic2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Scientist"/>
-        <NamedIndividual IRI="#Scientist1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Scientist"/>
-        <NamedIndividual IRI="#Scientist2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Semantic"/>
-        <NamedIndividual IRI="#Semantic1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Semantic"/>
-        <NamedIndividual IRI="#Semantic2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Service"/>
-        <NamedIndividual IRI="#Service1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Service"/>
-        <NamedIndividual IRI="#Service2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Service"/>
-        <NamedIndividual IRI="#Service3"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Syntactic"/>
-        <NamedIndividual IRI="#Syntactic1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Syntactic"/>
-        <NamedIndividual IRI="#Syntactic2"/>
-    </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasInvolved"/>
-        <NamedIndividual IRI="#Context1"/>
-        <NamedIndividual IRI="#Scientist2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasInvolved"/>
-        <NamedIndividual IRI="#Context1"/>
-        <NamedIndividual IRI="#Scientist1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#who"/>
-        <NamedIndividual IRI="#Context1"/>
-        <NamedIndividual IRI="#Scientist1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasInvolved"/>
-        <NamedIndividual IRI="#Context2"/>
-        <NamedIndividual IRI="#Scientist1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasInvolved"/>
-        <NamedIndividual IRI="#Context2"/>
-        <NamedIndividual IRI="#Scientist2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#who"/>
-        <NamedIndividual IRI="#Context2"/>
-        <NamedIndividual IRI="#Scientist2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesContext"/>
-        <NamedIndividual IRI="#Pragmatic1"/>
-        <NamedIndividual IRI="#Context1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesHardware"/>
-        <NamedIndividual IRI="#Pragmatic1"/>
-        <NamedIndividual IRI="#Hardware1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesContext"/>
-        <NamedIndividual IRI="#Pragmatic2"/>
-        <NamedIndividual IRI="#Context2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesHardware"/>
-        <NamedIndividual IRI="#Pragmatic2"/>
-        <NamedIndividual IRI="#Hardware2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesPragmatic"/>
-        <NamedIndividual IRI="#Service1"/>
-        <NamedIndividual IRI="#Pragmatic1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesSemantic"/>
-        <NamedIndividual IRI="#Service1"/>
-        <NamedIndividual IRI="#Semantic1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesSyntactic"/>
-        <NamedIndividual IRI="#Service1"/>
-        <NamedIndividual IRI="#Syntactic1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesPragmatic"/>
-        <NamedIndividual IRI="#Service2"/>
-        <NamedIndividual IRI="#Pragmatic2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesSemantic"/>
-        <NamedIndividual IRI="#Service2"/>
-        <NamedIndividual IRI="#Semantic2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesSyntactic"/>
-        <NamedIndividual IRI="#Service2"/>
-        <NamedIndividual IRI="#Syntactic2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesPragmatic"/>
-        <NamedIndividual IRI="#Service3"/>
-        <NamedIndividual IRI="#Pragmatic2"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesSemantic"/>
-        <NamedIndividual IRI="#Service3"/>
-        <NamedIndividual IRI="#Semantic1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#includesSyntactic"/>
-        <NamedIndividual IRI="#Service3"/>
-        <NamedIndividual IRI="#Syntactic1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Syntactic1"/>
-        <NamedIndividual IRI="#Parameter1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasParameter"/>
-        <NamedIndividual IRI="#Syntactic2"/>
-        <NamedIndividual IRI="#Parameter2"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasArtifact"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Prot45</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasComments"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">very good</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDomain"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">HIV</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLicense"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">public</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasReputation"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasRestriction"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">not valid for anemic subjects</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#how"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Composition</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#what"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral"> artifact 2.05 composition with artifact 3.90</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#when"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">20140424000000</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#where"/>
-        <NamedIndividual IRI="#Context1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">RJ, Brazil</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasArtifact"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Prot46</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasComments"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">It works fine!</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasDomain"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">muscle regenaration</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasLicense"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">4.2.5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasReputation"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">7</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasRestriction"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">can not be applied to children younger than 6 years</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#how"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Experiment</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#what"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">artifact 2.05 utilization</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#when"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">20140510000000</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#where"/>
-        <NamedIndividual IRI="#Context2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Miami, Florida</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasCPU"/>
-        <NamedIndividual IRI="#Hardware1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">I5</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasOperationalSystem"/>
-        <NamedIndividual IRI="#Hardware1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Linux</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasRAM"/>
-        <NamedIndividual IRI="#Hardware1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">4</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasROM"/>
-        <NamedIndividual IRI="#Hardware1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasCPU"/>
-        <NamedIndividual IRI="#Hardware2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">I7</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasOperationalSystem"/>
-        <NamedIndividual IRI="#Hardware2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Windows</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasRAM"/>
-        <NamedIndividual IRI="#Hardware2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">8</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasROM"/>
-        <NamedIndividual IRI="#Hardware2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasType"/>
-        <NamedIndividual IRI="#Parameter1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">cell</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Parameter1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">object31</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasType"/>
-        <NamedIndividual IRI="#Parameter2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">cell</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasValue"/>
-        <NamedIndividual IRI="#Parameter2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">object32</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasNonFunctionalRequirement"/>
-        <NamedIndividual IRI="#Pragmatic1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">performance below 15 minutes</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasNonFunctionalRequirement"/>
-        <NamedIndividual IRI="#Pragmatic2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">memory space demanded below 1GB</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasCompleteName"/>
-        <NamedIndividual IRI="#Scientist1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Marcio Werner</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Scientist1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">werner.marcio@chr.org</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInstitutionFiliation"/>
-        <NamedIndividual IRI="#Scientist1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Center of HIV Research (CHR-RJ)</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasCompleteName"/>
-        <NamedIndividual IRI="#Scientist2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Maria Winter</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasEmail"/>
-        <NamedIndividual IRI="#Scientist2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">winter.maria@health.us</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasInstitutionFiliation"/>
-        <NamedIndividual IRI="#Scientist2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Health Department of Miami</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasFunctionalRequirements"/>
-        <NamedIndividual IRI="#Semantic1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">to isolate protein Prot45</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasSemanticReception"/>
-        <NamedIndividual IRI="#Semantic1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">type B cell</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasSemanticRepresentation"/>
-        <NamedIndividual IRI="#Semantic1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Protein Pro45 isolation</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasSemanticReturn"/>
-        <NamedIndividual IRI="#Semantic1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">if the protein prot45 was isolated</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasFunctionalRequirements"/>
-        <NamedIndividual IRI="#Semantic2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">to synthesize protein Prot46</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasSemanticReception"/>
-        <NamedIndividual IRI="#Semantic2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">type A cell</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasSemanticRepresentation"/>
-        <NamedIndividual IRI="#Semantic2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">protein Prot46  synthesis </Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasSemanticReturn"/>
-        <NamedIndividual IRI="#Semantic2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">if protein Prot46 was synthesized inside the received cell</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Syntactic1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">service45/1.2</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasReturn"/>
-        <NamedIndividual IRI="#Syntactic1"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasName"/>
-        <NamedIndividual IRI="#Syntactic2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">service46/1.3</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#hasReturn"/>
-        <NamedIndividual IRI="#Syntactic2"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">true</Literal>
-    </DataPropertyAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#includesPragmatic"/>
-        <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#includesSemantic"/>
-        <ObjectProperty IRI="#semanticIsIncludedBy"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#syntacticIsIncludedBy"/>
-        <ObjectProperty IRI="#includesSyntactic"/>
-    </InverseObjectProperties>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasInvolved"/>
-        <Class IRI="#Context"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasParameter"/>
-        <Class IRI="#Syntactic"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
-        <Class IRI="#Pragmatic"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#semanticIsIncludedBy"/>
-        <Class IRI="#Semantic"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#syntacticIsIncludedBy"/>
-        <Class IRI="#Syntactic"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#who"/>
-        <Class IRI="#Context"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasInvolved"/>
-        <Class IRI="#Scientist"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasParameter"/>
-        <Class IRI="#Parameter"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#includesContext"/>
-        <Class IRI="#Context"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#includesHardware"/>
-        <Class IRI="#Hardware"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#includesPragmatic"/>
-        <Class IRI="#Pragmatic"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#includesSemantic"/>
-        <Class IRI="#Semantic"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#includesSyntactic"/>
-        <Class IRI="#Syntactic"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#who"/>
-        <Class IRI="#Scientist"/>
-    </ObjectPropertyRange>
-    <DisjointObjectProperties>
-        <ObjectProperty IRI="#includesPragmatic"/>
-        <ObjectProperty IRI="#includesSemantic"/>
-        <ObjectProperty IRI="#includesSyntactic"/>
-    </DisjointObjectProperties>
-    <DisjointObjectProperties>
-        <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
-        <ObjectProperty IRI="#semanticIsIncludedBy"/>
-        <ObjectProperty IRI="#syntacticIsIncludedBy"/>
-    </DisjointObjectProperties>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectProperty IRI="#includesPragmatic"/>
-            <ObjectProperty IRI="#pragmaticIsIncludedBy"/>
-        </ObjectPropertyChain>
-        <ObjectProperty IRI="#pragmaticallyEquivalent"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectProperty IRI="#includesSemantic"/>
-            <ObjectProperty IRI="#semanticIsIncludedBy"/>
-        </ObjectPropertyChain>
-        <ObjectProperty IRI="#semanticallyEquivalent"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectPropertyChain>
-            <ObjectProperty IRI="#includesSyntactic"/>
-            <ObjectProperty IRI="#syntacticIsIncludedBy"/>
-        </ObjectPropertyChain>
-        <ObjectProperty IRI="#syntacticallyEquivalent"/>
-    </SubObjectPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasArtifact"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasCPU"/>
-        <DataProperty IRI="#hasHardwareConfiguration"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasComments"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasCompleteName"/>
-        <DataProperty IRI="#hasIdentification"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasDomain"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasEmail"/>
-        <DataProperty IRI="#hasIdentification"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasFunctionalRequirements"/>
-        <DataProperty IRI="#hasSemanticComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasInstitutionFiliation"/>
-        <DataProperty IRI="#hasIdentification"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasLicense"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasName"/>
-        <DataProperty IRI="#hasSyntacticComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasOperationalSystem"/>
-        <DataProperty IRI="#hasHardwareConfiguration"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasRAM"/>
-        <DataProperty IRI="#hasHardwareConfiguration"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasROM"/>
-        <DataProperty IRI="#hasHardwareConfiguration"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasReputation"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasRestriction"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasReturn"/>
-        <DataProperty IRI="#hasSyntacticComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasSemanticReception"/>
-        <DataProperty IRI="#hasSemanticComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasSemanticRepresentation"/>
-        <DataProperty IRI="#hasSemanticComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasSemanticReturn"/>
-        <DataProperty IRI="#hasSemanticComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#how"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#what"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#when"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#where"/>
-        <DataProperty IRI="#hasContextComposition"/>
-    </SubDataPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasArtifact"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasCPU"/>
-        <Class IRI="#Hardware"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasComments"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasCompleteName"/>
-        <Class IRI="#Scientist"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasContextComposition"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasDomain"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasEmail"/>
-        <Class IRI="#Scientist"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasFunctionalRequirements"/>
-        <Class IRI="#Semantic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasHardwareConfiguration"/>
-        <Class IRI="#Hardware"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasIdentification"/>
-        <Class IRI="#Scientist"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasInstitutionFiliation"/>
-        <Class IRI="#Scientist"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasLicense"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasName"/>
-        <Class IRI="#Syntactic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasNonFunctionalRequirement"/>
-        <Class IRI="#Pragmatic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasOperationalSystem"/>
-        <Class IRI="#Hardware"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasRAM"/>
-        <Class IRI="#Hardware"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasROM"/>
-        <Class IRI="#Hardware"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasReputation"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasRestriction"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasReturn"/>
-        <Class IRI="#Syntactic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasSemanticComposition"/>
-        <Class IRI="#Semantic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasSemanticReception"/>
-        <Class IRI="#Semantic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasSemanticRepresentation"/>
-        <Class IRI="#Semantic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasSemanticReturn"/>
-        <Class IRI="#Semantic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasSyntacticComposition"/>
-        <Class IRI="#Syntactic"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasType"/>
-        <Class IRI="#Parameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasValue"/>
-        <Class IRI="#Parameter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#how"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#what"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#when"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#where"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasArtifact"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasCPU"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasComments"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasCompleteName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasDomain"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasEmail"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasFunctionalRequirements"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasInstitutionFiliation"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasLicense"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasNonFunctionalRequirement"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasOperationalSystem"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasRAM"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasROM"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasReputation"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasRestriction"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasReturn"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasSemanticReception"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasSemanticRepresentation"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasSemanticReturn"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#how"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#what"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#when"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#where"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DisjointDataProperties>
-        <DataProperty IRI="#hasFunctionalRequirements"/>
-        <DataProperty IRI="#hasNonFunctionalRequirement"/>
-    </DisjointDataProperties>
-</Ontology>
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <Ontology rdf:about="http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl">
+        <rdfs:comment>PL-Science service description, considering syntactic, semantic and pragmatic aspects!</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasInvolved -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;hasInvolved">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:range rdf:resource="&PLScienceServiceDescription;Scientist"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasParameter -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;hasParameter">
+        <rdfs:range rdf:resource="&PLScienceServiceDescription;Parameter"/>
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Syntactic"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#includesContext -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;includesContext">
+        <rdfs:range rdf:resource="&PLScienceServiceDescription;Context"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#includesHardware -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;includesHardware">
+        <rdfs:range rdf:resource="&PLScienceServiceDescription;Hardware"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#includesPragmatic -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;includesPragmatic">
+        <rdfs:range rdf:resource="&PLScienceServiceDescription;Pragmatic"/>
+        <inverseOf rdf:resource="&PLScienceServiceDescription;pragmaticIsIncludedBy"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#includesSemantic -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;includesSemantic">
+        <rdfs:range rdf:resource="&PLScienceServiceDescription;Semantic"/>
+        <inverseOf rdf:resource="&PLScienceServiceDescription;semanticIsIncludedBy"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#includesSyntactic -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;includesSyntactic">
+        <rdfs:range rdf:resource="&PLScienceServiceDescription;Syntactic"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#pragmaticIsIncludedBy -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;pragmaticIsIncludedBy">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Pragmatic"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#pragmaticallyEquivalent -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;pragmaticallyEquivalent">
+        <propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&PLScienceServiceDescription;includesPragmatic"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;pragmaticIsIncludedBy"/>
+        </propertyChainAxiom>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#semanticIsIncludedBy -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;semanticIsIncludedBy">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Semantic"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#semanticallyEquivalent -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;semanticallyEquivalent">
+        <propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&PLScienceServiceDescription;includesSemantic"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;semanticIsIncludedBy"/>
+        </propertyChainAxiom>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#syntacticIsIncludedBy -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;syntacticIsIncludedBy">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Syntactic"/>
+        <inverseOf rdf:resource="&PLScienceServiceDescription;includesSyntactic"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#syntacticallyEquivalent -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;syntacticallyEquivalent">
+        <propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="&PLScienceServiceDescription;includesSyntactic"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;syntacticIsIncludedBy"/>
+        </propertyChainAxiom>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#who -->
+
+    <ObjectProperty rdf:about="&PLScienceServiceDescription;who">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:range rdf:resource="&PLScienceServiceDescription;Scientist"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasArtifact -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasArtifact">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasCPU -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasCPU">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Hardware"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasHardwareConfiguration"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasComments -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasComments">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasCompleteName -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasCompleteName">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Scientist"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasIdentification"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasContextComposition -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasContextComposition">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasDomain -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasDomain">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasEmail -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasEmail">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Scientist"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasIdentification"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasFunctionalRequirements -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasFunctionalRequirements">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Semantic"/>
+        <propertyDisjointWith rdf:resource="&PLScienceServiceDescription;hasNonFunctionalRequirement"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasSemanticComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasHardwareConfiguration -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasHardwareConfiguration">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Hardware"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasIdentification -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasIdentification">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Scientist"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasInstitutionFiliation -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasInstitutionFiliation">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Scientist"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasIdentification"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasLicense -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasLicense">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasName -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasName">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Syntactic"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasSyntacticComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasNonFunctionalRequirement -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasNonFunctionalRequirement">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Pragmatic"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasOperationalSystem -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasOperationalSystem">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Hardware"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasHardwareConfiguration"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasRAM -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasRAM">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Hardware"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasHardwareConfiguration"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasROM -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasROM">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Hardware"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasHardwareConfiguration"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasReputation -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasReputation">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasRestriction -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasRestriction">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasReturn -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasReturn">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Syntactic"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasSyntacticComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasSemanticComposition -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasSemanticComposition">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Semantic"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasSemanticReception -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasSemanticReception">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Semantic"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasSemanticComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasSemanticRepresentation -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasSemanticRepresentation">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Semantic"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasSemanticComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasSemanticReturn -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasSemanticReturn">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Semantic"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasSemanticComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasSyntacticComposition -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasSyntacticComposition">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Syntactic"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasType -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasType">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Parameter"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#hasValue -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;hasValue">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Parameter"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#how -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;how">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#what -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;what">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#when -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;when">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#where -->
+
+    <DatatypeProperty rdf:about="&PLScienceServiceDescription;where">
+        <rdfs:domain rdf:resource="&PLScienceServiceDescription;Context"/>
+        <rdfs:subPropertyOf rdf:resource="&PLScienceServiceDescription;hasContextComposition"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Context -->
+
+    <Class rdf:about="&PLScienceServiceDescription;Context">
+        <rdfs:subClassOf rdf:resource="&PLScienceServiceDescription;Pragmatic"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Hardware -->
+
+    <Class rdf:about="&PLScienceServiceDescription;Hardware">
+        <rdfs:subClassOf rdf:resource="&PLScienceServiceDescription;Pragmatic"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Parameter -->
+
+    <Class rdf:about="&PLScienceServiceDescription;Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Pragmatic -->
+
+    <Class rdf:about="&PLScienceServiceDescription;Pragmatic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Scientist -->
+
+    <Class rdf:about="&PLScienceServiceDescription;Scientist"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Semantic -->
+
+    <Class rdf:about="&PLScienceServiceDescription;Semantic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Service -->
+
+    <Class rdf:about="&PLScienceServiceDescription;Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Syntactic -->
+
+    <Class rdf:about="&PLScienceServiceDescription;Syntactic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Context1 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Context1">
+        <PLScienceServiceDescription:hasRestriction>not valid for anemic subjects</PLScienceServiceDescription:hasRestriction>
+        <PLScienceServiceDescription:where>RJ, Brazil</PLScienceServiceDescription:where>
+        <PLScienceServiceDescription:hasReputation>5</PLScienceServiceDescription:hasReputation>
+        <PLScienceServiceDescription:how>Composition</PLScienceServiceDescription:how>
+        <PLScienceServiceDescription:hasArtifact>Prot45</PLScienceServiceDescription:hasArtifact>
+        <PLScienceServiceDescription:hasDomain>HIV</PLScienceServiceDescription:hasDomain>
+        <PLScienceServiceDescription:hasLicense>public</PLScienceServiceDescription:hasLicense>
+        <PLScienceServiceDescription:hasComments>very good</PLScienceServiceDescription:hasComments>
+        <PLScienceServiceDescription:what> artifact 2.05 composition with artifact 3.90</PLScienceServiceDescription:what>
+        <PLScienceServiceDescription:when>20140424000000</PLScienceServiceDescription:when>
+        <PLScienceServiceDescription:who rdf:resource="&PLScienceServiceDescription;Scientist1"/>
+        <PLScienceServiceDescription:hasInvolved rdf:resource="&PLScienceServiceDescription;Scientist1"/>
+        <PLScienceServiceDescription:hasInvolved rdf:resource="&PLScienceServiceDescription;Scientist2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Context2 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Context2">
+        <PLScienceServiceDescription:hasLicense>4.2.5</PLScienceServiceDescription:hasLicense>
+        <PLScienceServiceDescription:hasReputation>7</PLScienceServiceDescription:hasReputation>
+        <PLScienceServiceDescription:where>Miami, Florida</PLScienceServiceDescription:where>
+        <PLScienceServiceDescription:hasRestriction>can not be applied to children younger than 6 years</PLScienceServiceDescription:hasRestriction>
+        <PLScienceServiceDescription:hasDomain>muscle regenaration</PLScienceServiceDescription:hasDomain>
+        <PLScienceServiceDescription:when>20140510000000</PLScienceServiceDescription:when>
+        <PLScienceServiceDescription:how>Experiment</PLScienceServiceDescription:how>
+        <PLScienceServiceDescription:hasArtifact>Prot46</PLScienceServiceDescription:hasArtifact>
+        <PLScienceServiceDescription:what>artifact 2.05 utilization</PLScienceServiceDescription:what>
+        <PLScienceServiceDescription:hasComments>It works fine!</PLScienceServiceDescription:hasComments>
+        <PLScienceServiceDescription:hasInvolved rdf:resource="&PLScienceServiceDescription;Scientist1"/>
+        <PLScienceServiceDescription:who rdf:resource="&PLScienceServiceDescription;Scientist2"/>
+        <PLScienceServiceDescription:hasInvolved rdf:resource="&PLScienceServiceDescription;Scientist2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Hardware1 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Hardware1">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Hardware"/>
+        <PLScienceServiceDescription:hasRAM>4</PLScienceServiceDescription:hasRAM>
+        <PLScienceServiceDescription:hasOperationalSystem>Linux</PLScienceServiceDescription:hasOperationalSystem>
+        <PLScienceServiceDescription:hasCPU>I5</PLScienceServiceDescription:hasCPU>
+        <PLScienceServiceDescription:hasROM>1</PLScienceServiceDescription:hasROM>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Hardware2 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Hardware2">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Hardware"/>
+        <PLScienceServiceDescription:hasROM>2</PLScienceServiceDescription:hasROM>
+        <PLScienceServiceDescription:hasRAM>8</PLScienceServiceDescription:hasRAM>
+        <PLScienceServiceDescription:hasCPU>I7</PLScienceServiceDescription:hasCPU>
+        <PLScienceServiceDescription:hasOperationalSystem>Windows</PLScienceServiceDescription:hasOperationalSystem>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Parameter1 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Parameter1">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Parameter"/>
+        <PLScienceServiceDescription:hasValue>object31</PLScienceServiceDescription:hasValue>
+        <PLScienceServiceDescription:hasType>cell</PLScienceServiceDescription:hasType>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Parameter2 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Parameter2">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Parameter"/>
+        <PLScienceServiceDescription:hasValue>object32</PLScienceServiceDescription:hasValue>
+        <PLScienceServiceDescription:hasType>cell</PLScienceServiceDescription:hasType>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Pragmatic1 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Pragmatic1">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Pragmatic"/>
+        <PLScienceServiceDescription:hasNonFunctionalRequirement>performance below 15 minutes</PLScienceServiceDescription:hasNonFunctionalRequirement>
+        <PLScienceServiceDescription:includesContext rdf:resource="&PLScienceServiceDescription;Context1"/>
+        <PLScienceServiceDescription:includesHardware rdf:resource="&PLScienceServiceDescription;Hardware1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Pragmatic2 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Pragmatic2">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Pragmatic"/>
+        <PLScienceServiceDescription:hasNonFunctionalRequirement>memory space demanded below 1GB</PLScienceServiceDescription:hasNonFunctionalRequirement>
+        <PLScienceServiceDescription:includesContext rdf:resource="&PLScienceServiceDescription;Context2"/>
+        <PLScienceServiceDescription:includesHardware rdf:resource="&PLScienceServiceDescription;Hardware2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Scientist1 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Scientist1">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Scientist"/>
+        <PLScienceServiceDescription:hasCompleteName>Marcio Werner</PLScienceServiceDescription:hasCompleteName>
+        <PLScienceServiceDescription:hasInstitutionFiliation>Center of HIV Research (CHR-RJ)</PLScienceServiceDescription:hasInstitutionFiliation>
+        <PLScienceServiceDescription:hasEmail>werner.marcio@chr.org</PLScienceServiceDescription:hasEmail>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Scientist2 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Scientist2">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Scientist"/>
+        <PLScienceServiceDescription:hasCompleteName>Maria Winter</PLScienceServiceDescription:hasCompleteName>
+        <PLScienceServiceDescription:hasEmail>winter.maria@health.us</PLScienceServiceDescription:hasEmail>
+        <PLScienceServiceDescription:hasInstitutionFiliation>Health Department of Miami</PLScienceServiceDescription:hasInstitutionFiliation>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Semantic1 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Semantic1">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Semantic"/>
+        <PLScienceServiceDescription:hasSemanticRepresentation>Protein Pro45 isolation</PLScienceServiceDescription:hasSemanticRepresentation>
+        <PLScienceServiceDescription:hasSemanticReception>type B cell</PLScienceServiceDescription:hasSemanticReception>
+        <PLScienceServiceDescription:hasFunctionalRequirements>to isolate protein Prot45</PLScienceServiceDescription:hasFunctionalRequirements>
+        <PLScienceServiceDescription:hasSemanticReturn>if the protein prot45 was isolated</PLScienceServiceDescription:hasSemanticReturn>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Semantic2 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Semantic2">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Semantic"/>
+        <PLScienceServiceDescription:hasSemanticReturn>if protein Prot46 was synthesized inside the received cell</PLScienceServiceDescription:hasSemanticReturn>
+        <PLScienceServiceDescription:hasSemanticReception>type A cell</PLScienceServiceDescription:hasSemanticReception>
+        <PLScienceServiceDescription:hasSemanticRepresentation>protein Prot46  synthesis </PLScienceServiceDescription:hasSemanticRepresentation>
+        <PLScienceServiceDescription:hasFunctionalRequirements>to synthesize protein Prot46</PLScienceServiceDescription:hasFunctionalRequirements>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Service1 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Service1">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Service"/>
+        <PLScienceServiceDescription:includesPragmatic rdf:resource="&PLScienceServiceDescription;Pragmatic1"/>
+        <PLScienceServiceDescription:includesSemantic rdf:resource="&PLScienceServiceDescription;Semantic1"/>
+        <PLScienceServiceDescription:semanticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service1"/>
+        <PLScienceServiceDescription:syntacticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service1"/>
+        <PLScienceServiceDescription:pragmaticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service1"/>
+        <PLScienceServiceDescription:semanticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service3"/>
+        <PLScienceServiceDescription:syntacticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service3"/>
+        <PLScienceServiceDescription:includesSyntactic rdf:resource="&PLScienceServiceDescription;Syntactic1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Service2 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Service2">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Service"/>
+        <PLScienceServiceDescription:includesPragmatic rdf:resource="&PLScienceServiceDescription;Pragmatic2"/>
+        <PLScienceServiceDescription:includesSemantic rdf:resource="&PLScienceServiceDescription;Semantic2"/>
+        <PLScienceServiceDescription:syntacticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service2"/>
+        <PLScienceServiceDescription:semanticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service2"/>
+        <PLScienceServiceDescription:pragmaticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service2"/>
+        <PLScienceServiceDescription:pragmaticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service3"/>
+        <PLScienceServiceDescription:includesSyntactic rdf:resource="&PLScienceServiceDescription;Syntactic2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Service3 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Service3">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Service"/>
+        <PLScienceServiceDescription:includesPragmatic rdf:resource="&PLScienceServiceDescription;Pragmatic2"/>
+        <PLScienceServiceDescription:includesSemantic rdf:resource="&PLScienceServiceDescription;Semantic1"/>
+        <PLScienceServiceDescription:syntacticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service1"/>
+        <PLScienceServiceDescription:semanticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service1"/>
+        <PLScienceServiceDescription:pragmaticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service2"/>
+        <PLScienceServiceDescription:syntacticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service3"/>
+        <PLScienceServiceDescription:semanticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service3"/>
+        <PLScienceServiceDescription:pragmaticallyEquivalent rdf:resource="&PLScienceServiceDescription;Service3"/>
+        <PLScienceServiceDescription:includesSyntactic rdf:resource="&PLScienceServiceDescription;Syntactic1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Syntactic1 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Syntactic1">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Syntactic"/>
+        <PLScienceServiceDescription:hasName>service45/1.2</PLScienceServiceDescription:hasName>
+        <PLScienceServiceDescription:hasReturn>true</PLScienceServiceDescription:hasReturn>
+        <PLScienceServiceDescription:hasParameter rdf:resource="&PLScienceServiceDescription;Parameter1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fran/ontologies/2014/6/PLScienceServiceDescription.owl#Syntactic2 -->
+
+    <NamedIndividual rdf:about="&PLScienceServiceDescription;Syntactic2">
+        <rdf:type rdf:resource="&PLScienceServiceDescription;Syntactic"/>
+        <PLScienceServiceDescription:hasName>service46/1.3</PLScienceServiceDescription:hasName>
+        <PLScienceServiceDescription:hasReturn>true</PLScienceServiceDescription:hasReturn>
+        <PLScienceServiceDescription:hasParameter rdf:resource="&PLScienceServiceDescription;Parameter2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&PLScienceServiceDescription;Context"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;Hardware"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;Semantic"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&PLScienceServiceDescription;includesPragmatic"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;includesSemantic"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;includesSyntactic"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointProperties"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&PLScienceServiceDescription;pragmaticIsIncludedBy"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;semanticIsIncludedBy"/>
+            <rdf:Description rdf:about="&PLScienceServiceDescription;syntacticIsIncludedBy"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
 
 
 
