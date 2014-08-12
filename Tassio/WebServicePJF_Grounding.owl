@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE uridef[
-  <!ENTITY kkk       "http://www.w3.org/2001/XMLSchema">
+<!ENTITY kkk       "http://www.w3.org/2001/XMLSchema">
 ]>
 
 
 <rdf:RDF
-  xmlns:kkk      ="&xsd;#"
+  xmlns:kkk="&kkk;#"
   xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#"
   xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
@@ -69,7 +69,7 @@
       <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
     </grounding:wsdlReference>
     </grounding:WsdlAtomicProcessGrounding>
-  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+  <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarSubclassesComJena">
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena"/>
     <grounding:wsdlOperation>
@@ -102,7 +102,7 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarIndividuosClasseComJena">
-  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+  <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosClasseComJena"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarIndividuosClasseComJena"/>
@@ -135,7 +135,7 @@
   </grounding:WsdlAtomicProcessGrounding>
   
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarPropriedadesComJena">
-    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+    <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarPropriedadesComJena"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarPropriedadesComJena"/>
@@ -167,7 +167,7 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarSoftwareGerenciadaPor">
-   <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+   <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSoftwareGerenciadaPor"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSoftwareGerenciadaPor"/>
@@ -199,7 +199,7 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarIndividuosComInferenciaComSparql">
-	    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+	    <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosComInferenciaComSparql"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarIndividuosComInferenciaComSparql"/>
@@ -231,7 +231,7 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarSubClassesSemInferenciaComSparql">
-	    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+	    <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubClassesSemInferenciaComSparql"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubClassesSemInferenciaComSparql"/>
@@ -263,7 +263,7 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComSparql">
-	    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+	    <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComSparql"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComInferenciaComSparql"/>
@@ -295,7 +295,7 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarSubclassesComInferenciaComJena">
-	    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+	    <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComJena"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarSubclassesComInferenciaComJena"/>
@@ -327,7 +327,7 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_hello">
-	    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
+	    <grounding:wsdlDocument rdf:datatype="&kkk;anyURI">http://localhost:8084/WebServicePJF/WebServicePJF</grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_hello"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#hello"/>
