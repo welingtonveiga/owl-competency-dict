@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Grounding.owl#"
+  xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
+  xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
+  xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
+  xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
+  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" xmlns:xsd="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <rdfs:comment>Add Ontology Comment</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl"/>
+  </owl:Ontology>
+  <grounding:WsdlGrounding rdf:ID="GrosnWS_Grounding">
+    <service:supportedBy rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Service#GrosnWS_Service"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterClasses"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterSubclassesSPARQL"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterPropriedades"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterIndividuosClasse"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterIndividuosClasseSparql"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterSubclasses"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterSubclassesComInferencia"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterIndividuosComInferenciaComSparql"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterSubclassesComInferenciaComSparql"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterDadosIndividuosClasseSparql"/>
+  </grounding:WsdlGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterClasses">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterClasses"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterClasses"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterClasses"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterClasses_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterClassesResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterClasses_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterSubclassesSPARQL">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesSPARQL"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesSPARQL"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesSPARQL"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesSPARQL_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesSPARQLResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesSPARQL_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterPropriedades">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterPropriedades"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterPropriedades"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterPropriedades"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterPropriedades_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterPropriedadesResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterPropriedades_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterIndividuosClasse">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosClasse"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosClasse"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosClasse"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosClasse_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosClasseResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosClasse_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterIndividuosClasseSparql">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosClasseSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosClasseSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosClasseSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosClasseSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosClasseSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosClasseSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterSubclasses">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclasses"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclasses"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclasses"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclasses_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclasses_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterSubclassesComInferencia">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesComInferencia"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesComInferencia"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesComInferencia"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesComInferencia_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesComInferenciaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesComInferencia_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterIndividuosComInferenciaComSparql">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosComInferenciaComSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosComInferenciaComSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosComInferenciaComSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosComInferenciaComSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterIndividuosComInferenciaComSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterIndividuosComInferenciaComSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterSubclassesComInferenciaComSparql">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesComInferenciaComSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesComInferenciaComSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesComInferenciaComSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesComInferenciaComSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterSubclassesComInferenciaComSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterSubclassesComInferenciaComSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterDadosIndividuosClasseSparql">
+    <grounding:owlsProcess rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterDadosIndividuosClasseSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterDadosIndividuosClasseSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterDadosIndividuosClasseSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterDadosIndividuosClasseSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#obterDadosIndividuosClasseSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_obterDadosIndividuosClasseSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

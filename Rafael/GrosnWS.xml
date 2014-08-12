@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description>
+   <baseDir>C:\owlsedit\temp</baseDir>
+   <service>GrosnWS_Service.owl</service>
+   <profile>GrosnWS_Profile.owl</profile>
+   <process>GrosnWS_Process.owl</process>
+   <grounding>GrosnWS_Grounding.owl</grounding>
+   <name>GrosnWS.xml</name>
+</description>

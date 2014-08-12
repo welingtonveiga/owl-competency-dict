@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:base=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#"
+  xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
+  xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
+  xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
+  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <rdfs:comment>Add Ontology Comment</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl"/>
+  </owl:Ontology>
+  <process:ProcessModel rdf:ID="GrosnWS_ProcessModel">
+    <process:hasProcess rdf:resource="#GrosnWS_Composite"/>
+    <process:describes rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Service#GrosnWS_Service"/>
+  </process:ProcessModel>
+  <process:CompositeProcess rdf:ID="GrosnWS_Composite"/>
+  <process:Input rdf:ID="GrosnWS_obterClasses_parameters_IN">
+    <process:parameterName>GrosnWS_obterClasses_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterClasses_parameters_OUT">
+    <process:parameterName>GrosnWS_obterClasses_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterClasses">
+    <process:hasInput rdf:resource="#GrosnWS_obterClasses_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterClasses_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterSubclassesSPARQL_parameters_IN">
+    <process:parameterName>GrosnWS_obterSubclassesSPARQL_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterSubclassesSPARQL_parameters_OUT">
+    <process:parameterName>GrosnWS_obterSubclassesSPARQL_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterSubclassesSPARQL">
+    <process:hasInput rdf:resource="#GrosnWS_obterSubclassesSPARQL_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterSubclassesSPARQL_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterPropriedades_parameters_IN">
+    <process:parameterName>GrosnWS_obterPropriedades_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterPropriedades_parameters_OUT">
+    <process:parameterName>GrosnWS_obterPropriedades_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterPropriedades">
+    <process:hasInput rdf:resource="#GrosnWS_obterPropriedades_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterPropriedades_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterIndividuosClasse_parameters_IN">
+    <process:parameterName>GrosnWS_obterIndividuosClasse_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterIndividuosClasse_parameters_OUT">
+    <process:parameterName>GrosnWS_obterIndividuosClasse_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterIndividuosClasse">
+    <process:hasInput rdf:resource="#GrosnWS_obterIndividuosClasse_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterIndividuosClasse_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterIndividuosClasseSparql_parameters_IN">
+    <process:parameterName>GrosnWS_obterIndividuosClasseSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterIndividuosClasseSparql_parameters_OUT">
+    <process:parameterName>GrosnWS_obterIndividuosClasseSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterIndividuosClasseSparql">
+    <process:hasInput rdf:resource="#GrosnWS_obterIndividuosClasseSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterIndividuosClasseSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterSubclasses_parameters_IN">
+    <process:parameterName>GrosnWS_obterSubclasses_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterSubclasses_parameters_OUT">
+    <process:parameterName>GrosnWS_obterSubclasses_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterSubclasses">
+    <process:hasInput rdf:resource="#GrosnWS_obterSubclasses_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterSubclasses_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterSubclassesComInferencia_parameters_IN">
+    <process:parameterName>GrosnWS_obterSubclassesComInferencia_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterSubclassesComInferencia_parameters_OUT">
+    <process:parameterName>GrosnWS_obterSubclassesComInferencia_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterSubclassesComInferencia">
+    <process:hasInput rdf:resource="#GrosnWS_obterSubclassesComInferencia_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterSubclassesComInferencia_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterIndividuosComInferenciaComSparql_parameters_IN">
+    <process:parameterName>GrosnWS_obterIndividuosComInferenciaComSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterIndividuosComInferenciaComSparql_parameters_OUT">
+    <process:parameterName>GrosnWS_obterIndividuosComInferenciaComSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterIndividuosComInferenciaComSparql">
+    <process:hasInput rdf:resource="#GrosnWS_obterIndividuosComInferenciaComSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterIndividuosComInferenciaComSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterSubclassesComInferenciaComSparql_parameters_IN">
+    <process:parameterName>GrosnWS_obterSubclassesComInferenciaComSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterSubclassesComInferenciaComSparql_parameters_OUT">
+    <process:parameterName>GrosnWS_obterSubclassesComInferenciaComSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterSubclassesComInferenciaComSparql">
+    <process:hasInput rdf:resource="#GrosnWS_obterSubclassesComInferenciaComSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterSubclassesComInferenciaComSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+  <process:Input rdf:ID="GrosnWS_obterDadosIndividuosClasseSparql_parameters_IN">
+    <process:parameterName>GrosnWS_obterDadosIndividuosClasseSparql_parameters_IN</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Input>
+  <process:Output rdf:ID="GrosnWS_obterDadosIndividuosClasseSparql_parameters_OUT">
+    <process:parameterName>GrosnWS_obterDadosIndividuosClasseSparql_parameters_OUT</process:parameterName>
+    <process:parameterType rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </process:Output>
+  <process:AtomicProcess rdf:ID="GrosnWS_obterDadosIndividuosClasseSparql">
+    <process:hasInput rdf:resource="#GrosnWS_obterDadosIndividuosClasseSparql_parameters_IN"/>
+    <process:hasResult>
+      <process:Result>
+        <process:hasOutput rdf:resource="#GrosnWS_obterDadosIndividuosClasseSparql_parameters_OUT"/>
+      </process:Result>
+    </process:hasResult>
+  </process:AtomicProcess>
+</rdf:RDF>
