@@ -25,6 +25,7 @@
      xmlns:rdf-schema="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl">
         <owl:imports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dict-grounding.owl"/>
+        <owl:imports rdf:resource="https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-grounding.owl"/>
     </owl:Ontology>
     
 
@@ -919,6 +920,8 @@
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#Protein">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/service.owl#Service"/>
+        <isService rdf:resource="https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-grounding.owl#serviceDescription-performProteinIsolation"/>
+        <isService rdf:resource="https://sites.google.com/site/francilaneiva/restfulgrounding/serviceDescription-grounding.owl#serviceDescription-performProteinSynthesis"/>
     </owl:NamedIndividual>
     
 
