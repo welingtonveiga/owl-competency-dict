@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [  
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >   
+]>
 <rdf:RDF
   xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#"
   xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
@@ -34,7 +37,9 @@
     <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WebServicePJF_hello"/>
   </grounding:WsdlGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WebServicePJF_buscarClassesComJena">
-	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">http://localhost</grounding:wsdlDocument>
+	   <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	    https://localhost:8084
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarClassesComJena"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://modelo.pgcc.ufjf.br/#buscarClassesComJena"/>
