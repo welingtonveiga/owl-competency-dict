@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-  xml:base="http://modelo.pgcc.ufjf.br//WebServicePJF_Profile.owl#"
+  xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Profile.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
   xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
   xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
@@ -19,26 +19,26 @@
     <service:presentedBy rdf:resource="WebServicePJF_Service"/>
     <profile:serviceName>Web Service Ontologia SPIT</profile:serviceName>
     <profile:textDescription>Service onde se encontrar os metodos para consultar a ontologia OWL da SPIT - Settra - PJF</profile:textDescription>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarClassesComJena_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarClassesComJena_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosClasseComJena_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosClasseComJena_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarPropriedadesComJena_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarPropriedadesComJena_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSoftwareGerenciadaPor_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSoftwareGerenciadaPor_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
-    <profile:hasInput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_hello_parameters_IN"/>
-    <profile:hasOutput rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_hello_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarClassesComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarClassesComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosClasseComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosClasseComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarPropriedadesComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarPropriedadesComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSoftwareGerenciadaPor_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSoftwareGerenciadaPor_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarIndividuosComInferenciaComSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubClassesSemInferenciaComSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComSparql_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_buscarSubclassesComInferenciaComJena_parameters_OUT"/>
+    <profile:hasInput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_hello_parameters_IN"/>
+    <profile:hasOutput rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel#WebServicePJF_hello_parameters_OUT"/>
     <profile:qualityRating/>
   </profile:Profile>
 </rdf:RDF>

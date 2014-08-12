@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-  xml:base="http://modelo.pgcc.ufjf.br//WebServicePJF_Service.owl#"
+  xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Service.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#" xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#">
@@ -14,8 +14,8 @@
     <owl:imports rdf:resource="http://www.semanticweb.org/tassio/ontologies/2014/6/spit#"/>
   </owl:Ontology>
   <service:Service rdf:ID="WebServicePJF_Service">
-    <service:presents rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_Profile#WebServicePJF_Profile"/>
-    <service:describedBy rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_ProcessModel#WebServicePJF_ProcessModel"/>
-    <service:supports rdf:resource="http://modelo.pgcc.ufjf.br//WebServicePJF_Grounding#WebServicePJF_Grounding"/>
+    <service:presents rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Profile.owl#WebServicePJF_Profile"/>
+    <service:describedBy rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_ProcessModel.owl#WebServicePJF_ProcessModel"/>
+    <service:supports rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Tassio/WebServicePJF_Grounding.owl#WebServicePJF_Grounding"/>
   </service:Service>
 </rdf:RDF>
