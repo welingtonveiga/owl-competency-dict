@@ -12,8 +12,8 @@
     <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
   </owl:Ontology>
   <service:Service rdf:ID="GrosnWS_Service">
-    <service:presents rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Profile#GrosnWS_Profile"/>
-    <service:describedBy rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel#GrosnWS_ProcessModel"/>
-    <service:supports rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Grounding#GrosnWS_Grounding"/>
+    <service:presents rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Profile.owl#GrosnWS_Profile"/>
+    <service:describedBy rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_ProcessModel.owl#GrosnWS_ProcessModel"/>
+    <service:supports rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Grounding.owl#GrosnWS_Grounding"/>
   </service:Service>
 </rdf:RDF>

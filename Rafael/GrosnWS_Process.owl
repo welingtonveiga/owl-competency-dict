@@ -18,7 +18,7 @@
   </owl:Ontology>
   <process:ProcessModel rdf:ID="GrosnWS_ProcessModel">
     <process:hasProcess rdf:resource="#GrosnWS_Composite"/>
-    <process:describes rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Service#GrosnWS_Service"/>
+    <process:describes rdf:resource=" https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Service.owl#GrosnWS_Service"/>
   </process:ProcessModel>
   <process:CompositeProcess rdf:ID="GrosnWS_Composite"/>
   <process:Input rdf:ID="GrosnWS_obterClasses_parameters_IN">
