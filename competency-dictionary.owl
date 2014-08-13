@@ -6,6 +6,7 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY competency-dictionary "https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#" >
 ]>
 
 
@@ -33,21 +34,21 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#contains -->
 
-    <owl:ObjectProperty rdf:about="contains">
+    <owl:ObjectProperty rdf:about="&competency-dictionary;contains">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <owl:inverseOf rdf:resource="isPartOf"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;isPartOf"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasCompetency -->
 
-    <owl:ObjectProperty rdf:about="hasCompetency">
-        <rdfs:range rdf:resource="Competency"/>
-        <rdfs:domain rdf:resource="Person"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasCompetency">
+        <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="hasRole"/>
-            <rdf:Description rdf:about="requires"/>
+            <rdf:Description rdf:about="&competency-dictionary;hasRole"/>
+            <rdf:Description rdf:about="&competency-dictionary;requires"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -55,53 +56,53 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasManager -->
 
-    <owl:ObjectProperty rdf:about="hasManager">
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasManager">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="Person"/>
-        <rdfs:domain rdf:resource="Team"/>
-        <rdfs:subPropertyOf rdf:resource="hasMember"/>
-        <owl:inverseOf rdf:resource="isManager"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Team"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;hasMember"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;isManager"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasMember -->
 
-    <owl:ObjectProperty rdf:about="hasMember">
-        <rdfs:range rdf:resource="Person"/>
-        <rdfs:domain rdf:resource="Team"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasMember">
+        <rdfs:range rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Team"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasRole -->
 
-    <owl:ObjectProperty rdf:about="hasRole">
-        <rdfs:domain rdf:resource="Person"/>
-        <rdfs:range rdf:resource="Role"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasRole">
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Role"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#hasTask -->
 
-    <owl:ObjectProperty rdf:about="hasTask">
+    <owl:ObjectProperty rdf:about="&competency-dictionary;hasTask">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="Project"/>
-        <rdfs:range rdf:resource="Task"/>
-        <owl:inverseOf rdf:resource="isPartOfProject"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Task"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;isPartOfProject"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#involvesCompetency -->
 
-    <owl:ObjectProperty rdf:about="involvesCompetency">
-        <rdfs:range rdf:resource="Competency"/>
-        <rdfs:domain rdf:resource="Project"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;involvesCompetency">
+        <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="hasTask"/>
-            <rdf:Description rdf:about="requiresCompetency"/>
+            <rdf:Description rdf:about="&competency-dictionary;hasTask"/>
+            <rdf:Description rdf:about="&competency-dictionary;requiresCompetency"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -109,12 +110,12 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#involvesRole -->
 
-    <owl:ObjectProperty rdf:about="involvesRole">
-        <rdfs:domain rdf:resource="Project"/>
-        <rdfs:range rdf:resource="Role"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;involvesRole">
+        <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Role"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="involvesCompetency"/>
-            <rdf:Description rdf:about="isRequiredBy"/>
+            <rdf:Description rdf:about="&competency-dictionary;involvesCompetency"/>
+            <rdf:Description rdf:about="&competency-dictionary;isRequiredBy"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -122,12 +123,12 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isAssociateIn -->
 
-    <owl:ObjectProperty rdf:about="isAssociateIn">
-        <rdfs:range rdf:resource="Organization"/>
-        <rdfs:domain rdf:resource="Person"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isAssociateIn">
+        <rdfs:range rdf:resource="&competency-dictionary;Organization"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="isMember"/>
-            <rdf:Description rdf:about="isPartOf"/>
+            <rdf:Description rdf:about="&competency-dictionary;isMember"/>
+            <rdf:Description rdf:about="&competency-dictionary;isPartOf"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -135,11 +136,11 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isManagedBy -->
 
-    <owl:ObjectProperty rdf:about="isManagedBy">
-        <owl:inverseOf rdf:resource="manages"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isManagedBy">
+        <owl:inverseOf rdf:resource="&competency-dictionary;manages"/>
         <owl:equivalentProperty>
             <rdf:Description>
-                <owl:inverseOf rdf:resource="manages"/>
+                <owl:inverseOf rdf:resource="&competency-dictionary;manages"/>
             </rdf:Description>
         </owl:equivalentProperty>
     </owl:ObjectProperty>
@@ -148,18 +149,18 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isManager -->
 
-    <owl:ObjectProperty rdf:about="isManager">
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isManager">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="Person"/>
-        <rdfs:range rdf:resource="Team"/>
-        <rdfs:subPropertyOf rdf:resource="isMember"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Team"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;isMember"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isMe -->
 
-    <owl:ObjectProperty rdf:about="isMe">
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isMe">
         <rdf:type rdf:resource="&owl;ReflexiveProperty"/>
     </owl:ObjectProperty>
     
@@ -167,25 +168,25 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isMember -->
 
-    <owl:ObjectProperty rdf:about="isMember">
-        <rdfs:domain rdf:resource="Person"/>
-        <rdfs:range rdf:resource="Team"/>
-        <owl:inverseOf rdf:resource="hasMember"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isMember">
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Team"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;hasMember"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isOnSameTeam -->
 
-    <owl:ObjectProperty rdf:about="isOnSameTeam">
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isOnSameTeam">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:domain rdf:resource="Person"/>
-        <rdfs:range rdf:resource="Person"/>
-        <owl:inverseOf rdf:resource="isOnSameTeam"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Person"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;isOnSameTeam"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="isMember"/>
-            <rdf:Description rdf:about="hasMember"/>
+            <rdf:Description rdf:about="&competency-dictionary;isMember"/>
+            <rdf:Description rdf:about="&competency-dictionary;hasMember"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -193,21 +194,21 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isPartOf -->
 
-    <owl:ObjectProperty rdf:about="isPartOf">
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isPartOf">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:range rdf:resource="Organization"/>
-        <rdfs:domain rdf:resource="Organization_Unit"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Organization"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Organization_Unit"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isPartOfProject -->
 
-    <owl:ObjectProperty rdf:about="isPartOfProject">
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isPartOfProject">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <owl:equivalentProperty>
             <rdf:Description>
-                <owl:inverseOf rdf:resource="hasTask"/>
+                <owl:inverseOf rdf:resource="&competency-dictionary;hasTask"/>
             </rdf:Description>
         </owl:equivalentProperty>
     </owl:ObjectProperty>
@@ -216,12 +217,12 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#isRequiredBy -->
 
-    <owl:ObjectProperty rdf:about="isRequiredBy">
-        <rdfs:domain rdf:resource="Competency"/>
-        <rdfs:range rdf:resource="Role"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;isRequiredBy">
+        <rdfs:domain rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Role"/>
         <owl:equivalentProperty>
             <rdf:Description>
-                <owl:inverseOf rdf:resource="requires"/>
+                <owl:inverseOf rdf:resource="&competency-dictionary;requires"/>
             </rdf:Description>
         </owl:equivalentProperty>
     </owl:ObjectProperty>
@@ -230,21 +231,21 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#leads -->
 
-    <owl:ObjectProperty rdf:about="leads">
-        <owl:inverseOf rdf:resource="isManagedBy"/>
-        <owl:equivalentProperty rdf:resource="manages"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;leads">
+        <owl:inverseOf rdf:resource="&competency-dictionary;isManagedBy"/>
+        <owl:equivalentProperty rdf:resource="&competency-dictionary;manages"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#manages -->
 
-    <owl:ObjectProperty rdf:about="manages">
-        <rdfs:range rdf:resource="Person"/>
-        <rdfs:domain rdf:resource="Person"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;manages">
+        <rdfs:range rdf:resource="&competency-dictionary;Person"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Person"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="isManager"/>
-            <rdf:Description rdf:about="hasMember"/>
+            <rdf:Description rdf:about="&competency-dictionary;isManager"/>
+            <rdf:Description rdf:about="&competency-dictionary;hasMember"/>
         </owl:propertyChainAxiom>
     </owl:ObjectProperty>
     
@@ -252,49 +253,49 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requires -->
 
-    <owl:ObjectProperty rdf:about="requires">
-        <rdfs:range rdf:resource="Competency"/>
-        <rdfs:domain rdf:resource="Role"/>
-        <owl:inverseOf rdf:resource="isRequiredBy"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requires">
+        <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+        <owl:inverseOf rdf:resource="&competency-dictionary;isRequiredBy"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requiresCompetency -->
 
-    <owl:ObjectProperty rdf:about="requiresCompetency">
-        <rdfs:range rdf:resource="Competency"/>
-        <rdfs:domain rdf:resource="Task"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requiresCompetency">
+        <rdfs:range rdf:resource="&competency-dictionary;Competency"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Task"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requiresHability -->
 
-    <owl:ObjectProperty rdf:about="requiresHability">
-        <rdfs:range rdf:resource="Hability"/>
-        <rdfs:domain rdf:resource="Role"/>
-        <rdfs:subPropertyOf rdf:resource="requires"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requiresHability">
+        <rdfs:range rdf:resource="&competency-dictionary;Hability"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;requires"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requiresKnowledge -->
 
-    <owl:ObjectProperty rdf:about="requiresKnowledge">
-        <rdfs:range rdf:resource="Knowledge"/>
-        <rdfs:domain rdf:resource="Role"/>
-        <rdfs:subPropertyOf rdf:resource="requires"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requiresKnowledge">
+        <rdfs:range rdf:resource="&competency-dictionary;Knowledge"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;requires"/>
     </owl:ObjectProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#requiresSkill -->
 
-    <owl:ObjectProperty rdf:about="requiresSkill">
-        <rdfs:domain rdf:resource="Role"/>
-        <rdfs:range rdf:resource="Skill"/>
-        <rdfs:subPropertyOf rdf:resource="requires"/>
+    <owl:ObjectProperty rdf:about="&competency-dictionary;requiresSkill">
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
+        <rdfs:range rdf:resource="&competency-dictionary;Skill"/>
+        <rdfs:subPropertyOf rdf:resource="&competency-dictionary;requires"/>
     </owl:ObjectProperty>
     
 
@@ -312,26 +313,26 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#done -->
 
-    <owl:DatatypeProperty rdf:about="done">
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;done">
         <rdfs:range rdf:resource="&xsd;boolean"/>
-        <rdfs:domain rdf:resource="Task"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Task"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#jobTitle -->
 
-    <owl:DatatypeProperty rdf:about="jobTitle">
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;jobTitle">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain rdf:resource="Role"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Role"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#name -->
 
-    <owl:DatatypeProperty rdf:about="name">
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;name">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -340,20 +341,20 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#scope -->
 
-    <owl:DatatypeProperty rdf:about="scope">
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;scope">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain rdf:resource="Project"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Project"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#taskDescription -->
 
-    <owl:DatatypeProperty rdf:about="taskDescription">
+    <owl:DatatypeProperty rdf:about="&competency-dictionary;taskDescription">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain rdf:resource="Task"/>
+        <rdfs:domain rdf:resource="&competency-dictionary;Task"/>
     </owl:DatatypeProperty>
     
 
@@ -371,92 +372,92 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Competency -->
 
-    <owl:Class rdf:about="Competency"/>
+    <owl:Class rdf:about="&competency-dictionary;Competency"/>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Hability -->
 
-    <owl:Class rdf:about="Hability">
-        <rdfs:subClassOf rdf:resource="Competency"/>
+    <owl:Class rdf:about="&competency-dictionary;Hability">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Knowledge -->
 
-    <owl:Class rdf:about="Knowledge">
-        <rdfs:subClassOf rdf:resource="Competency"/>
+    <owl:Class rdf:about="&competency-dictionary;Knowledge">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Manager -->
 
-    <owl:Class rdf:about="Manager">
-        <rdfs:subClassOf rdf:resource="Role"/>
+    <owl:Class rdf:about="&competency-dictionary;Manager">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Role"/>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Organization -->
 
-    <owl:Class rdf:about="Organization"/>
+    <owl:Class rdf:about="&competency-dictionary;Organization"/>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Organization_Unit -->
 
-    <owl:Class rdf:about="Organization_Unit">
-        <rdfs:subClassOf rdf:resource="Organization"/>
+    <owl:Class rdf:about="&competency-dictionary;Organization_Unit">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Organization"/>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Person -->
 
-    <owl:Class rdf:about="Person"/>
+    <owl:Class rdf:about="&competency-dictionary;Person"/>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Project -->
 
-    <owl:Class rdf:about="Project"/>
+    <owl:Class rdf:about="&competency-dictionary;Project"/>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Role -->
 
-    <owl:Class rdf:about="Role"/>
+    <owl:Class rdf:about="&competency-dictionary;Role"/>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Skill -->
 
-    <owl:Class rdf:about="Skill">
-        <rdfs:subClassOf rdf:resource="Competency"/>
+    <owl:Class rdf:about="&competency-dictionary;Skill">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Competency"/>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task -->
 
-    <owl:Class rdf:about="Task"/>
+    <owl:Class rdf:about="&competency-dictionary;Task"/>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Team -->
 
-    <owl:Class rdf:about="Team">
-        <rdfs:subClassOf rdf:resource="Organization_Unit"/>
+    <owl:Class rdf:about="&competency-dictionary;Team">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Organization_Unit"/>
     </owl:Class>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Team_Member -->
 
-    <owl:Class rdf:about="Team_Member">
-        <rdfs:subClassOf rdf:resource="Role"/>
+    <owl:Class rdf:about="&competency-dictionary;Team_Member">
+        <rdfs:subClassOf rdf:resource="&competency-dictionary;Role"/>
     </owl:Class>
     
 
@@ -474,585 +475,585 @@
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Acceptance_Tests -->
 
-    <owl:NamedIndividual rdf:about="Acceptance_Tests">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Skill"/>
-        <competency-dictionary:isMe rdf:resource="Acceptance_Tests"/>
-        <competency-dictionary:isRequiredBy rdf:resource="Tester"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Acceptance_Tests">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Acceptance_Tests"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;Tester"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Computer_Programming -->
 
-    <owl:NamedIndividual rdf:about="Computer_Programming">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Skill"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Computer_Programming">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Computer programming</competency-dictionary:name>
-        <competency-dictionary:isMe rdf:resource="Computer_Programming"/>
-        <competency-dictionary:isMe rdf:resource="Development"/>
-        <owl:sameAs rdf:resource="Development"/>
-        <competency-dictionary:isRequiredBy rdf:resource="Systems_Analyst"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Development"/>
+        <owl:sameAs rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;Systems_Analyst"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Design -->
 
-    <owl:NamedIndividual rdf:about="Design">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Skill"/>
-        <competency-dictionary:isMe rdf:resource="Design"/>
-        <competency-dictionary:isRequiredBy rdf:resource="Designer"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Design">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Design"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;Designer"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Designer -->
 
-    <owl:NamedIndividual rdf:about="Designer">
-        <rdf:type rdf:resource="Role"/>
-        <rdf:type rdf:resource="Team_Member"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Designer">
+        <rdf:type rdf:resource="&competency-dictionary;Role"/>
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
         <competency-dictionary:jobTitle rdf:datatype="&xsd;string">Designer</competency-dictionary:jobTitle>
-        <competency-dictionary:requires rdf:resource="Design"/>
-        <competency-dictionary:isMe rdf:resource="Designer"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Design"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Designer"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Development -->
 
-    <owl:NamedIndividual rdf:about="Development">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Skill"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Development">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Computer programming</competency-dictionary:name>
-        <competency-dictionary:isMe rdf:resource="Computer_Programming"/>
-        <competency-dictionary:isMe rdf:resource="Development"/>
-        <competency-dictionary:isRequiredBy rdf:resource="Systems_Analyst"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;Systems_Analyst"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Devops -->
 
-    <owl:NamedIndividual rdf:about="Devops">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Role"/>
-        <rdf:type rdf:resource="Skill"/>
-        <rdf:type rdf:resource="Team_Member"/>
-        <competency-dictionary:isMe rdf:resource="Devops"/>
-        <competency-dictionary:isRequiredBy rdf:resource="Plataform_Operator"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Devops">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Role"/>
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Devops"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;Plataform_Operator"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Dom_Alonso_Asturias -->
 
-    <owl:NamedIndividual rdf:about="Dom_Alonso_Asturias">
-        <rdf:type rdf:resource="Person"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Dom_Alonso_Asturias">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Fernando Alonso</competency-dictionary:name>
-        <competency-dictionary:manages rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isMe rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:leads rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isManagedBy rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:leads rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isMe rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isManagedBy rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:manages rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:hasRole rdf:resource="IT_Coordinator"/>
-        <competency-dictionary:leads rdf:resource="Joana_Darc"/>
-        <competency-dictionary:manages rdf:resource="Joana_Darc"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Joana_Darc"/>
-        <competency-dictionary:manages rdf:resource="John_Doe"/>
-        <competency-dictionary:leads rdf:resource="John_Doe"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="John_Doe"/>
-        <competency-dictionary:hasCompetency rdf:resource="Leadership"/>
-        <competency-dictionary:isAssociateIn rdf:resource="OU_Development"/>
-        <competency-dictionary:isAssociateIn rdf:resource="OU_IT"/>
-        <competency-dictionary:isAssociateIn rdf:resource="Organization_Wayne_Enterprises"/>
-        <competency-dictionary:isManager rdf:resource="Team_I"/>
-        <competency-dictionary:isMember rdf:resource="Team_I"/>
+        <competency-dictionary:manages rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:leads rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isManagedBy rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:leads rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isManagedBy rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:manages rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:hasRole rdf:resource="&competency-dictionary;IT_Coordinator"/>
+        <competency-dictionary:leads rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:manages rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:manages rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:leads rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:hasCompetency rdf:resource="&competency-dictionary;Leadership"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;OU_Development"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;OU_IT"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+        <competency-dictionary:isManager rdf:resource="&competency-dictionary;Team_I"/>
+        <competency-dictionary:isMember rdf:resource="&competency-dictionary;Team_I"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Fernando_Alonso -->
 
-    <owl:NamedIndividual rdf:about="Fernando_Alonso">
-        <rdf:type rdf:resource="Person"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Fernando_Alonso">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Fernando Alonso</competency-dictionary:name>
-        <competency-dictionary:isOnSameTeam rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:leads rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isMe rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:manages rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isManagedBy rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isMe rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:manages rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isManagedBy rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:leads rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:hasRole rdf:resource="IT_Coordinator"/>
-        <competency-dictionary:manages rdf:resource="Joana_Darc"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Joana_Darc"/>
-        <competency-dictionary:leads rdf:resource="Joana_Darc"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="John_Doe"/>
-        <competency-dictionary:leads rdf:resource="John_Doe"/>
-        <competency-dictionary:manages rdf:resource="John_Doe"/>
-        <competency-dictionary:hasCompetency rdf:resource="Leadership"/>
-        <competency-dictionary:isAssociateIn rdf:resource="OU_Development"/>
-        <competency-dictionary:isAssociateIn rdf:resource="OU_IT"/>
-        <competency-dictionary:isAssociateIn rdf:resource="Organization_Wayne_Enterprises"/>
-        <competency-dictionary:isMember rdf:resource="Team_I"/>
-        <competency-dictionary:isManager rdf:resource="Team_I"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:leads rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:manages rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isManagedBy rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:manages rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isManagedBy rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:leads rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:hasRole rdf:resource="&competency-dictionary;IT_Coordinator"/>
+        <competency-dictionary:manages rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:leads rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:leads rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:manages rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:hasCompetency rdf:resource="&competency-dictionary;Leadership"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;OU_Development"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;OU_IT"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+        <competency-dictionary:isMember rdf:resource="&competency-dictionary;Team_I"/>
+        <competency-dictionary:isManager rdf:resource="&competency-dictionary;Team_I"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Funcional_Tests -->
 
-    <owl:NamedIndividual rdf:about="Funcional_Tests">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Skill"/>
-        <competency-dictionary:isMe rdf:resource="Funcional_Tests"/>
-        <competency-dictionary:isRequiredBy rdf:resource="Tester"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Funcional_Tests">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Skill"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Funcional_Tests"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;Tester"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Gather_Requirements -->
 
-    <owl:NamedIndividual rdf:about="Gather_Requirements">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Hability"/>
-        <competency-dictionary:isMe rdf:resource="Gather_Requirements"/>
-        <competency-dictionary:isRequiredBy rdf:resource="Systems_Analyst"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Gather_Requirements">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Hability"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Gather_Requirements"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;Systems_Analyst"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#IT_Coordinator -->
 
-    <owl:NamedIndividual rdf:about="IT_Coordinator">
-        <rdf:type rdf:resource="Manager"/>
-        <rdf:type rdf:resource="Role"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;IT_Coordinator">
+        <rdf:type rdf:resource="&competency-dictionary;Manager"/>
+        <rdf:type rdf:resource="&competency-dictionary;Role"/>
         <competency-dictionary:jobTitle rdf:datatype="&xsd;string">IT  Coordinator</competency-dictionary:jobTitle>
-        <competency-dictionary:isMe rdf:resource="IT_Coordinator"/>
-        <competency-dictionary:requires rdf:resource="Leadership"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;IT_Coordinator"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Leadership"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Jack_White -->
 
-    <owl:NamedIndividual rdf:about="Jack_White">
-        <rdf:type rdf:resource="Person"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Jack_White">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Jack White</competency-dictionary:name>
-        <competency-dictionary:isOnSameTeam rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Jack_White"/>
-        <competency-dictionary:isMe rdf:resource="Jack_White"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Joana_Darc"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="John_Doe"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Jack_White"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Jack_White"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;John_Doe"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Joana_Darc -->
 
-    <owl:NamedIndividual rdf:about="Joana_Darc">
-        <rdf:type rdf:resource="Person"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Joana_Darc">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Joana Darc</competency-dictionary:name>
-        <competency-dictionary:isManagedBy rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isManagedBy rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Joana_Darc"/>
-        <competency-dictionary:isMe rdf:resource="Joana_Darc"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="John_Doe"/>
-        <competency-dictionary:isAssociateIn rdf:resource="OU_Development"/>
-        <competency-dictionary:isAssociateIn rdf:resource="OU_IT"/>
-        <competency-dictionary:isAssociateIn rdf:resource="Organization_Wayne_Enterprises"/>
-        <competency-dictionary:isMember rdf:resource="Team_I"/>
+        <competency-dictionary:isManagedBy rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isManagedBy rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;OU_Development"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;OU_IT"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+        <competency-dictionary:isMember rdf:resource="&competency-dictionary;Team_I"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#John_Doe -->
 
-    <owl:NamedIndividual rdf:about="John_Doe">
-        <rdf:type rdf:resource="Person"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;John_Doe">
+        <rdf:type rdf:resource="&competency-dictionary;Person"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Jhon Doe</competency-dictionary:name>
-        <competency-dictionary:hasCompetency rdf:resource="Computer_Programming"/>
-        <competency-dictionary:hasCompetency rdf:resource="Development"/>
-        <competency-dictionary:isManagedBy rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:isManagedBy rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:hasCompetency rdf:resource="Gather_Requirements"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Jack_White"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="Joana_Darc"/>
-        <competency-dictionary:isMe rdf:resource="John_Doe"/>
-        <competency-dictionary:isOnSameTeam rdf:resource="John_Doe"/>
-        <competency-dictionary:isAssociateIn rdf:resource="OU_Development"/>
-        <competency-dictionary:isAssociateIn rdf:resource="OU_IT"/>
-        <competency-dictionary:isAssociateIn rdf:resource="Organization_Wayne_Enterprises"/>
-        <competency-dictionary:hasCompetency rdf:resource="Relational_Databases"/>
-        <competency-dictionary:hasRole rdf:resource="Systems_Analyst"/>
-        <competency-dictionary:isMember rdf:resource="Team_I"/>
+        <competency-dictionary:hasCompetency rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:hasCompetency rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:isManagedBy rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:isManagedBy rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:hasCompetency rdf:resource="&competency-dictionary;Gather_Requirements"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Jack_White"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:isOnSameTeam rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;OU_Development"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;OU_IT"/>
+        <competency-dictionary:isAssociateIn rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+        <competency-dictionary:hasCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:hasRole rdf:resource="&competency-dictionary;Systems_Analyst"/>
+        <competency-dictionary:isMember rdf:resource="&competency-dictionary;Team_I"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Leadership -->
 
-    <owl:NamedIndividual rdf:about="Leadership">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Hability"/>
-        <rdf:type rdf:resource="Knowledge"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Leadership">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Hability"/>
+        <rdf:type rdf:resource="&competency-dictionary;Knowledge"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Leadership</competency-dictionary:name>
-        <competency-dictionary:isRequiredBy rdf:resource="IT_Coordinator"/>
-        <competency-dictionary:isMe rdf:resource="Leadership"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;IT_Coordinator"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Leadership"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#OU_Development -->
 
-    <owl:NamedIndividual rdf:about="OU_Development">
-        <rdf:type rdf:resource="Organization"/>
-        <rdf:type rdf:resource="Organization_Unit"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;OU_Development">
+        <rdf:type rdf:resource="&competency-dictionary;Organization"/>
+        <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Development</competency-dictionary:name>
-        <competency-dictionary:isMe rdf:resource="OU_Development"/>
-        <competency-dictionary:isPartOf rdf:resource="OU_IT"/>
-        <competency-dictionary:isPartOf rdf:resource="Organization_Wayne_Enterprises"/>
-        <competency-dictionary:contains rdf:resource="Team_I"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;OU_Development"/>
+        <competency-dictionary:isPartOf rdf:resource="&competency-dictionary;OU_IT"/>
+        <competency-dictionary:isPartOf rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+        <competency-dictionary:contains rdf:resource="&competency-dictionary;Team_I"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#OU_HR -->
 
-    <owl:NamedIndividual rdf:about="OU_HR">
-        <rdf:type rdf:resource="Organization"/>
-        <rdf:type rdf:resource="Organization_Unit"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;OU_HR">
+        <rdf:type rdf:resource="&competency-dictionary;Organization"/>
+        <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Human Resources Departament</competency-dictionary:name>
-        <competency-dictionary:isMe rdf:resource="OU_HR"/>
-        <competency-dictionary:isPartOf rdf:resource="Organization_Wayne_Enterprises"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;OU_HR"/>
+        <competency-dictionary:isPartOf rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#OU_IT -->
 
-    <owl:NamedIndividual rdf:about="OU_IT">
-        <rdf:type rdf:resource="Organization"/>
-        <rdf:type rdf:resource="Organization_Unit"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;OU_IT">
+        <rdf:type rdf:resource="&competency-dictionary;Organization"/>
+        <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">TI Departament</competency-dictionary:name>
-        <competency-dictionary:contains rdf:resource="OU_Development"/>
-        <competency-dictionary:isMe rdf:resource="OU_IT"/>
-        <competency-dictionary:isPartOf rdf:resource="Organization_Wayne_Enterprises"/>
-        <competency-dictionary:contains rdf:resource="Team_I"/>
+        <competency-dictionary:contains rdf:resource="&competency-dictionary;OU_Development"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;OU_IT"/>
+        <competency-dictionary:isPartOf rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+        <competency-dictionary:contains rdf:resource="&competency-dictionary;Team_I"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Organization_Wayne_Enterprises -->
 
-    <owl:NamedIndividual rdf:about="Organization_Wayne_Enterprises">
-        <rdf:type rdf:resource="Organization"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Organization_Wayne_Enterprises">
+        <rdf:type rdf:resource="&competency-dictionary;Organization"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Wayne Enterprises</competency-dictionary:name>
-        <competency-dictionary:contains rdf:resource="OU_Development"/>
-        <competency-dictionary:contains rdf:resource="OU_HR"/>
-        <competency-dictionary:contains rdf:resource="OU_IT"/>
-        <competency-dictionary:isMe rdf:resource="Organization_Wayne_Enterprises"/>
-        <competency-dictionary:contains rdf:resource="Team_I"/>
+        <competency-dictionary:contains rdf:resource="&competency-dictionary;OU_Development"/>
+        <competency-dictionary:contains rdf:resource="&competency-dictionary;OU_HR"/>
+        <competency-dictionary:contains rdf:resource="&competency-dictionary;OU_IT"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+        <competency-dictionary:contains rdf:resource="&competency-dictionary;Team_I"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Plataform_Operator -->
 
-    <owl:NamedIndividual rdf:about="Plataform_Operator">
-        <rdf:type rdf:resource="Role"/>
-        <rdf:type rdf:resource="Team_Member"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Plataform_Operator">
+        <rdf:type rdf:resource="&competency-dictionary;Role"/>
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
         <competency-dictionary:jobTitle rdf:datatype="&xsd;string">Platform Operator</competency-dictionary:jobTitle>
-        <competency-dictionary:requires rdf:resource="Devops"/>
-        <competency-dictionary:isMe rdf:resource="Plataform_Operator"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Devops"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Plataform_Operator"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Project_ECommerce_Development -->
 
-    <owl:NamedIndividual rdf:about="Project_ECommerce_Development">
-        <rdf:type rdf:resource="Project"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Project_ECommerce_Development">
+        <rdf:type rdf:resource="&competency-dictionary;Project"/>
         <competency-dictionary:scope rdf:datatype="&xsd;string">Construir e-commerce modular customizável.</competency-dictionary:scope>
-        <competency-dictionary:involvesCompetency rdf:resource="Acceptance_Tests"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Computer_Programming"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Design"/>
-        <competency-dictionary:involvesRole rdf:resource="Designer"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Development"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Devops"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Funcional_Tests"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Gather_Requirements"/>
-        <competency-dictionary:involvesRole rdf:resource="Plataform_Operator"/>
-        <competency-dictionary:isMe rdf:resource="Project_ECommerce_Development"/>
-        <competency-dictionary:isMe rdf:resource="Project_X"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Relational_Databases"/>
-        <competency-dictionary:involvesRole rdf:resource="Systems_Analyst"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Create_Layout"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Deployment"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Development"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Modeling_Database"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Requirements_Gathering"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Tests"/>
-        <competency-dictionary:involvesRole rdf:resource="Tester"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Acceptance_Tests"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Design"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Designer"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Devops"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Funcional_Tests"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Gather_Requirements"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Plataform_Operator"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Project_ECommerce_Development"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Project_X"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Systems_Analyst"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Create_Layout"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Deployment"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Development"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Modeling_Database"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Requirements_Gathering"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Tests"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Tester"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Project_Report_Creation -->
 
-    <owl:NamedIndividual rdf:about="Project_Report_Creation">
-        <rdf:type rdf:resource="Project"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Computer_Programming"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Design"/>
-        <competency-dictionary:involvesRole rdf:resource="Designer"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Development"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Devops"/>
-        <competency-dictionary:involvesRole rdf:resource="Plataform_Operator"/>
-        <competency-dictionary:isMe rdf:resource="Project_Report_Creation"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Relational_Databases"/>
-        <competency-dictionary:involvesRole rdf:resource="Systems_Analyst"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Create_Query"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Create_Report_Layout"/>
-        <competency-dictionary:hasTask rdf:resource="Task_integrate_report"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Project_Report_Creation">
+        <rdf:type rdf:resource="&competency-dictionary;Project"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Design"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Designer"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Devops"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Plataform_Operator"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Project_Report_Creation"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Systems_Analyst"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Create_Query"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Create_Report_Layout"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_integrate_report"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Project_X -->
 
-    <owl:NamedIndividual rdf:about="Project_X">
-        <rdf:type rdf:resource="Project"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Project_X">
+        <rdf:type rdf:resource="&competency-dictionary;Project"/>
         <competency-dictionary:scope rdf:datatype="&xsd;string">Construir e-commerce modular customizável.</competency-dictionary:scope>
-        <competency-dictionary:involvesCompetency rdf:resource="Acceptance_Tests"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Computer_Programming"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Design"/>
-        <competency-dictionary:involvesRole rdf:resource="Designer"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Development"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Devops"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Funcional_Tests"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Gather_Requirements"/>
-        <competency-dictionary:involvesRole rdf:resource="Plataform_Operator"/>
-        <competency-dictionary:isMe rdf:resource="Project_ECommerce_Development"/>
-        <competency-dictionary:isMe rdf:resource="Project_X"/>
-        <competency-dictionary:involvesCompetency rdf:resource="Relational_Databases"/>
-        <competency-dictionary:involvesRole rdf:resource="Systems_Analyst"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Create_Layout"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Deployment"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Development"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Modeling_Database"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Requirements_Gathering"/>
-        <competency-dictionary:hasTask rdf:resource="Task_Tests"/>
-        <competency-dictionary:involvesRole rdf:resource="Tester"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Acceptance_Tests"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Design"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Designer"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Devops"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Funcional_Tests"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Gather_Requirements"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Plataform_Operator"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Project_ECommerce_Development"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Project_X"/>
+        <competency-dictionary:involvesCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Systems_Analyst"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Create_Layout"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Deployment"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Development"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Modeling_Database"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Requirements_Gathering"/>
+        <competency-dictionary:hasTask rdf:resource="&competency-dictionary;Task_Tests"/>
+        <competency-dictionary:involvesRole rdf:resource="&competency-dictionary;Tester"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Relational_Databases -->
 
-    <owl:NamedIndividual rdf:about="Relational_Databases">
-        <rdf:type rdf:resource="Competency"/>
-        <rdf:type rdf:resource="Knowledge"/>
-        <competency-dictionary:isMe rdf:resource="Relational_Databases"/>
-        <competency-dictionary:isRequiredBy rdf:resource="Systems_Analyst"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Relational_Databases">
+        <rdf:type rdf:resource="&competency-dictionary;Competency"/>
+        <rdf:type rdf:resource="&competency-dictionary;Knowledge"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:isRequiredBy rdf:resource="&competency-dictionary;Systems_Analyst"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Systems_Analyst -->
 
-    <owl:NamedIndividual rdf:about="Systems_Analyst">
-        <rdf:type rdf:resource="Role"/>
-        <rdf:type rdf:resource="Team_Member"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Systems_Analyst">
+        <rdf:type rdf:resource="&competency-dictionary;Role"/>
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
         <competency-dictionary:jobTitle rdf:datatype="&xsd;string">Systems Analyst</competency-dictionary:jobTitle>
-        <competency-dictionary:requiresSkill rdf:resource="Computer_Programming"/>
-        <competency-dictionary:requires rdf:resource="Computer_Programming"/>
-        <competency-dictionary:requiresSkill rdf:resource="Development"/>
-        <competency-dictionary:requires rdf:resource="Development"/>
-        <competency-dictionary:requires rdf:resource="Gather_Requirements"/>
-        <competency-dictionary:requires rdf:resource="Relational_Databases"/>
-        <competency-dictionary:isMe rdf:resource="Systems_Analyst"/>
+        <competency-dictionary:requiresSkill rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:requiresSkill rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Gather_Requirements"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Systems_Analyst"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Create_Layout -->
 
-    <owl:NamedIndividual rdf:about="Task_Create_Layout">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Layout">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Criação das telas do e-commerce, assim como sua identidade visual.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">false</competency-dictionary:done>
-        <competency-dictionary:requiresCompetency rdf:resource="Design"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_ECommerce_Development"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_X"/>
-        <competency-dictionary:isMe rdf:resource="Task_Create_Layout"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Design"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_ECommerce_Development"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_X"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_Create_Layout"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Create_Query -->
 
-    <owl:NamedIndividual rdf:about="Task_Create_Query">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Query">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Consruir a consulta para obtenção dos resultados.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">false</competency-dictionary:done>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_Report_Creation"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Relational_Databases"/>
-        <competency-dictionary:isMe rdf:resource="Task_Create_Query"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_Report_Creation"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_Create_Query"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Create_Report_Layout -->
 
-    <owl:NamedIndividual rdf:about="Task_Create_Report_Layout">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Create_Report_Layout">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Criar a distribuição das informações no relatório final.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">false</competency-dictionary:done>
-        <competency-dictionary:requiresCompetency rdf:resource="Computer_Programming"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Design"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Development"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_Report_Creation"/>
-        <competency-dictionary:isMe rdf:resource="Task_Create_Report_Layout"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Design"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_Report_Creation"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_Create_Report_Layout"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Deployment -->
 
-    <owl:NamedIndividual rdf:about="Task_Deployment">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Deployment">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Realizar deploy em ambiente de homologação e produção.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">false</competency-dictionary:done>
-        <competency-dictionary:requiresCompetency rdf:resource="Computer_Programming"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Development"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Devops"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_ECommerce_Development"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_X"/>
-        <competency-dictionary:isMe rdf:resource="Task_Deployment"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Devops"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_ECommerce_Development"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_X"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_Deployment"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Development -->
 
-    <owl:NamedIndividual rdf:about="Task_Development">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Development">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Desenvolvimento.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">false</competency-dictionary:done>
-        <competency-dictionary:requiresCompetency rdf:resource="Computer_Programming"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Development"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Funcional_Tests"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_ECommerce_Development"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_X"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Relational_Databases"/>
-        <competency-dictionary:isMe rdf:resource="Task_Development"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Funcional_Tests"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_ECommerce_Development"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_X"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_Development"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Modeling_Database -->
 
-    <owl:NamedIndividual rdf:about="Task_Modeling_Database">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Modeling_Database">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Modelagem do banco de dados.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">false</competency-dictionary:done>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_ECommerce_Development"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_X"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Relational_Databases"/>
-        <competency-dictionary:isMe rdf:resource="Task_Modeling_Database"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_ECommerce_Development"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_X"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Relational_Databases"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_Modeling_Database"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Requirements_Gathering -->
 
-    <owl:NamedIndividual rdf:about="Task_Requirements_Gathering">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Requirements_Gathering">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Coleta de requisitos e definição dos casos de uso.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">true</competency-dictionary:done>
-        <competency-dictionary:requiresCompetency rdf:resource="Gather_Requirements"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_ECommerce_Development"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_X"/>
-        <competency-dictionary:isMe rdf:resource="Task_Requirements_Gathering"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Gather_Requirements"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_ECommerce_Development"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_X"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_Requirements_Gathering"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_Tests -->
 
-    <owl:NamedIndividual rdf:about="Task_Tests">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_Tests">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Testes funcionais e de aceitação.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">false</competency-dictionary:done>
-        <competency-dictionary:requiresCompetency rdf:resource="Acceptance_Tests"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Funcional_Tests"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_ECommerce_Development"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_X"/>
-        <competency-dictionary:isMe rdf:resource="Task_Tests"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Acceptance_Tests"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Funcional_Tests"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_ECommerce_Development"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_X"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_Tests"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Task_integrate_report -->
 
-    <owl:NamedIndividual rdf:about="Task_integrate_report">
-        <rdf:type rdf:resource="Task"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Task_integrate_report">
+        <rdf:type rdf:resource="&competency-dictionary;Task"/>
         <competency-dictionary:taskDescription rdf:datatype="&xsd;string">Integra o relatório ao projeto existente.</competency-dictionary:taskDescription>
         <competency-dictionary:done rdf:datatype="&xsd;boolean">false</competency-dictionary:done>
-        <competency-dictionary:requiresCompetency rdf:resource="Computer_Programming"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Development"/>
-        <competency-dictionary:requiresCompetency rdf:resource="Devops"/>
-        <competency-dictionary:isPartOfProject rdf:resource="Project_Report_Creation"/>
-        <competency-dictionary:isMe rdf:resource="Task_integrate_report"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Computer_Programming"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Development"/>
+        <competency-dictionary:requiresCompetency rdf:resource="&competency-dictionary;Devops"/>
+        <competency-dictionary:isPartOfProject rdf:resource="&competency-dictionary;Project_Report_Creation"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Task_integrate_report"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Team_I -->
 
-    <owl:NamedIndividual rdf:about="Team_I">
-        <rdf:type rdf:resource="Organization"/>
-        <rdf:type rdf:resource="Organization_Unit"/>
-        <rdf:type rdf:resource="Team"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Team_I">
+        <rdf:type rdf:resource="&competency-dictionary;Organization"/>
+        <rdf:type rdf:resource="&competency-dictionary;Organization_Unit"/>
+        <rdf:type rdf:resource="&competency-dictionary;Team"/>
         <competency-dictionary:name rdf:datatype="&xsd;string">Unidos de Vila Esperança</competency-dictionary:name>
-        <competency-dictionary:hasManager rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:hasMember rdf:resource="Dom_Alonso_Asturias"/>
-        <competency-dictionary:hasMember rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:hasManager rdf:resource="Fernando_Alonso"/>
-        <competency-dictionary:hasMember rdf:resource="Joana_Darc"/>
-        <competency-dictionary:hasMember rdf:resource="John_Doe"/>
-        <competency-dictionary:isPartOf rdf:resource="OU_Development"/>
-        <competency-dictionary:isPartOf rdf:resource="OU_IT"/>
-        <competency-dictionary:isPartOf rdf:resource="Organization_Wayne_Enterprises"/>
-        <competency-dictionary:isMe rdf:resource="Team_I"/>
+        <competency-dictionary:hasManager rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:hasMember rdf:resource="&competency-dictionary;Dom_Alonso_Asturias"/>
+        <competency-dictionary:hasMember rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:hasManager rdf:resource="&competency-dictionary;Fernando_Alonso"/>
+        <competency-dictionary:hasMember rdf:resource="&competency-dictionary;Joana_Darc"/>
+        <competency-dictionary:hasMember rdf:resource="&competency-dictionary;John_Doe"/>
+        <competency-dictionary:isPartOf rdf:resource="&competency-dictionary;OU_Development"/>
+        <competency-dictionary:isPartOf rdf:resource="&competency-dictionary;OU_IT"/>
+        <competency-dictionary:isPartOf rdf:resource="&competency-dictionary;Organization_Wayne_Enterprises"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Team_I"/>
     </owl:NamedIndividual>
     
 
 
     <!-- https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/competency-dictionary.owl#Tester -->
 
-    <owl:NamedIndividual rdf:about="Tester">
-        <rdf:type rdf:resource="Role"/>
-        <rdf:type rdf:resource="Team_Member"/>
+    <owl:NamedIndividual rdf:about="&competency-dictionary;Tester">
+        <rdf:type rdf:resource="&competency-dictionary;Role"/>
+        <rdf:type rdf:resource="&competency-dictionary;Team_Member"/>
         <competency-dictionary:jobTitle rdf:datatype="&xsd;string">Tester</competency-dictionary:jobTitle>
-        <competency-dictionary:requires rdf:resource="Acceptance_Tests"/>
-        <competency-dictionary:requires rdf:resource="Funcional_Tests"/>
-        <competency-dictionary:isMe rdf:resource="Tester"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Acceptance_Tests"/>
+        <competency-dictionary:requires rdf:resource="&competency-dictionary;Funcional_Tests"/>
+        <competency-dictionary:isMe rdf:resource="&competency-dictionary;Tester"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
