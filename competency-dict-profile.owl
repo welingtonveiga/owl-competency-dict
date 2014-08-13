@@ -38,39 +38,34 @@
     <profile:has_process rdf:resource="&competency-dict-process;hasCompetency"/>
     <profile:serviceName>ComeptencyDictService_Agent</profile:serviceName>
     <profile:textDescription>
-    This  service provide flight reservations based on the
-    specification of a flight request.  This typically involves a departure
-    airport, an arrival airport, a departure date, and if a return trip is
-    required, a return date.
-        If the desired flight is available, an itinerary and reservation number
-    will be returned.
+      This service provide competency dictionary semantic search funcionalities.
     </profile:textDescription>
 
     <profile:contactInformation>
       
       <actor:Actor rdf:ID="CompetencyDictAgent">
-        <actor:name>BravoAir Reservation department</actor:name>
+        <actor:name>Competency Dict Service</actor:name>
         <actor:title>
-      Reservation Representative 
-    </actor:title>
-    <actor:phone>412 268 8780 </actor:phone>
-    <actor:fax>412 268 5569 </actor:fax>
-    <actor:email>Bravo@Bravoair.com</actor:email>
-    <actor:physicalAddress>
-          Airstrip 2,
+         Competency Dict
+        </actor:title>
+        <actor:phone>412 268 8780 </actor:phone>
+        <actor:fax>412 268 5569 </actor:fax>
+        <actor:email>Bravo@Bravoair.com</actor:email>
+        <actor:physicalAddress>
+          Street 2,
           Teetering Cliff Hights,
           Florida 12321,
           USA
-    </actor:physicalAddress>
-    <actor:webURL> 
-            http://www.daml.org/services/daml-s/2001/05/BravoAir.html 
+      </actor:physicalAddress>
+      <actor:webURL> 
+            http://localhost:8080/
         </actor:webURL>
       </actor:Actor>
       
     </profile:contactInformation>
 
     <profile:hasInput rdf:resource="&xsd;string"/>
-    <profile:hasOutput rdf:resource="&competency-dictionary;Person"/>
+    <profile:hasOutput rdf:resource="&xsd;string"/>
 
 </profile:profile>
 </rdf:RDF>

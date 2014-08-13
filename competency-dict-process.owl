@@ -28,16 +28,55 @@
         <owl:imports rdf:resource="http://www.daml.org/services/owl-s/1.2/Process.owl"/>
     </owl:Ontology>
 
-     <process:AtomicProcess rdf:ID="hasCompetencuy">
-        <rdfs:label>Has Competency/rdfs:label>
-        <rdfs:comment>Returns people with a competency</rdfs:comment>
+     <process:AtomicProcess rdf:ID="hasCompetency">
         <process:hasInput>
-          <process:Input rdf:ID="hasCompetencuy_In_Name">
+          <process:Input rdf:ID="hasCompetency_In">
             <process:parameterType rdf:resource="&xsd;string" />
           </process:Input>
         </process:hasInput>
         <process:hasOutput>
-          <process:Output rdf:ID="hasCompetencuy_Out_Person">
+          <process:Output rdf:ID="hasCompetency_Out">
+            <process:parameterType rdf:resource="&xsd;string" />
+          </process:Output>
+        </process:hasOutput>
+      </process:AtomicProcess>
+
+      <process:AtomicProcess rdf:ID="getAllMembersOnSameTeam">
+        <process:hasInput>
+          <process:Input rdf:ID="getAllMembersOnSameTeam_In">
+            <process:parameterType rdf:resource="&xsd;string" />
+          </process:Input>
+        </process:hasInput>
+        <process:hasOutput>
+          <process:Output rdf:ID="getAllMembersOnSameTeam_Out">
+            <process:parameterType rdf:resource="&xsd;string" />
+          </process:Output>
+        </process:hasOutput>
+      </process:AtomicProcess>
+
+
+      <process:AtomicProcess rdf:ID="isAbleToParticipate">
+        <process:hasInput>
+          <process:Input rdf:ID="isAbleToParticipate_In">
+            <process:parameterType rdf:resource="&xsd;string" />
+          </process:Input>
+        </process:hasInput>
+        <process:hasOutput>
+          <process:Output rdf:ID="isAbleToParticipate_Out">
+            <process:parameterType rdf:resource="&xsd;string" />
+          </process:Output>
+        </process:hasOutput>
+      </process:AtomicProcess>
+
+
+      <process:AtomicProcess rdf:ID="involvesRole">
+        <process:hasInput>
+          <process:Input rdf:ID="involvesRole_In">
+            <process:parameterType rdf:resource="&xsd;string" />
+          </process:Input>
+        </process:hasInput>
+        <process:hasOutput>
+          <process:Output rdf:ID="involvesRole_Out">
             <process:parameterType rdf:resource="&xsd;string" />
           </process:Output>
         </process:hasOutput>

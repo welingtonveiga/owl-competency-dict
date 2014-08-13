@@ -40,30 +40,33 @@
 
   <grounding:WsdlGrounding rdf:ID="CompetencyDict_Agent">
     <service:supportedBy rdf:resource="&competency-dict-service;CompetencyDictService"/>
-    <!-- Collecton of all the groundings specifications -->
-    <grounding:hasAtomicProcessGrounding rdf:resource="#Wsdl_HasCompetency"/>
+    
+    <grounding:hasAtomicProcessGrounding rdf:resource="#Wsdl_hasCompetency"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#Wsdl_getAllMembersOnSameTeam"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#Wsdl_isAbleToParticipate"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#Wsdl_involvesRole"/>
   </grounding:WsdlGrounding>
 
-  <grounding:WsdlAtomicProcessGrounding rdf:ID="Wsdl_HasCompetency">
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="Wsdl_hasCompetency">
     <!-- Location of theWSDL document -->
     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;</grounding:wsdlDocument>
-    <grounding:owlsProcess rdf:datatype="&xsd;anyURI">&competency-dict-process;HasCompetency</grounding:owlsProcess>
+    <grounding:owlsProcess rdf:datatype="&xsd;anyURI">&competency-dict-process;hasCompetency</grounding:owlsProcess>
     <!-- Reference to the corresponding WSDL operation -->
-    <!--grounding:wsdlOperation rdf:resource="#HasCompetency"/-->
+    <!--grounding:wsdlOperation rdf:resource="#hasCompetency"/-->
     <!-- Reference to the WSDL input message -->
     <!--grounding:wsdlInputMessage rdf:datatype="&xsd;string" /-->
   
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:owlsParameter rdf:resource="&competency-dict-process;HasCompetency_In_Name"/>
-        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#PersonByNameRequest</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;hasCompetency_In"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#hasCompetencyRequest</grounding:wsdlMessagePart>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
 
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
-        <grounding:owlsParameter rdf:resource="&competency-dict-process;HasCompetency_Out_Person"/>
-        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#PersonByNameResponse</grounding:wsdlMessagePart>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;hasCompetency_Out"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#hasCompetencyResponse</grounding:wsdlMessagePart>
       </grounding:WsdlOutputMessageMap>
     </grounding:wsdlOutput>
     
@@ -72,7 +75,7 @@
     </grounding:wsdlVersion>
   </grounding:WsdlAtomicProcessGrounding>
   
-  <grounding:WsdlOperationRef rdf:ID="Wsdl_HasCompetency_Op">
+  <grounding:WsdlOperationRef rdf:ID="Wsdl_hasCompetency_Op">
     <rdfs:comment>
      A pointer to the WSDL operation used for SelectAvailableFlight
     </rdfs:comment>
@@ -82,7 +85,133 @@
     </grounding:portType>
     <!-- locate operation to be used -->
     <grounding:operation rdf:datatype="&xsd;anyURI">
-      &competency-dict-wsdl;#HasCompetency
+      &competency-dict-wsdl;#hasCompetency
+    </grounding:operation>
+  </grounding:WsdlOperationRef>
+
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="Wsdl_getAllMembersOnSameTeam">
+    <!-- Location of theWSDL document -->
+    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;</grounding:wsdlDocument>
+    <grounding:owlsProcess rdf:datatype="&xsd;anyURI">&competency-dict-process;getAllMembersOnSameTeam</grounding:owlsProcess>
+    <!-- Reference to the corresponding WSDL operation -->
+    <!--grounding:wsdlOperation rdf:resource="#getAllMembersOnSameTeam"/-->
+    <!-- Reference to the WSDL input message -->
+    <!--grounding:wsdlInputMessage rdf:datatype="&xsd;string" /-->
+  
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;getAllMembersOnSameTeam_In"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#getAllMembersOnSameTeamRequest</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;getAllMembersOnSameTeam_Out"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#getAllMembersOnSameTeamResponse</grounding:wsdlMessagePart>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    
+    <grounding:wsdlVersion rdf:datatype="&xsd;anyURI">
+      http://www.w3.org/TR/2001/NOTE-wsdl-20010315
+    </grounding:wsdlVersion>
+  </grounding:WsdlAtomicProcessGrounding>
+  
+  <grounding:WsdlOperationRef rdf:ID="Wsdl_getAllMembersOnSameTeam_Op">
+    <rdfs:comment>
+     A pointer to the WSDL operation used for SelectAvailableFlight
+    </rdfs:comment>
+    <!-- locate port type to be used -->
+    <grounding:portType rdf:datatype="&xsd;anyURI">
+      &competency-dict-wsdl;#CompetencyDictService
+    </grounding:portType>
+    <!-- locate operation to be used -->
+    <grounding:operation rdf:datatype="&xsd;anyURI">
+      &competency-dict-wsdl;#getAllMembersOnSameTeam
+    </grounding:operation>
+  </grounding:WsdlOperationRef>
+
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="Wsdl_isAbleToParticipate">
+    <!-- Location of theWSDL document -->
+    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;</grounding:wsdlDocument>
+    <grounding:owlsProcess rdf:datatype="&xsd;anyURI">&competency-dict-process;isAbleToParticipate</grounding:owlsProcess>
+    <!-- Reference to the corresponding WSDL operation -->
+    <!--grounding:wsdlOperation rdf:resource="#isAbleToParticipate"/-->
+    <!-- Reference to the WSDL input message -->
+    <!--grounding:wsdlInputMessage rdf:datatype="&xsd;string" /-->
+  
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;isAbleToParticipate_In"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#isAbleToParticipateRequest</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;isAbleToParticipate_Out"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#isAbleToParticipateResponse</grounding:wsdlMessagePart>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    
+    <grounding:wsdlVersion rdf:datatype="&xsd;anyURI">
+      http://www.w3.org/TR/2001/NOTE-wsdl-20010315
+    </grounding:wsdlVersion>
+  </grounding:WsdlAtomicProcessGrounding>
+  
+  <grounding:WsdlOperationRef rdf:ID="Wsdl_isAbleToParticipate_Op">
+    <rdfs:comment>
+     A pointer to the WSDL operation used for SelectAvailableFlight
+    </rdfs:comment>
+    <!-- locate port type to be used -->
+    <grounding:portType rdf:datatype="&xsd;anyURI">
+      &competency-dict-wsdl;#CompetencyDictService
+    </grounding:portType>
+    <!-- locate operation to be used -->
+    <grounding:operation rdf:datatype="&xsd;anyURI">
+      &competency-dict-wsdl;#isAbleToParticipate
+    </grounding:operation>
+  </grounding:WsdlOperationRef>
+
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="Wsdl_involvesRole">
+    <!-- Location of theWSDL document -->
+    <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;</grounding:wsdlDocument>
+    <grounding:owlsProcess rdf:datatype="&xsd;anyURI">&competency-dict-process;involvesRole</grounding:owlsProcess>
+    <!-- Reference to the corresponding WSDL operation -->
+    <!--grounding:wsdlOperation rdf:resource="#involvesRole"/-->
+    <!-- Reference to the WSDL input message -->
+    <!--grounding:wsdlInputMessage rdf:datatype="&xsd;string" /-->
+  
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;involvesRole_In"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#involvesRoleRequest</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;involvesRole_Out"/>
+        <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#involvesRoleResponse</grounding:wsdlMessagePart>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    
+    <grounding:wsdlVersion rdf:datatype="&xsd;anyURI">
+      http://www.w3.org/TR/2001/NOTE-wsdl-20010315
+    </grounding:wsdlVersion>
+  </grounding:WsdlAtomicProcessGrounding>
+  
+  <grounding:WsdlOperationRef rdf:ID="Wsdl_involvesRole_Op">
+    <rdfs:comment>
+     A pointer to the WSDL operation used for SelectAvailableFlight
+    </rdfs:comment>
+    <!-- locate port type to be used -->
+    <grounding:portType rdf:datatype="&xsd;anyURI">
+      &competency-dict-wsdl;#CompetencyDictService
+    </grounding:portType>
+    <!-- locate operation to be used -->
+    <grounding:operation rdf:datatype="&xsd;anyURI">
+      &competency-dict-wsdl;#involvesRole
     </grounding:operation>
   </grounding:WsdlOperationRef>
 

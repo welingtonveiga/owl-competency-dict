@@ -45,7 +45,10 @@
      <service:presents rdf:resource="&competency-dict-profile;ComeptencyDictService"/>
    
      <!-- Reference to the BravoAir Process Model -->
-     <service:describedBy rdf:resource="&competency-dict-process;getPersonByName"/>
+     <service:describedBy rdf:resource="&competency-dict-process;HasCompetency"/>
+     <service:describedBy rdf:resource="&competency-dict-process;GetAllMembersOnSameTeam"/>
+     <service:describedBy rdf:resource="&competency-dict-process;IsAbleToParticipate"/>
+     <service:describedBy rdf:resource="&competency-dict-process;InvolvesRole"/>
    
      <!-- Reference to the BravoAir Grounding -->
      <service:supports rdf:resource="&competency-dict-grounding;CompetencyDict_Agent"/>
