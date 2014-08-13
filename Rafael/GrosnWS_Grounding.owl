@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [  
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >   
+]>
 <rdf:RDF xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Rafael/GrosnWS_Grounding.owl#"
   xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
   xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
@@ -32,6 +35,9 @@
     <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_GrosnWS_obterDadosIndividuosClasseSparql"/>
   </grounding:WsdlGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterClasses">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterClasses"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterClasses"/>
@@ -63,6 +69,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterSubclassesSPARQL">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterSubclassesSPARQL"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterSubclassesSPARQL"/>
@@ -94,6 +103,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterPropriedades">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterPropriedades"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterPropriedades"/>
@@ -125,6 +137,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterIndividuosClasse">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterIndividuosClasse"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterIndividuosClasse"/>
@@ -156,6 +171,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterIndividuosClasseSparql">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterIndividuosClasseSparql"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterIndividuosClasseSparql"/>
@@ -187,6 +205,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterSubclasses">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterSubclasses"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterSubclasses"/>
@@ -218,6 +239,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterSubclassesComInferencia">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterSubclassesComInferencia"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterSubclassesComInferencia"/>
@@ -249,6 +273,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterIndividuosComInferenciaComSparql">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterIndividuosComInferenciaComSparql"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterIndividuosComInferenciaComSparql"/>
@@ -280,6 +307,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterSubclassesComInferenciaComSparql">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterSubclassesComInferenciaComSparql"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterSubclassesComInferenciaComSparql"/>
@@ -311,6 +341,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_GrosnWS_obterDadosIndividuosClasseSparql">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+http://localhost:8080/GrosnWS/GrosnWS
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="http://ws//GrosnWS_ProcessModel#GrosnWS_obterDadosIndividuosClasseSparql"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://ws/#obterDadosIndividuosClasseSparql"/>
