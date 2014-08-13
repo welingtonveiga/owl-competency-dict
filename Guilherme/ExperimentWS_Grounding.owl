@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [  
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >   
+]>
 <rdf:RDF
   xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_Grounding.owl#"
   xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
@@ -30,6 +33,9 @@
     <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_ExperimentWS_getGroupExperiment"/>
   </grounding:WsdlGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_ExperimentWS_getSubClasses">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	    https://localhost:8080/ExperimentWebServer/
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClasses"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://experiment.me.org/#getSubClasses"/>
@@ -61,6 +67,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_ExperimentWS_getSubClassesForSPARQL">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	    https://localhost:8080/ExperimentWebServer/
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getSubClassesForSPARQL"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://experiment.me.org/#getSubClassesForSPARQL"/>
@@ -92,6 +101,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_ExperimentWS_getIndividuals">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	    https://localhost:8080/ExperimentWebServer/
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividuals"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://experiment.me.org/#getIndividuals"/>
@@ -123,6 +135,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_ExperimentWS_getIndividualsForSPARQL">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	    https://localhost:8080/ExperimentWebServer/
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getIndividualsForSPARQL"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://experiment.me.org/#getIndividualsForSPARQL"/>
@@ -154,6 +169,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_ExperimentWS_getDatasIndividuals">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	    https://localhost:8080/ExperimentWebServer/
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getDatasIndividuals"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://experiment.me.org/#getDatasIndividuals"/>
@@ -185,6 +203,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_ExperimentWS_getResponsibleExperiment">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	    https://localhost:8080/ExperimentWebServer/
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getResponsibleExperiment"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://experiment.me.org/#getResponsibleExperiment"/>
@@ -209,6 +230,9 @@
     </grounding:wsdlReference>
   </grounding:WsdlAtomicProcessGrounding>
   <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_ExperimentWS_getGroupExperiment">
+	  <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	    https://localhost:8080/ExperimentWebServer/
+	   </grounding:wsdlDocument>
     <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Guilherme/ExperimentWS_ProcessModel#ExperimentWS_getGroupExperiment"/>
     <grounding:wsdlOperation>
       <xsd:uriReference rdf:value="http://experiment.me.org/#getGroupExperiment"/>
