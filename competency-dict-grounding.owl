@@ -41,28 +41,28 @@
   <grounding:WsdlGrounding rdf:ID="CompetencyDict_Agent">
     <service:supportedBy rdf:resource="&competency-dict-service;CompetencyDictService"/>
     <!-- Collecton of all the groundings specifications -->
-    <grounding:hasAtomicProcessGrounding rdf:resource="#Wsdl_GetPersonByName"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#Wsdl_HasCompetency"/>
   </grounding:WsdlGrounding>
 
-  <grounding:WsdlAtomicProcessGrounding rdf:ID="Wsdl_GetPersonByName">
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="Wsdl_HasCompetency">
     <!-- Location of theWSDL document -->
     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;</grounding:wsdlDocument>
-    <grounding:owlsProcess rdf:datatype="&xsd;anyURI">&competency-dict-process;getPersonByName</grounding:owlsProcess>
+    <grounding:owlsProcess rdf:datatype="&xsd;anyURI">&competency-dict-process;HasCompetency</grounding:owlsProcess>
     <!-- Reference to the corresponding WSDL operation -->
-    <!--grounding:wsdlOperation rdf:resource="#getPersonByName"/-->
+    <!--grounding:wsdlOperation rdf:resource="#HasCompetency"/-->
     <!-- Reference to the WSDL input message -->
     <!--grounding:wsdlInputMessage rdf:datatype="&xsd;string" /-->
   
     <grounding:wsdlInput>
       <grounding:WsdlInputMessageMap>
-        <grounding:owlsParameter rdf:resource="&competency-dict-process;getPersonByName_In_Name"/>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;HasCompetency_In_Name"/>
         <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#PersonByNameRequest</grounding:wsdlMessagePart>
       </grounding:WsdlInputMessageMap>
     </grounding:wsdlInput>
 
     <grounding:wsdlOutput>
       <grounding:WsdlOutputMessageMap>
-        <grounding:owlsParameter rdf:resource="&competency-dict-process;getPersonByName_Out_Person"/>
+        <grounding:owlsParameter rdf:resource="&competency-dict-process;HasCompetency_Out_Person"/>
         <grounding:wsdlMessagePart rdf:datatype="&xsd;anyURI">&competency-dict-wsdl;#PersonByNameResponse</grounding:wsdlMessagePart>
       </grounding:WsdlOutputMessageMap>
     </grounding:wsdlOutput>
@@ -72,7 +72,7 @@
     </grounding:wsdlVersion>
   </grounding:WsdlAtomicProcessGrounding>
   
-  <grounding:WsdlOperationRef rdf:ID="Wsdl_GetPersonByName_Op">
+  <grounding:WsdlOperationRef rdf:ID="Wsdl_HasCompetency_Op">
     <rdfs:comment>
      A pointer to the WSDL operation used for SelectAvailableFlight
     </rdfs:comment>
@@ -82,7 +82,7 @@
     </grounding:portType>
     <!-- locate operation to be used -->
     <grounding:operation rdf:datatype="&xsd;anyURI">
-      &competency-dict-wsdl;#getPersonByName
+      &competency-dict-wsdl;#HasCompetency
     </grounding:operation>
   </grounding:WsdlOperationRef>
 

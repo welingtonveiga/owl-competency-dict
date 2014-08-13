@@ -35,7 +35,7 @@
 
 
 <profile:profile rdf:ID="ComeptencyDictService">
-    <profile:has_process rdf:resource="&competency-dict-process;getPersonByName"/>
+    <profile:has_process rdf:resource="&competency-dict-process;hasCompetency"/>
     <profile:serviceName>ComeptencyDictService_Agent</profile:serviceName>
     <profile:textDescription>
     This  service provide flight reservations based on the
