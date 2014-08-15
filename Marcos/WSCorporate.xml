@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description>
+   <baseDir>C:\owlsedit\temp</baseDir>
+   <service>WSCorporate_Service.owl</service>
+   <profile>WSCorporate_Profile.owl</profile>
+   <process>WSCorporate_Process.owl</process>
+   <grounding>WSCorporate_Grounding.owl</grounding>
+   <name>WSCorporate.xml</name>
+</description>

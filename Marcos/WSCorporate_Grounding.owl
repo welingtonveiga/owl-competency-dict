@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [  
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >   
+]>
+<rdf:RDF
+  xml:base="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_Grounding.owl#"
+  xmlns:grounding="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl#"
+  xmlns:owl="http://jamsci.servehttp.com/owlsedit/owl.rdf#"
+  xmlns:process="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl#"
+  xmlns:profile="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf#"
+  xmlns:service="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl#" xmlns:xsd="http://jamsci.servehttp.com/owlsedit/XMLSchema.xsd#">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+    <rdfs:comment>Add Ontology Comment</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/owl.rdf"/>
+    <owl:imports rdf:resource="http://jamsci.servehttp.com/owlsedit/rdf-schema.rdf"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Service.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Profile.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Process.owl"/>
+    <owl:imports rdf:resource="http://staff.um.edu.mt/cabe2/supervising/undergraduate/owlseditFYP/owls11/Grounding.owl"/>
+  </owl:Ontology>
+  <grounding:WsdlGrounding rdf:ID="WSCorporate_Grounding">
+    <service:supportedBy rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_Service#WSCorporate_Service"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getIndividualsInferredSparql"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getSubClassInferredSparql"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getSubClassInferredJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getClassJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getESocioDe"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getSubClassJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getMenbersClassJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getPropertiesJena"/>
+    <grounding:hasAtomicProcessGrounding rdf:resource="#WSDLGrounding_WSCorporate_getSubClassSparql"/>
+  </grounding:WsdlGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getIndividualsInferredSparql">
+	   <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+  <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getIndividualsInferredSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getIndividualsInferredSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getIndividualsInferredSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getIndividualsInferredSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getIndividualsInferredSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getIndividualsInferredSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getSubClassInferredSparql">
+     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+    <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassInferredSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassInferredSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassInferredSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassInferredSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassInferredSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassInferredSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getSubClassInferredJena">
+     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+    <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassInferredJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassInferredJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassInferredJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassInferredJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassInferredJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassInferredJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getClassJena">
+     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+    <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getClassJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getClassJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getClassJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getClassJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getClassJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getClassJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getESocioDe">
+     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+    <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getESocioDe"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getESocioDe"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getESocioDe"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getESocioDe_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getESocioDeResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getESocioDe_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getSubClassJena">
+     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+    <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getMenbersClassJena">
+     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+    <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getMenbersClassJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getMenbersClassJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getMenbersClassJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getMenbersClassJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getMenbersClassJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getMenbersClassJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getPropertiesJena">
+     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+    <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getPropertiesJena"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getPropertiesJena"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getPropertiesJena"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getPropertiesJena_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getPropertiesJenaResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getPropertiesJena_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:ID="WSDLGrounding_WSCorporate_getSubClassSparql">
+     <grounding:wsdlDocument rdf:datatype="&xsd;anyURI">
+	   http://localhost:8084/WSCorporate/WSCorporate
+	   </grounding:wsdlDocument>
+  
+    <grounding:owlsProcess rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassSparql"/>
+    <grounding:wsdlOperation>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassSparql"/>
+    </grounding:wsdlOperation>
+    <grounding:wsdlInputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassSparql"/>
+    </grounding:wsdlInputMessage>
+    <grounding:wsdlInputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassSparql_parameters_IN"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlInputMessageParts>
+    <grounding:wsdlOutputMessage>
+      <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#getSubClassSparqlResponse"/>
+    </grounding:wsdlOutputMessage>
+    <grounding:wsdlOutputMessageParts rdf:parseType="Collection">
+      <grounding:WsdlMessageMap>
+        <grounding:owlsParameter rdf:resource="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/WSCorporate_ProcessModel#WSCorporate_getSubClassSparql_parameters_OUT"/>
+        <grounding:wsdlMessagePart>
+          <xsd:uriReference rdf:value="https://raw.githubusercontent.com/welingtonveiga/owl-competency-dict/master/Marcos/#parameters"/>
+        </grounding:wsdlMessagePart>
+      </grounding:WsdlMessageMap>
+    </grounding:wsdlOutputMessageParts>
+    <grounding:wsdlReference>
+      <xsd:uriReference rdf:value="http://www.w3.org/TR/2001/NOTE-wsdl-20010315"/>
+    </grounding:wsdlReference>
+  </grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>
